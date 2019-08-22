@@ -5,7 +5,7 @@
 #ifndef FT_PRINTF
 # define FT_PRINTF
 # include <stdarg.h>
-# define BUFF_SIZE 100
+# define BUFF_SIZE 10
 
 # define M_MINUS 1
 # define M_PLUS 2
@@ -29,18 +29,18 @@ typedef struct	s_prsng
 	char 	modifiers;
 	char 	type;
 	size_t	counter;
-	int 	buff_count;
-	char 	buff[BUFF_SIZE];
+	char 	buff[BUFF_SIZE + 1];
 	va_list	ap;
 }				t_prsng;
 
-int		ft_printf(const char* format, ...);
+int		ft_printf(char* format, ...);
 void 	parsing(char **format, t_prsng *tools);
-
+void to_buff(char *str, t_prsng *tools);
+void	add_str_to_buff(char **format, t_prsng *tools);
 
 //// to libft
 char	*ft_itoa_base(long long n, int base);
-_Bool	ft_putptr(void *ptr, t_prsng *tools);
+_Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 
 
 

@@ -4,13 +4,13 @@
 
 #include "ft_ptintf.h"
 
-void		param_processing(const char **format, t_prsng *tools)
+void		param_processing(char **format, t_prsng *tools)
 {
 	char *str;
 
 	(*format)++;
 	if (**format == '%')
-		ft_putchar(**format);
+		add_str_to_buff(format, tools);
 	else
 	{
 		parsing(format, tools);
@@ -22,9 +22,9 @@ void		param_processing(const char **format, t_prsng *tools)
 			ft_putstr(str);
 			tools->counter += ft_strlen(str) - 1;
 		}
-		else if (**format == 'p')
+		else if (tools->type == 'p')
 		{
-			if (!(ft_putptr(va_arg(tools->ap, void*), tools) - 1)) ///
+			if (!(ft_putptr_buff(va_arg(tools->ap, void*), tools)))
 				exit(1);
 		}
 	}
@@ -37,10 +37,10 @@ void 	init_tools(t_prsng *tools)
 	tools->precision = 0;
 	tools->type = 0;
 	tools->counter = 0;
-	tools->buff_count = 0;
+	tools->buff[0] = '\0';
 }
 
-int		ft_printf(const char* format, ...)
+int		ft_printf(char* format, ...)
 {
 	va_list	ap;
 	t_prsng	tools;
@@ -54,10 +54,9 @@ int		ft_printf(const char* format, ...)
 		if (*format == '%')
 			param_processing(&format, &tools);
 		else
-			ft_putchar(*format);
-		format++;
-		tools.counter++;
+			add_str_to_buff(&format, &tools);
 	}
 	va_end(tools.ap);
+	write(1, tools.buff, ft_strlen(tools.buff));
 	return (tools.counter);
 }

@@ -186,3 +186,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o: ../ft_ptintf/parsing.c
 
+CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o: ../ft_ptintf/ft_ptintf.h
+CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o: ../ft_ptintf/to_buff.c
+

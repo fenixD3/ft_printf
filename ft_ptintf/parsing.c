@@ -41,11 +41,17 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 		(*format)++;
 }
 
+_Bool	is_typeflag(char c)
+{
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'o' ||
+		c == 'u' || c == 'x' || c == 'X' || c == 'f')
+		return (1);
+	return (0);
+}
+
 void 	parsing(char **format, t_prsng *tools)
 {
-	while (**format != 'c' && **format != 's' && **format != 'p' &&
-	**format != 'd'&& **format != 'i' && **format != 'o' && **format != 'u' &&
-	**format != 'x' && **format != 'X' && **format != 'f')
+	while (!is_typeflag(**format))
 	{
 		if (**format == '-' || **format == '+' || **format == '0' || **format == '#')
 			parsing_flags(format, tools);

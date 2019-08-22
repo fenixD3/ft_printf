@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+ft_ptintf/field.o: ft_ptintf/field.c.o
+
+.PHONY : ft_ptintf/field.o
+
+# target to build an object file
+ft_ptintf/field.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.o
+.PHONY : ft_ptintf/field.c.o
+
+ft_ptintf/field.i: ft_ptintf/field.c.i
+
+.PHONY : ft_ptintf/field.i
+
+# target to preprocess a source file
+ft_ptintf/field.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.i
+.PHONY : ft_ptintf/field.c.i
+
+ft_ptintf/field.s: ft_ptintf/field.c.s
+
+.PHONY : ft_ptintf/field.s
+
+# target to generate assembly for a file
+ft_ptintf/field.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.s
+.PHONY : ft_ptintf/field.c.s
+
 ft_ptintf/ft_itoa_base.o: ft_ptintf/ft_itoa_base.c.o
 
 .PHONY : ft_ptintf/ft_itoa_base.o
@@ -2013,6 +2040,33 @@ ft_ptintf/parsing.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.s
 .PHONY : ft_ptintf/parsing.c.s
 
+ft_ptintf/to_buff.o: ft_ptintf/to_buff.c.o
+
+.PHONY : ft_ptintf/to_buff.o
+
+# target to build an object file
+ft_ptintf/to_buff.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o
+.PHONY : ft_ptintf/to_buff.c.o
+
+ft_ptintf/to_buff.i: ft_ptintf/to_buff.c.i
+
+.PHONY : ft_ptintf/to_buff.i
+
+# target to preprocess a source file
+ft_ptintf/to_buff.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.i
+.PHONY : ft_ptintf/to_buff.c.i
+
+ft_ptintf/to_buff.s: ft_ptintf/to_buff.c.s
+
+.PHONY : ft_ptintf/to_buff.s
+
+# target to generate assembly for a file
+ft_ptintf/to_buff.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.s
+.PHONY : ft_ptintf/to_buff.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2022,6 +2076,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... ft_ptintf/field.o"
+	@echo "... ft_ptintf/field.i"
+	@echo "... ft_ptintf/field.s"
 	@echo "... ft_ptintf/ft_itoa_base.o"
 	@echo "... ft_ptintf/ft_itoa_base.i"
 	@echo "... ft_ptintf/ft_itoa_base.s"
@@ -2232,6 +2289,9 @@ help:
 	@echo "... ft_ptintf/parsing.o"
 	@echo "... ft_ptintf/parsing.i"
 	@echo "... ft_ptintf/parsing.s"
+	@echo "... ft_ptintf/to_buff.o"
+	@echo "... ft_ptintf/to_buff.i"
+	@echo "... ft_ptintf/to_buff.s"
 .PHONY : help
 
 

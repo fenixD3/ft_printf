@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/field.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_itoa_base.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -294,6 +297,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/parsing.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/to_buff.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/CMakeLists.txt">

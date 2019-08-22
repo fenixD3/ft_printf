@@ -69,6 +69,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/field.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )
