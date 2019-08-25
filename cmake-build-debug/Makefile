@@ -123,59 +123,59 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
-ft_ptintf/field.o: ft_ptintf/field.c.o
+ft_ptintf/field_len.o: ft_ptintf/field_len.c.o
 
-.PHONY : ft_ptintf/field.o
-
-# target to build an object file
-ft_ptintf/field.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.o
-.PHONY : ft_ptintf/field.c.o
-
-ft_ptintf/field.i: ft_ptintf/field.c.i
-
-.PHONY : ft_ptintf/field.i
-
-# target to preprocess a source file
-ft_ptintf/field.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.i
-.PHONY : ft_ptintf/field.c.i
-
-ft_ptintf/field.s: ft_ptintf/field.c.s
-
-.PHONY : ft_ptintf/field.s
-
-# target to generate assembly for a file
-ft_ptintf/field.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field.c.s
-.PHONY : ft_ptintf/field.c.s
-
-ft_ptintf/ft_itoa_base.o: ft_ptintf/ft_itoa_base.c.o
-
-.PHONY : ft_ptintf/ft_itoa_base.o
+.PHONY : ft_ptintf/field_len.o
 
 # target to build an object file
-ft_ptintf/ft_itoa_base.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base.c.o
-.PHONY : ft_ptintf/ft_itoa_base.c.o
+ft_ptintf/field_len.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.o
+.PHONY : ft_ptintf/field_len.c.o
 
-ft_ptintf/ft_itoa_base.i: ft_ptintf/ft_itoa_base.c.i
+ft_ptintf/field_len.i: ft_ptintf/field_len.c.i
 
-.PHONY : ft_ptintf/ft_itoa_base.i
+.PHONY : ft_ptintf/field_len.i
 
 # target to preprocess a source file
-ft_ptintf/ft_itoa_base.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base.c.i
-.PHONY : ft_ptintf/ft_itoa_base.c.i
+ft_ptintf/field_len.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.i
+.PHONY : ft_ptintf/field_len.c.i
 
-ft_ptintf/ft_itoa_base.s: ft_ptintf/ft_itoa_base.c.s
+ft_ptintf/field_len.s: ft_ptintf/field_len.c.s
 
-.PHONY : ft_ptintf/ft_itoa_base.s
+.PHONY : ft_ptintf/field_len.s
 
 # target to generate assembly for a file
-ft_ptintf/ft_itoa_base.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base.c.s
-.PHONY : ft_ptintf/ft_itoa_base.c.s
+ft_ptintf/field_len.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.s
+.PHONY : ft_ptintf/field_len.c.s
+
+ft_ptintf/ft_itoa_base_printf.o: ft_ptintf/ft_itoa_base_printf.c.o
+
+.PHONY : ft_ptintf/ft_itoa_base_printf.o
+
+# target to build an object file
+ft_ptintf/ft_itoa_base_printf.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.o
+.PHONY : ft_ptintf/ft_itoa_base_printf.c.o
+
+ft_ptintf/ft_itoa_base_printf.i: ft_ptintf/ft_itoa_base_printf.c.i
+
+.PHONY : ft_ptintf/ft_itoa_base_printf.i
+
+# target to preprocess a source file
+ft_ptintf/ft_itoa_base_printf.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.i
+.PHONY : ft_ptintf/ft_itoa_base_printf.c.i
+
+ft_ptintf/ft_itoa_base_printf.s: ft_ptintf/ft_itoa_base_printf.c.s
+
+.PHONY : ft_ptintf/ft_itoa_base_printf.s
+
+# target to generate assembly for a file
+ft_ptintf/ft_itoa_base_printf.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.s
+.PHONY : ft_ptintf/ft_itoa_base_printf.c.s
 
 ft_ptintf/ft_printf.o: ft_ptintf/ft_printf.c.o
 
@@ -230,6 +230,33 @@ ft_ptintf/ft_putptr.s: ft_ptintf/ft_putptr.c.s
 ft_ptintf/ft_putptr.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.s
 .PHONY : ft_ptintf/ft_putptr.c.s
+
+ft_ptintf/is.o: ft_ptintf/is.c.o
+
+.PHONY : ft_ptintf/is.o
+
+# target to build an object file
+ft_ptintf/is.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/is.c.o
+.PHONY : ft_ptintf/is.c.o
+
+ft_ptintf/is.i: ft_ptintf/is.c.i
+
+.PHONY : ft_ptintf/is.i
+
+# target to preprocess a source file
+ft_ptintf/is.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/is.c.i
+.PHONY : ft_ptintf/is.c.i
+
+ft_ptintf/is.s: ft_ptintf/is.c.s
+
+.PHONY : ft_ptintf/is.s
+
+# target to generate assembly for a file
+ft_ptintf/is.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/is.c.s
+.PHONY : ft_ptintf/is.c.s
 
 ft_ptintf/libft/ft_atoi.o: ft_ptintf/libft/ft_atoi.c.o
 
@@ -2013,6 +2040,33 @@ ft_ptintf/main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/main.c.s
 .PHONY : ft_ptintf/main.c.s
 
+ft_ptintf/make_field_diouxx.o: ft_ptintf/make_field_diouxx.c.o
+
+.PHONY : ft_ptintf/make_field_diouxx.o
+
+# target to build an object file
+ft_ptintf/make_field_diouxx.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.o
+.PHONY : ft_ptintf/make_field_diouxx.c.o
+
+ft_ptintf/make_field_diouxx.i: ft_ptintf/make_field_diouxx.c.i
+
+.PHONY : ft_ptintf/make_field_diouxx.i
+
+# target to preprocess a source file
+ft_ptintf/make_field_diouxx.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.i
+.PHONY : ft_ptintf/make_field_diouxx.c.i
+
+ft_ptintf/make_field_diouxx.s: ft_ptintf/make_field_diouxx.c.s
+
+.PHONY : ft_ptintf/make_field_diouxx.s
+
+# target to generate assembly for a file
+ft_ptintf/make_field_diouxx.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.s
+.PHONY : ft_ptintf/make_field_diouxx.c.s
+
 ft_ptintf/parsing.o: ft_ptintf/parsing.c.o
 
 .PHONY : ft_ptintf/parsing.o
@@ -2076,18 +2130,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
-	@echo "... ft_ptintf/field.o"
-	@echo "... ft_ptintf/field.i"
-	@echo "... ft_ptintf/field.s"
-	@echo "... ft_ptintf/ft_itoa_base.o"
-	@echo "... ft_ptintf/ft_itoa_base.i"
-	@echo "... ft_ptintf/ft_itoa_base.s"
+	@echo "... ft_ptintf/field_len.o"
+	@echo "... ft_ptintf/field_len.i"
+	@echo "... ft_ptintf/field_len.s"
+	@echo "... ft_ptintf/ft_itoa_base_printf.o"
+	@echo "... ft_ptintf/ft_itoa_base_printf.i"
+	@echo "... ft_ptintf/ft_itoa_base_printf.s"
 	@echo "... ft_ptintf/ft_printf.o"
 	@echo "... ft_ptintf/ft_printf.i"
 	@echo "... ft_ptintf/ft_printf.s"
 	@echo "... ft_ptintf/ft_putptr.o"
 	@echo "... ft_ptintf/ft_putptr.i"
 	@echo "... ft_ptintf/ft_putptr.s"
+	@echo "... ft_ptintf/is.o"
+	@echo "... ft_ptintf/is.i"
+	@echo "... ft_ptintf/is.s"
 	@echo "... ft_ptintf/libft/ft_atoi.o"
 	@echo "... ft_ptintf/libft/ft_atoi.i"
 	@echo "... ft_ptintf/libft/ft_atoi.s"
@@ -2286,6 +2343,9 @@ help:
 	@echo "... ft_ptintf/main.o"
 	@echo "... ft_ptintf/main.i"
 	@echo "... ft_ptintf/main.s"
+	@echo "... ft_ptintf/make_field_diouxx.o"
+	@echo "... ft_ptintf/make_field_diouxx.i"
+	@echo "... ft_ptintf/make_field_diouxx.s"
 	@echo "... ft_ptintf/parsing.o"
 	@echo "... ft_ptintf/parsing.i"
 	@echo "... ft_ptintf/parsing.s"

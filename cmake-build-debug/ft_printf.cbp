@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/field.c">
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/field_len.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_itoa_base.c">
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_itoa_base_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_printf.c">
@@ -93,6 +93,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_putptr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/is.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_atoi.c">
@@ -294,6 +297,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/main.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/make_field_diouxx.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/parsing.c">

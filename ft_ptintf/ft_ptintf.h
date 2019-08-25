@@ -33,16 +33,36 @@ typedef struct	s_prsng
 	va_list	ap;
 }				t_prsng;
 
-int		ft_printf(char* format, ...);
+typedef struct	s_mkfld
+{
+	int		lennum;
+	int 	len;
+	int		number;
+	int		base;
+	char	*str;
+}				t_mkfld;
+
+int		ft_printf(const char* format, ...);
 void 	parsing(char **format, t_prsng *tools);
-void to_buff(char *str, t_prsng *tools);
+void	to_buff(char *str, t_prsng *tools);
 void	add_str_to_buff(char **format, t_prsng *tools);
 
-//// to libft
-char	*ft_itoa_base(long long n, int base);
+///make field
+int 	make_field_diouxx(t_prsng *tools);
+
+///field_len
+int ft_lennum(long long n, int base);
+int 	define_base(t_prsng *tools);
+int define_flaglen(t_mkfld *field, t_prsng *tools);
+
+////meh
+char *itoa_base_printf(long long n, int base, char *str, int lennum);
+char *itoa_base_printf_unsigned(unsigned long long n, int base, char *str, int lennum);
+
 _Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 
-
+/// is
+_Bool is_signed(char c);
 
 
 #endif

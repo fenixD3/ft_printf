@@ -11,11 +11,12 @@ void 	init_tools(t_prsng *tools);
 int main() {
 
 
-	int *a;
+	char *a;
 
-printf("aaaa%-100sbbb\n", "1234567890");
+/*	printf("aaaa%lfbbb\n", 12.5);
+	printf("aaaa%dbb\n", sizeof(double));*/
 
-ft_printf("12345%pABC\n", a);
+ft_printf("ooo%#5oooo\n", 100);
 
 //	t_prsng tools;
 //	init_tools(&tools);

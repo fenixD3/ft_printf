@@ -14,19 +14,7 @@ void		param_processing(char **format, t_prsng *tools)
 	else
 	{
 		parsing(format, tools);
-		if (**format == 'c')
-			ft_putchar(va_arg(tools->ap, int)); // unsigned char??
-		else if (**format == 's')
-		{
-			str = va_arg(tools->ap,char*); /// здесь выделяется память? Нужно фришить?
-			ft_putstr(str);
-			tools->counter += ft_strlen(str) - 1;
-		}
-		else if (tools->type == 'p')
-		{
-			if (!(ft_putptr_buff(va_arg(tools->ap, void*), tools)))
-				exit(1);
-		}
+		make_field_diouxx(tools);
 	}
 }
 
@@ -40,7 +28,7 @@ void 	init_tools(t_prsng *tools)
 	tools->buff[0] = '\0';
 }
 
-int		ft_printf(char* format, ...)
+int		ft_printf(const char* format, ...)
 {
 	va_list	ap;
 	t_prsng	tools;

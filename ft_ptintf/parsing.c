@@ -55,17 +55,23 @@ void 	parsing(char **format, t_prsng *tools)
 	{
 		if (**format == '-' || **format == '+' || **format == '0' || **format == '#')
 			parsing_flags(format, tools);
-		else if (**format >= '1' && **format <= '9' && *(*format - 1) != '.')
+		else if (((**format >= '1' && **format <= '9') || **format == '*') && *(*format - 1) != '.')
 		{
-			tools->field = ft_atoi(*format);
-			while (**format >= '0' && **format <= '9')
+			if (**format == '*')
+				tools->field = va_arg(tools->ap, int);
+			else
+				tools->field = ft_atoi(*format);
+			while ((**format >= '1' && **format <= '9') || **format == '*')
 				(*format)++;
 		}
 		else if (**format == '.')
 		{
 			(*format)++;
-			tools->precision = ft_atoi(*format);
-			while (**format >= '0' && **format <= '9')
+			if (**format == '*')
+				tools->precision = va_arg(tools->ap, int);
+			else
+				tools->precision = ft_atoi(*format);
+			while ((**format >= '1' && **format <= '9') || **format == '*')
 				(*format)++;
 		}
 		else if (**format == 'l' || **format == 'h' || **format == 'L')

@@ -10,7 +10,7 @@ _Bool	ft_putptr_buff(void *ptr, t_prsng *tools)
 	char 		*str;
 	int			i;
 
-	if (!(str = ft_itoa_base((long long)ptr, 16)))
+	if (!(str = itoa_base_printf((long long) ptr, 16, NULL, 0)))
 		return (0);
 	i = 0;
 	while (str[i])
