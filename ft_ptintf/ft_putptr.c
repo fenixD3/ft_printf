@@ -5,6 +5,7 @@
 //#include "libft/libft.h"
 #include "ft_ptintf.h"
 
+/*
 _Bool	ft_putptr_buff(void *ptr, t_prsng *tools)
 {
 	char 		*str;
@@ -22,4 +23,4 @@ _Bool	ft_putptr_buff(void *ptr, t_prsng *tools)
 	to_buff(str, tools);
 	free(str);
 	return (1);
-}
+}*/

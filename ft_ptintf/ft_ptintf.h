@@ -10,7 +10,7 @@
 # define M_MINUS 1
 # define M_PLUS 2
 # define M_SHARP 4
-# define M_NUL 8
+# define M_ZERO 8
 
 # define M_HH 1
 # define M_H 2
@@ -33,11 +33,26 @@ typedef struct	s_prsng
 	va_list	ap;
 }				t_prsng;
 
+typedef union	u_un
+{
+	int					i;
+	unsigned int		ui;
+	long 				l;
+	unsigned long		ul;
+	short				sh;
+	unsigned short		ush;
+	long long			ll;
+	unsigned long long	ull;
+	char				c;
+	unsigned char		uc;
+}				t_un;
+
 typedef struct	s_mkfld
 {
-	int		lennum;
-	int 	len;
-	int		number;
+	size_t	lennum;
+	size_t 	len;
+	size_t 	len_empty_field;
+	t_un	number;
 	int		base;
 	char	*str;
 }				t_mkfld;
@@ -51,18 +66,23 @@ void	add_str_to_buff(char **format, t_prsng *tools);
 int 	make_field_diouxx(t_prsng *tools);
 
 ///field_len
-int ft_lennum(long long n, int base);
-int 	define_base(t_prsng *tools);
+size_t count_lennum(t_mkfld *field, t_prsng *tools);
+int 	define_base_diouxx(t_prsng *tools);
 int define_flaglen(t_mkfld *field, t_prsng *tools);
 
-////meh
+unsigned long long reverse_if_negative(t_un *number, t_prsng *tools);
+
+/*////meh
 char *itoa_base_printf(long long n, int base, char *str, int lennum);
-char *itoa_base_printf_unsigned(unsigned long long n, int base, char *str, int lennum);
+char *itoa_base_printf_unsigned(unsigned long long n, int base, char *str, int lennum);*/
+char *itoa_base_union(t_prsng *tools, t_mkfld *field, char *str);
 
 _Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 
 /// is
-_Bool is_signed(char c);
+_Bool	is_signed(char c);
+_Bool	is_typeflag(char c);
+_Bool 	is_diouxx(char c);
 
 
 #endif

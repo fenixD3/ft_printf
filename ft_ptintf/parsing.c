@@ -15,7 +15,7 @@ void 	parsing_flags(char **format, t_prsng *tools)
 		else if (**format == '#')
 			tools->flags += M_SHARP;
 		else if (**format == '0')
-			tools->flags += M_NUL;
+			tools->flags += M_ZERO;
 		else
 			break ;
 		(*format)++;
@@ -26,7 +26,7 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 {
 	if (**format == 'h' && *(*format + 1) == 'h')
 		tools->modifiers += M_HH;
-	else if (**format == 'l' && **(format + 1) == 'l')
+	else if (**format == 'l' && *(*format + 1) == 'l')
 		tools->modifiers += M_LL;
 	else if (**format == 'h')
 		tools->modifiers += M_H;
@@ -39,14 +39,6 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 		(*format) += 2;
 	else
 		(*format)++;
-}
-
-_Bool	is_typeflag(char c)
-{
-	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'o' ||
-		c == 'u' || c == 'x' || c == 'X' || c == 'f')
-		return (1);
-	return (0);
 }
 
 void 	parsing(char **format, t_prsng *tools)

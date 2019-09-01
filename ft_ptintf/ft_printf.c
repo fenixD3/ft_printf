@@ -8,6 +8,7 @@ void		param_processing(char **format, t_prsng *tools)
 {
 	char *str;
 
+
 	(*format)++;
 	if (**format == '%')
 		add_str_to_buff(format, tools);
@@ -23,6 +24,7 @@ void 	init_tools(t_prsng *tools)
 	tools->flags = 0;
 	tools->field = 0;
 	tools->precision = 0;
+	tools->modifiers = 0;
 	tools->type = 0;
 	tools->counter = 0;
 	tools->buff[0] = '\0';
@@ -34,7 +36,6 @@ int		ft_printf(const char* format, ...)
 	t_prsng	tools;
 
 
-	/// need validation????
 	init_tools(&tools);
 	va_start(tools.ap, format);
 	while (*format)

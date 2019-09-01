@@ -11,13 +11,23 @@ void 	init_tools(t_prsng *tools);
 int main() {
 
 
-	char *a;
+
 
 /*	printf("aaaa%lfbbb\n", 12.5);
 	printf("aaaa%dbb\n", sizeof(double));*/
+//	printf("ooo%#5.4xooo\n", 100);
 
-ft_printf("ooo%#5oooo\n", 100);
+/*int a;
+unsigned int b;
 
+a = -10;
+b = (unsigned int)a;
+a = (int)b;
+printf("%d %u\n\n\n", a, b);9223372036854775807
+printf("%o %o\n\n\n", a, b);*/
+
+printf("%2o\n", -1);
+ft_printf("%2o", -1);
 //	t_prsng tools;
 //	init_tools(&tools);
 //	to_buff("1234567", &tools);
