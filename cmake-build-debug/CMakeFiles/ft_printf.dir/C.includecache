@@ -13,6 +13,8 @@ libft/libft.h
 /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
 stdio.h
 -
+stdbool.h
+-
 
 /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
 string.h

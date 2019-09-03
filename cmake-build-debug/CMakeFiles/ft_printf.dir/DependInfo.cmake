@@ -75,8 +75,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_toupper.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_toupper.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/libft/get_next_line.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/get_next_line.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/main.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o"
-  "/Users/mdeanne/ft_printf/ft_ptintf/make_field_diouxx.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.o"
+  "/Users/mdeanne/ft_printf/ft_ptintf/make_field.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/parsing.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o"
+  "/Users/mdeanne/ft_printf/ft_ptintf/set_buff.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/to_buff.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

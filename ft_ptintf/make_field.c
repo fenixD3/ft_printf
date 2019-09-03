@@ -4,29 +4,34 @@
 
 #include "ft_ptintf.h"
 
-void	fill_union(t_mkfld *field, t_prsng *tools)
+
+void	fill_union_diouxx(t_mkfld *field, t_prsng *tools)
 {
 	field->number.ull = 0;
+
 	if (tools->modifiers == 0 && tools->type == 'u')
 		field->number.ui = va_arg(tools->ap, unsigned int);
 	else if (tools->modifiers == 0)
 		field->number.i = va_arg(tools->ap, int);
-	else if (tools->modifiers & M_L && tools->type == 'u')
-		field->number.ul = va_arg(tools->ap, unsigned long);
-	else if (tools->modifiers & M_L)
-		field->number.l = va_arg(tools->ap, long);
+
 	else if (tools->modifiers & M_LL && tools->type == 'u')
 		field->number.ull = va_arg(tools->ap, unsigned long long);
 	else if (tools->modifiers & M_LL)
 		field->number.ll = va_arg(tools->ap, long long);
+	else if (tools->modifiers & M_L && tools->type == 'u')
+		field->number.ul = va_arg(tools->ap, unsigned long);
+	else if (tools->modifiers & M_L)
+		field->number.l = va_arg(tools->ap, long);
 	else if (tools->modifiers & M_H && tools->type == 'u')
 		field->number.ush = (unsigned short)va_arg(tools->ap, unsigned int);
 	else if (tools->modifiers & M_H)
 		field->number.sh = (short)va_arg(tools->ap, int);
-/*	else if (tools->modifiers & M_H && tools->type == 'u')
+	//////////////////////////??????
+	else if (tools->modifiers & M_H && tools->type == 'u')
 		field->number.uc = (unsigned char)va_arg(tools->ap, unsigned int);
 	else if (tools->modifiers & M_H)
-		field->number.c = (char)va_arg(tools->ap, int);*/
+		field->number.c = (char)va_arg(tools->ap, int);
+	/////////////////////////??????
 }
 
 void	set_flags(t_mkfld *field, t_prsng *tools)
@@ -60,49 +65,45 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 
 }
 
-_Bool	set_buff_diouxx(t_mkfld *fld, t_prsng *tls)
+
+
+
+
+void	len_counting(t_prsng *tools, t_mkfld *field)
 {
-	if (!(fld->str = (char*)malloc(sizeof(char) * (fld->lennum + fld->len + 1))))
-		return (0);
-	ft_memset(fld->str, ' ', fld->lennum + fld->len);//// или нулями?
-	if (tls->flags & M_MINUS)
-		fld->len -= fld->len_empty_field;
-
-	itoa_base_union(tls, fld, &fld->str[fld->len]);
-
-/*	if (tls->type == 'u')
-		itoa_base_printf_unsigned(fld->number.ui, fld->base, &fld->str[fld->len], fld->lennum);
-	else
-		itoa_base_printf(fld->number, fld->base, &fld->str[fld->len], fld->lennum);*/
-
-
-	/// заполнение нулями избытка точности
-	if (tls->precision > fld->lennum)
-	{
-		fld->len -= tls->precision - fld->lennum;
-		ft_memset(&fld->str[fld->len], '0', tls->precision - fld->lennum);
-	}
-	set_flags(fld, tls);
-	to_buff(fld->str, tls);
-	free(fld->str);
+	field->len = 0;
+	field->len_empty_field = 0;
+	if (tools->precision > field->lennum)
+		field->len += tools->precision - field->lennum;
+	field->len += define_flaglen(&field, tools);
+	if (tools->field > field->lennum + field->len)
+		field->len_empty_field = tools->field - field->lennum - field->len;
+	field->len += field->len_empty_field;
 }
-int 	make_field_diouxx(t_prsng *tools)
+
+
+void	diouxx(t_prsng *tools, t_mkfld *field)
+{
+	fill_union_diouxx(&field, tools);
+	field->base = define_base_diouxx(tools);
+	field->lennum = count_lennum(&field, tools);
+	len_counting(tools, &field);
+}
+
+
+int 	organozation_by_flags_to_buff(t_prsng *tools)
 {
 	t_mkfld field;
-
-	fill_union(&field, tools);
-	field.base = define_base_diouxx(tools);
-	field.lennum = count_lennum(&field, tools);
-	field.len = 0;
-	field.len_empty_field = 0;
-	if (tools->precision > field.lennum)
-		field.len += tools->precision - field.lennum;
-	field.len += define_flaglen(&field, tools);
-	if (tools->field > field.lennum + field.len)
-		field.len_empty_field = tools->field - field.lennum - field.len;
-	field.len += field.len_empty_field;
-	set_buff_diouxx(&field, tools);
-
-
+	
+	if (is_diouxx(tools->type)) 
+	{
+		diouxx(tools, &field);
+		if (!set_buff_diouxx(&field, tools))
+			return (0);
+	}
+	else if (!(tools->type == 'c' || tools->type == 's' || tools->type == 'p'))
+		;
+	else if (!is_typeflag(tools->type))
+		;
 	return (1);
 }

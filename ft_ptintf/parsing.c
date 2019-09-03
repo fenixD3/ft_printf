@@ -8,13 +8,13 @@ void 	parsing_flags(char **format, t_prsng *tools)
 {
 	while (1)
 	{
-		if (**format == '-')
+		if (**format == '-' && !(tools->flags & M_MINUS))
 			tools->flags += M_MINUS;
-		else if (**format == '+')
+		else if (**format == '+' && !(tools->flags & M_PLUS))
 			tools->flags += M_PLUS;
-		else if (**format == '#')
+		else if (**format == '#' && !(tools->flags & M_SHARP))
 			tools->flags += M_SHARP;
-		else if (**format == '0')
+		else if (**format == '0' && !(tools->flags & M_ZERO))
 			tools->flags += M_ZERO;
 		else
 			break ;
@@ -41,34 +41,47 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 		(*format)++;
 }
 
-void 	parsing(char **format, t_prsng *tools)
+void	parsing_field(char **format, t_prsng *tools)
 {
-	while (!is_typeflag(**format))
+	if (**format == '*')
+		tools->field = va_arg(tools->ap, int);
+	else
+		tools->field = ft_atoi(*format);
+	while ((**format >= '0' && **format <= '9') || **format == '*')
+		(*format)++;
+}
+
+void	parsing_precision(char **format, t_prsng *tools)
+{
+	(*format)++;
+	if (**format == '*')
+		tools->precision = va_arg(tools->ap, int);
+	else
+		tools->precision = ft_atoi(*format);
+	while ((**format >= '1' && **format <= '9') || **format == '*')
+		(*format)++;
+}
+
+int		parsing(char **format, t_prsng *tools)
+{
+	while (**format && is_flag(**format))
 	{
 		if (**format == '-' || **format == '+' || **format == '0' || **format == '#')
 			parsing_flags(format, tools);
 		else if (((**format >= '1' && **format <= '9') || **format == '*') && *(*format - 1) != '.')
-		{
-			if (**format == '*')
-				tools->field = va_arg(tools->ap, int);
-			else
-				tools->field = ft_atoi(*format);
-			while ((**format >= '1' && **format <= '9') || **format == '*')
-				(*format)++;
-		}
+			parsing_field(format, tools);
 		else if (**format == '.')
-		{
-			(*format)++;
-			if (**format == '*')
-				tools->precision = va_arg(tools->ap, int);
-			else
-				tools->precision = ft_atoi(*format);
-			while ((**format >= '1' && **format <= '9') || **format == '*')
-				(*format)++;
-		}
-		else if (**format == 'l' || **format == 'h' || **format == 'L')
+			parsing_precision(format, tools);
+		else if (is_modifiers(**format))
 			parsing_modifiers(format, tools);
+		else if (is_typeflag(**format))
+		{
+			tools->type = **format;
+			(*format)++;
+			return (1);
+		}
 	}
-	tools->type = **format;
-	(*format)++;
+	if (!tools->type)
+		tools->type = **format;
+	return (0);
 }

@@ -14,8 +14,10 @@ void		param_processing(char **format, t_prsng *tools)
 		add_str_to_buff(format, tools);
 	else
 	{
-		parsing(format, tools);
-		make_field_diouxx(tools);
+		if (!parsing(format, tools))
+			;
+		else if (is_diouxx(tools->type))
+			organozation_by_flags_to_buff(tools);
 	}
 }
 

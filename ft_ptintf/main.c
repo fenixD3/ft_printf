@@ -26,8 +26,10 @@ a = (int)b;
 printf("%d %u\n\n\n", a, b);9223372036854775807
 printf("%o %o\n\n\n", a, b);*/
 
-printf("%2o\n", -1);
-ft_printf("%2o", -1);
+	printf("%d\n", sizeof(long long));
+
+//printf("%0.*k%d\n", 3, 2, 5);
+//ft_printf("%");
 //	t_prsng tools;
 //	init_tools(&tools);
 //	to_buff("1234567", &tools);
@@ -41,5 +43,5 @@ ft_printf("%2o", -1);
 //	to_buff("789", &tools);
 //	ft_putchar('-');
 //	to_buff("BBB", &tools);
-	return 0;
+return 0;
 }

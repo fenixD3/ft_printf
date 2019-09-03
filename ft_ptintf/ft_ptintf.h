@@ -20,13 +20,14 @@
 
 #include "libft/libft.h"
 #include <stdio.h>
+#include <stdbool.h>
 
 typedef struct	s_prsng
 {
 	char	flags;
 	int		field;
 	int 	precision;
-	char 	modifiers;
+	unsigned char 	modifiers;
 	char 	type;
 	size_t	counter;
 	char 	buff[BUFF_SIZE + 1];
@@ -42,9 +43,11 @@ typedef union	u_un
 	short				sh;
 	unsigned short		ush;
 	long long			ll;
-	unsigned long long	ull;
-	char				c;
+	unsigned long long	ull; //for p -flag
+	char				c; // for c -flag also
 	unsigned char		uc;
+
+	char 				*cptr;
 }				t_un;
 
 typedef struct	s_mkfld
@@ -58,12 +61,17 @@ typedef struct	s_mkfld
 }				t_mkfld;
 
 int		ft_printf(const char* format, ...);
-void 	parsing(char **format, t_prsng *tools);
+
+int parsing(char **format, t_prsng *tools);
 void	to_buff(char *str, t_prsng *tools);
 void	add_str_to_buff(char **format, t_prsng *tools);
 
+void	set_flags(t_mkfld *field, t_prsng *tools);
+
+_Bool	set_buff_diouxx(t_mkfld *fld, t_prsng *tls);
+
 ///make field
-int 	make_field_diouxx(t_prsng *tools);
+int 	organozation_by_flags_to_buff(t_prsng *tools);
 
 ///field_len
 size_t count_lennum(t_mkfld *field, t_prsng *tools);
@@ -83,6 +91,10 @@ _Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 _Bool	is_signed(char c);
 _Bool	is_typeflag(char c);
 _Bool 	is_diouxx(char c);
+_Bool 	is_aaeeffgg(char c);
+_Bool	is_signflag(char c);
+_Bool	is_modifiers(char c);
+_Bool	is_flag(char c);
 
 
 #endif

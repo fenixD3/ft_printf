@@ -71,8 +71,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.o"
-  "CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/is.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

@@ -18,7 +18,9 @@ CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/ft_putptr.c
  /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/is.c.o
+ /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
  /Users/mdeanne/ft_printf/ft_ptintf/is.c
+ /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_atoi.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_bzero.c.o
@@ -188,14 +190,18 @@ CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
  /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
  /Users/mdeanne/ft_printf/ft_ptintf/main.c
-CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.o
+CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
  /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
- /Users/mdeanne/ft_printf/ft_ptintf/make_field_diouxx.c
+ /Users/mdeanne/ft_printf/ft_ptintf/make_field.c
 CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
  /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
  /Users/mdeanne/ft_printf/ft_ptintf/parsing.c
+CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.o
+ /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
+ /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h
+ /Users/mdeanne/ft_printf/ft_ptintf/set_buff.c
 CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o
  /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
  /Users/mdeanne/ft_printf/ft_ptintf/libft/libft.h

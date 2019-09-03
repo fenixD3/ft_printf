@@ -2040,32 +2040,32 @@ ft_ptintf/main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/main.c.s
 .PHONY : ft_ptintf/main.c.s
 
-ft_ptintf/make_field_diouxx.o: ft_ptintf/make_field_diouxx.c.o
+ft_ptintf/make_field.o: ft_ptintf/make_field.c.o
 
-.PHONY : ft_ptintf/make_field_diouxx.o
+.PHONY : ft_ptintf/make_field.o
 
 # target to build an object file
-ft_ptintf/make_field_diouxx.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.o
-.PHONY : ft_ptintf/make_field_diouxx.c.o
+ft_ptintf/make_field.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.o
+.PHONY : ft_ptintf/make_field.c.o
 
-ft_ptintf/make_field_diouxx.i: ft_ptintf/make_field_diouxx.c.i
+ft_ptintf/make_field.i: ft_ptintf/make_field.c.i
 
-.PHONY : ft_ptintf/make_field_diouxx.i
+.PHONY : ft_ptintf/make_field.i
 
 # target to preprocess a source file
-ft_ptintf/make_field_diouxx.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.i
-.PHONY : ft_ptintf/make_field_diouxx.c.i
+ft_ptintf/make_field.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.i
+.PHONY : ft_ptintf/make_field.c.i
 
-ft_ptintf/make_field_diouxx.s: ft_ptintf/make_field_diouxx.c.s
+ft_ptintf/make_field.s: ft_ptintf/make_field.c.s
 
-.PHONY : ft_ptintf/make_field_diouxx.s
+.PHONY : ft_ptintf/make_field.s
 
 # target to generate assembly for a file
-ft_ptintf/make_field_diouxx.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field_diouxx.c.s
-.PHONY : ft_ptintf/make_field_diouxx.c.s
+ft_ptintf/make_field.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.s
+.PHONY : ft_ptintf/make_field.c.s
 
 ft_ptintf/parsing.o: ft_ptintf/parsing.c.o
 
@@ -2093,6 +2093,33 @@ ft_ptintf/parsing.s: ft_ptintf/parsing.c.s
 ft_ptintf/parsing.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.s
 .PHONY : ft_ptintf/parsing.c.s
+
+ft_ptintf/set_buff.o: ft_ptintf/set_buff.c.o
+
+.PHONY : ft_ptintf/set_buff.o
+
+# target to build an object file
+ft_ptintf/set_buff.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.o
+.PHONY : ft_ptintf/set_buff.c.o
+
+ft_ptintf/set_buff.i: ft_ptintf/set_buff.c.i
+
+.PHONY : ft_ptintf/set_buff.i
+
+# target to preprocess a source file
+ft_ptintf/set_buff.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.i
+.PHONY : ft_ptintf/set_buff.c.i
+
+ft_ptintf/set_buff.s: ft_ptintf/set_buff.c.s
+
+.PHONY : ft_ptintf/set_buff.s
+
+# target to generate assembly for a file
+ft_ptintf/set_buff.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.s
+.PHONY : ft_ptintf/set_buff.c.s
 
 ft_ptintf/to_buff.o: ft_ptintf/to_buff.c.o
 
@@ -2343,12 +2370,15 @@ help:
 	@echo "... ft_ptintf/main.o"
 	@echo "... ft_ptintf/main.i"
 	@echo "... ft_ptintf/main.s"
-	@echo "... ft_ptintf/make_field_diouxx.o"
-	@echo "... ft_ptintf/make_field_diouxx.i"
-	@echo "... ft_ptintf/make_field_diouxx.s"
+	@echo "... ft_ptintf/make_field.o"
+	@echo "... ft_ptintf/make_field.i"
+	@echo "... ft_ptintf/make_field.s"
 	@echo "... ft_ptintf/parsing.o"
 	@echo "... ft_ptintf/parsing.i"
 	@echo "... ft_ptintf/parsing.s"
+	@echo "... ft_ptintf/set_buff.o"
+	@echo "... ft_ptintf/set_buff.i"
+	@echo "... ft_ptintf/set_buff.s"
 	@echo "... ft_ptintf/to_buff.o"
 	@echo "... ft_ptintf/to_buff.i"
 	@echo "... ft_ptintf/to_buff.s"
