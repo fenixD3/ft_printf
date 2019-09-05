@@ -16,8 +16,7 @@ void		param_processing(char **format, t_prsng *tools)
 	{
 		if (!parsing(format, tools))
 			;
-		else if (is_diouxx(tools->type))
-			organozation_by_flags_to_buff(tools);
+		organozation_by_flags_to_buff(tools);
 	}
 }
 
@@ -36,16 +35,17 @@ int		ft_printf(const char* format, ...)
 {
 	va_list	ap;
 	t_prsng	tools;
+	char	*f_not_const;
 
-
+	f_not_const = (char*)format;
 	init_tools(&tools);
 	va_start(tools.ap, format);
-	while (*format)
+	while (*f_not_const)
 	{
-		if (*format == '%')
-			param_processing(&format, &tools);
+		if (*f_not_const == '%')
+			param_processing(&f_not_const, &tools);
 		else
-			add_str_to_buff(&format, &tools);
+			add_str_to_buff(&f_not_const, &tools);
 	}
 	va_end(tools.ap);
 	write(1, tools.buff, ft_strlen(tools.buff));

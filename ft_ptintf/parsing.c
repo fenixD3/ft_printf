@@ -16,7 +16,9 @@ void 	parsing_flags(char **format, t_prsng *tools)
 			tools->flags += M_SHARP;
 		else if (**format == '0' && !(tools->flags & M_ZERO))
 			tools->flags += M_ZERO;
-		else
+		else if (**format == ' ' && !(tools->flags & M_SPACE))
+			tools->flags += M_SPACE;
+		else if (!is_signflag(**format))
 			break ;
 		(*format)++;
 	}
@@ -66,7 +68,7 @@ int		parsing(char **format, t_prsng *tools)
 {
 	while (**format && is_flag(**format))
 	{
-		if (**format == '-' || **format == '+' || **format == '0' || **format == '#')
+		if (is_signflag(**format))
 			parsing_flags(format, tools);
 		else if (((**format >= '1' && **format <= '9') || **format == '*') && *(*format - 1) != '.')
 			parsing_field(format, tools);
@@ -82,6 +84,6 @@ int		parsing(char **format, t_prsng *tools)
 		}
 	}
 	if (!tools->type)
-		tools->type = **format;
+		tools->type = *((*format)++);
 	return (0);
 }

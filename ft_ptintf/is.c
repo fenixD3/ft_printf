@@ -6,7 +6,7 @@
 
 _Bool is_signed(char c)
 {
-	if (c == 'd' || c == 'i' || c == 'f' /*и другие типы с плавающей точкой*/)
+	if (c == 'd' || c == 'i' || c == 'f' /*c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'F' || c == 'g' || c ='G'*/)
 		return (1);
 	return (0);
 }
@@ -33,9 +33,16 @@ _Bool 	is_aaeeffgg(char c)
 	return (0);
 }
 
+_Bool 	is_csp(char c)
+{
+	if (c == 'c' || c == 's' || c == 'p')
+		return (1);
+	return (0);
+}
+
 _Bool	is_signflag(char c)
 {
-	if (c == '0' || c == '+' || c == '-' || c == '#')
+	if (c == '0' || c == '+' || c == '-' || c == '#' || c == ' ')
 		return (1);
 	return (0);
 }
@@ -49,7 +56,7 @@ _Bool	is_modifiers(char c)
 
 _Bool	is_flag(char c)
 {
-	if (is_typeflag(c) || is_signflag(c) || ft_isalnum(c) || c == '.' || is_modifiers(c))
+	if (is_typeflag(c) || is_signflag(c) || ft_isdigit(c) || c == '.' || is_modifiers(c))
 		return (1);
 	return (0);
 }

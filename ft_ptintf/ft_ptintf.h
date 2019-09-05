@@ -11,6 +11,7 @@
 # define M_PLUS 2
 # define M_SHARP 4
 # define M_ZERO 8
+# define M_SPACE 16
 
 # define M_HH 1
 # define M_H 2
@@ -68,14 +69,14 @@ void	add_str_to_buff(char **format, t_prsng *tools);
 
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
-_Bool	set_buff_diouxx(t_mkfld *fld, t_prsng *tls);
+_Bool	set_buff(t_mkfld *fld, t_prsng *tls);
 
 ///make field
 int 	organozation_by_flags_to_buff(t_prsng *tools);
 
 ///field_len
 size_t count_lennum(t_mkfld *field, t_prsng *tools);
-int 	define_base_diouxx(t_prsng *tools);
+int 	define_base(t_prsng *tools);
 int define_flaglen(t_mkfld *field, t_prsng *tools);
 
 unsigned long long reverse_if_negative(t_un *number, t_prsng *tools);
@@ -92,6 +93,7 @@ _Bool	is_signed(char c);
 _Bool	is_typeflag(char c);
 _Bool 	is_diouxx(char c);
 _Bool 	is_aaeeffgg(char c);
+_Bool 	is_csp(char c);
 _Bool	is_signflag(char c);
 _Bool	is_modifiers(char c);
 _Bool	is_flag(char c);
