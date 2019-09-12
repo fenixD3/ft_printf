@@ -63,13 +63,15 @@ typedef struct	s_mkfld
 
 int		ft_printf(const char* format, ...);
 
-int parsing(char **format, t_prsng *tools);
+int 	parsing(char **format, t_prsng *tools);
 void	to_buff(char *str, t_prsng *tools);
 void	add_str_to_buff(char **format, t_prsng *tools);
 
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls);
+
+void 	zeroing_tools(t_prsng *tools);
 
 ///make field
 int 	organozation_by_flags_to_buff(t_prsng *tools);
@@ -91,7 +93,7 @@ _Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 /// is
 _Bool	is_signed(char c);
 _Bool	is_typeflag(char c);
-_Bool 	is_diouxx(char c);
+_Bool 	is_ddioouuxx(char c);
 _Bool 	is_aaeeffgg(char c);
 _Bool 	is_csp(char c);
 _Bool	is_signflag(char c);

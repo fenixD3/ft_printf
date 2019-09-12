@@ -41,28 +41,3 @@ char *itoa_base_union(t_prsng *tools, t_mkfld *field, char *str)
 	}
 	return (str);
 }
-
-char *itoa_base_printf(long long n, int base, char *str, int lennum)
-{
-	if (n < 0)
-		n = -n;
-	while (lennum--)
-	{
-		str[lennum] = n % base + (n % base > 9 ? 'A' - 10 : '0');
-		n /= base;
-	}
-	return (str);
-}
-
-char *itoa_base_printf_unsigned(unsigned long long n, int base,
-								char *str, int lennum)
-{
-	if (n < 0)
-		n = -n;
-	while (lennum--)
-	{
-		str[lennum] = n % base + (n % base > 9 ? 'A' - 10 : '0');
-		n /= base;
-	}
-	return (str);
-}

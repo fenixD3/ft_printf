@@ -15,7 +15,7 @@ void	str_tolower(char *str)
 
 void	get_value_by_type(t_mkfld *fld, t_prsng *tls)
 {
-	if (is_diouxx(tls->type) || tls->type == 'p')
+	if (is_ddioouuxx(tls->type) || tls->type == 'p')
 		{
 			itoa_base_union(tls, fld, &fld->str[fld->len]);
 			if (tls->type == 'x' || tls->type == 'p')
@@ -34,6 +34,7 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 	if (!(fld->str = (char*)malloc(sizeof(char) * (fld->lennum + fld->len + 1))))
 		return (0);
 	ft_memset(fld->str, ' ', fld->lennum + fld->len);//// или нулями?
+	fld->str[fld->lennum + fld->len] = '\0';
 	if (tls->flags & M_MINUS)
 		fld->len -= fld->len_empty_field;
 	get_value_by_type(fld, tls);

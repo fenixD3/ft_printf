@@ -13,15 +13,15 @@ _Bool is_signed(char c)
 
 _Bool	is_typeflag(char c)
 {
-	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'o' ||
-		c == 'u' || c == 'x' || c == 'X' || c == 'f')
+	if (is_csp(c) || is_ddioouuxx(c) || is_aaeeffgg(c))
 		return (1);
 	return (0);
 }
 
-_Bool 	is_diouxx(char c)
+_Bool 	is_ddioouuxx(char c)
 {
-	if (c == 'd' || c == 'i' || c == 'o' || c == 'u' || c == 'x' || c == 'X')
+	if (c == 'd' || c == 'i' || c == 'o' || c == 'u' || c == 'x' || c == 'X' ||
+		c == 'D' || c == 'O' || c == 'U')
 		return (1);
 	return (0);
 }

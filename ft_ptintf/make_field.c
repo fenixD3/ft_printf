@@ -60,11 +60,11 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 	/** дополнить # для других флагов*/
 
-	if (tools->flags & M_ZERO && !tools->precision && is_diouxx(tools->type))
+	if (tools->flags & M_ZERO && !(tools->precision >= 0 && is_ddioouuxx(tools->type)))
 	{
 		while (field->len)
 			field->str[--field->len] = '0';
-		if ((tools->flags & M_PLUS && field->number.i > 0) || field->number.i < 0)
+		if ((tools->flags & M_PLUS && field->number.i > 0) || field->number.i < 0 || tools->flags & M_SPACE)
 			field->len++;
 	}
 	/** дополнить для других флагов кроме diouxX*/
@@ -74,6 +74,8 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 		field->str[--field->len] = '+';
 	else if (is_signed(tools->type) && field->number.i < 0)
 		field->str[--field->len] = '-';
+	else if (tools->flags & M_SPACE)
+		field->str[--field->len] = ' ';
 
 }
 
@@ -95,14 +97,14 @@ void	len_counting(t_prsng *tools, t_mkfld *field)
 
 void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 {
-	if (is_diouxx(tools->type))
+	if (is_ddioouuxx(tools->type))
 		fill_union_diouxx(field, tools);
 	else if (is_csp(tools->type))
 		fill_union_csp(field, tools);
 
 	field->base = define_base(tools);
 
-	if (tools->type || tools->type == 'c' || !is_flag(tools->type))
+	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
 	else if (tools->type == 's')
 		{
@@ -110,7 +112,7 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 			if (field->lennum > tools->precision && tools->precision)
 				field->lennum = tools->precision;
 		}
-	else if (is_diouxx(tools->type) || tools->type == 'p')
+	else if (is_ddioouuxx(tools->type) || tools->type == 'p')
 			field->lennum = count_lennum(field, tools);
 
 	len_counting(tools, field);
@@ -123,7 +125,7 @@ int 	organozation_by_flags_to_buff(t_prsng *tools)
 
 	if (is_aaeeffgg(tools->type))
 		;
-	else if (is_diouxx(tools->type) || is_csp(tools->type) || !is_flag(tools->type))
+	else if (is_ddioouuxx(tools->type) || is_csp(tools->type) || !is_flag(tools->type))
 	{
 		prepare_diouxxcsp(tools, &field);
 		if (tools->type && !set_buff(&field, tools))

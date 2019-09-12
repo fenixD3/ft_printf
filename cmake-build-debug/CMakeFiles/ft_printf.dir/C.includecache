@@ -24,7 +24,11 @@ stdlib.h
 unistd.h
 -
 
-/Users/mdeanne/ft_printf/ft_ptintf/set_buff.c
+/Users/mdeanne/ft_printf/ft_ptintf/main.c
+stdarg.h
+-
 ft_ptintf.h
 /Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h
+stdio.h
+-
 
