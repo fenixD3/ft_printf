@@ -27,9 +27,9 @@ printf("%d %u\n\n\n", a, b);9223372036854775807
 printf("%o %o\n\n\n", a, b);*/
 
 
-	printf("@main_ftprintf: %###-#0000 33...12..#0+0d", 256);
+	printf("@main_ftprintf: %####0000 33.#00d", 256);
 	printf("\n----------\n");
-	ft_printf("@main_ftprintf: %###-#0000 33...12..#0+0d", 256);
+	ft_printf("@main_ftprintf: %####0000 33.#00d", 256);
 	printf("\n");
 
 

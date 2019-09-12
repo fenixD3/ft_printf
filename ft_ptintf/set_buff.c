@@ -39,7 +39,7 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 		fld->len -= fld->len_empty_field;
 	get_value_by_type(fld, tls);
 	/// заполнение нулями избытка точности
-	if (tls->precision > fld->lennum)
+	if ((size_t)tls->precision > fld->lennum)
 	{
 		fld->len -= tls->precision - fld->lennum;
 		ft_memset(&fld->str[fld->len], '0', tls->precision - fld->lennum);

@@ -99,5 +99,10 @@ int		parsing(char **format, t_prsng *tools)
 	}
 	if (!tools->type && **format)
 		tools->type = *((*format)++);
+	if (tools->precision == -1)
+	{
+		tools->flags |= M_PRECISION;
+		tools->precision++;
+	}
 	return (0);
 }

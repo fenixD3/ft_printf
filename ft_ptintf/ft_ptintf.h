@@ -12,6 +12,7 @@
 # define M_SHARP 4
 # define M_ZERO 8
 # define M_SPACE 16
+# define M_PRECISION 32
 
 # define M_HH 1
 # define M_H 2
@@ -26,7 +27,7 @@
 typedef struct	s_prsng
 {
 	char	flags;
-	int		field;
+	size_t		field;
 	int 	precision;
 	unsigned char 	modifiers;
 	char 	type;

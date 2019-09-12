@@ -92,9 +92,6 @@
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_putptr.c">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/is.c">
 			<Option target="ft_printf"/>
 		</Unit>

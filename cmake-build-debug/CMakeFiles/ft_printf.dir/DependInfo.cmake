@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdeanne/ft_printf/ft_ptintf/field_len.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/ft_itoa_base_printf.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/ft_printf.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.o"
-  "/Users/mdeanne/ft_printf/ft_ptintf/ft_putptr.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/is.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/is.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_atoi.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_atoi.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_bzero.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_bzero.c.o"

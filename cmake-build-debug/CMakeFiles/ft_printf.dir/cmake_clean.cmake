@@ -66,7 +66,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/libft/get_next_line.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.o"
-  "CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/to_buff.c.o"

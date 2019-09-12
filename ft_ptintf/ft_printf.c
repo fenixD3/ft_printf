@@ -24,7 +24,6 @@ void 	zeroing_tools(t_prsng *tools)
 
 int		ft_printf(const char* format, ...)
 {
-	va_list	ap;
 	t_prsng	tools;
 	char	*f_not_const;
 
