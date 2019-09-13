@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/libft/get_next_line.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/float.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.o"
@@ -74,6 +75,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/is.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

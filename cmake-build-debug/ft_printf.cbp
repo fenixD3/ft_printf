@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/mdeanne/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/ylila/Printf_Hub/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/mdeanne/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/ylila/Printf_Hub/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/mdeanne/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/ylila/Printf_Hub/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf">
-				<Option output="/Users/mdeanne/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdeanne/ft_printf/cmake-build-debug"/>
+				<Option output="/Users/ylila/Printf_Hub/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ylila/Printf_Hub/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf/fast">
-				<Option output="/Users/mdeanne/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdeanne/ft_printf/cmake-build-debug"/>
+				<Option output="/Users/ylila/Printf_Hub/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ylila/Printf_Hub/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,245 +73,254 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdeanne/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ylila/Printf_Hub/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/field_len.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/field_len.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_itoa_base_printf.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/float.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_printf.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/float.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_ptintf.h">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_itoa_base_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/ft_putptr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/is.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_atoi.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_putptr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_bzero.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/is.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_fib.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_atoi.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isalnum.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_bzero.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isalpha.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_fib.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isascii.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isalnum.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isdigit.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isalpha.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_islower.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isascii.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isprint.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isdigit.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_isupper.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_islower.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_itoa.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isprint.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstadd.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_isupper.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstdel.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_itoa.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstdelone.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstadd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstiter.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstdel.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstmap.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstdelone.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstnew.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstiter.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_lstpush.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstmap.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memalloc.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstnew.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memccpy.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_lstpush.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memchr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memalloc.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memcmp.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memccpy.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memcpy.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memchr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memdel.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memcmp.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memmove.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memcpy.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_memset.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memdel.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_pow.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memmove.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putchar.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_memset.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_pow.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putendl.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putchar.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putchar_fd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putnbr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putendl.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putendl_fd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putstr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putnbr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putnbr_fd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_sqrt.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putstr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strcat.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_putstr_fd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strchr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_sqrt.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strclr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strcat.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strcmp.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strchr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strcpy.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strclr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strdel.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strcmp.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strdup.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strcpy.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strequ.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strdel.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_striter.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strdup.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_striteri.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strequ.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strjoin.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_striter.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strlcat.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_striteri.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strlen.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strjoin.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strmap.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strlcat.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strmapi.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strlen.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strncat.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strmap.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strncmp.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strmapi.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strncpy.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strncat.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strnequ.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strncmp.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strnew.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strncpy.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strnstr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strnequ.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strrchr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strnew.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strsplit.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strnstr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strstr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strrchr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strsub.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strsplit.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_strtrim.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strstr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_tolower.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strsub.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/ft_toupper.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_strtrim.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/get_next_line.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_tolower.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/libft/get_next_line.h">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/ft_toupper.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/main.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/get_next_line.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/make_field.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/libft/get_next_line.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/parsing.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/main.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/set_buff.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/make_field.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/to_buff.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/parsing.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/ft_printf/CMakeLists.txt">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/print_float.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/set_buff.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/to_buff.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

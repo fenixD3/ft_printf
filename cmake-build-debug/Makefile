@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdeanne/ft_printf
+CMAKE_SOURCE_DIR = /Users/ylila/Printf_Hub
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdeanne/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ylila/Printf_Hub/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mdeanne/ft_printf/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ ft_ptintf/field_len.s: ft_ptintf/field_len.c.s
 ft_ptintf/field_len.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.s
 .PHONY : ft_ptintf/field_len.c.s
+
+ft_ptintf/float.o: ft_ptintf/float.c.o
+
+.PHONY : ft_ptintf/float.o
+
+# target to build an object file
+ft_ptintf/float.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.o
+.PHONY : ft_ptintf/float.c.o
+
+ft_ptintf/float.i: ft_ptintf/float.c.i
+
+.PHONY : ft_ptintf/float.i
+
+# target to preprocess a source file
+ft_ptintf/float.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.i
+.PHONY : ft_ptintf/float.c.i
+
+ft_ptintf/float.s: ft_ptintf/float.c.s
+
+.PHONY : ft_ptintf/float.s
+
+# target to generate assembly for a file
+ft_ptintf/float.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.s
+.PHONY : ft_ptintf/float.c.s
 
 ft_ptintf/ft_itoa_base_printf.o: ft_ptintf/ft_itoa_base_printf.c.o
 
@@ -2094,6 +2121,33 @@ ft_ptintf/parsing.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.s
 .PHONY : ft_ptintf/parsing.c.s
 
+ft_ptintf/print_float.o: ft_ptintf/print_float.c.o
+
+.PHONY : ft_ptintf/print_float.o
+
+# target to build an object file
+ft_ptintf/print_float.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.o
+.PHONY : ft_ptintf/print_float.c.o
+
+ft_ptintf/print_float.i: ft_ptintf/print_float.c.i
+
+.PHONY : ft_ptintf/print_float.i
+
+# target to preprocess a source file
+ft_ptintf/print_float.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.i
+.PHONY : ft_ptintf/print_float.c.i
+
+ft_ptintf/print_float.s: ft_ptintf/print_float.c.s
+
+.PHONY : ft_ptintf/print_float.s
+
+# target to generate assembly for a file
+ft_ptintf/print_float.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.s
+.PHONY : ft_ptintf/print_float.c.s
+
 ft_ptintf/set_buff.o: ft_ptintf/set_buff.c.o
 
 .PHONY : ft_ptintf/set_buff.o
@@ -2160,6 +2214,9 @@ help:
 	@echo "... ft_ptintf/field_len.o"
 	@echo "... ft_ptintf/field_len.i"
 	@echo "... ft_ptintf/field_len.s"
+	@echo "... ft_ptintf/float.o"
+	@echo "... ft_ptintf/float.i"
+	@echo "... ft_ptintf/float.s"
 	@echo "... ft_ptintf/ft_itoa_base_printf.o"
 	@echo "... ft_ptintf/ft_itoa_base_printf.i"
 	@echo "... ft_ptintf/ft_itoa_base_printf.s"
@@ -2376,6 +2433,9 @@ help:
 	@echo "... ft_ptintf/parsing.o"
 	@echo "... ft_ptintf/parsing.i"
 	@echo "... ft_ptintf/parsing.s"
+	@echo "... ft_ptintf/print_float.o"
+	@echo "... ft_ptintf/print_float.i"
+	@echo "... ft_ptintf/print_float.s"
 	@echo "... ft_ptintf/set_buff.o"
 	@echo "... ft_ptintf/set_buff.i"
 	@echo "... ft_ptintf/set_buff.s"
