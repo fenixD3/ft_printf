@@ -231,33 +231,6 @@ ft_ptintf/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.s
 .PHONY : ft_ptintf/ft_printf.c.s
 
-ft_ptintf/ft_putptr.o: ft_ptintf/ft_putptr.c.o
-
-.PHONY : ft_ptintf/ft_putptr.o
-
-# target to build an object file
-ft_ptintf/ft_putptr.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.o
-.PHONY : ft_ptintf/ft_putptr.c.o
-
-ft_ptintf/ft_putptr.i: ft_ptintf/ft_putptr.c.i
-
-.PHONY : ft_ptintf/ft_putptr.i
-
-# target to preprocess a source file
-ft_ptintf/ft_putptr.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.i
-.PHONY : ft_ptintf/ft_putptr.c.i
-
-ft_ptintf/ft_putptr.s: ft_ptintf/ft_putptr.c.s
-
-.PHONY : ft_ptintf/ft_putptr.s
-
-# target to generate assembly for a file
-ft_ptintf/ft_putptr.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_putptr.c.s
-.PHONY : ft_ptintf/ft_putptr.c.s
-
 ft_ptintf/is.o: ft_ptintf/is.c.o
 
 .PHONY : ft_ptintf/is.o
@@ -2223,9 +2196,6 @@ help:
 	@echo "... ft_ptintf/ft_printf.o"
 	@echo "... ft_ptintf/ft_printf.i"
 	@echo "... ft_ptintf/ft_printf.s"
-	@echo "... ft_ptintf/ft_putptr.o"
-	@echo "... ft_ptintf/ft_putptr.i"
-	@echo "... ft_ptintf/ft_putptr.s"
 	@echo "... ft_ptintf/is.o"
 	@echo "... ft_ptintf/is.i"
 	@echo "... ft_ptintf/is.s"

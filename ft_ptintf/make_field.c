@@ -47,7 +47,7 @@ void	fill_union_csp(t_mkfld *field, t_prsng *tools)
 
 void	set_flags(t_mkfld *field, t_prsng *tools)
 {
-	if (tools->flags & M_SHARP && tools->type == 'o' && field->lennum >= tools->precision)
+	if (tools->flags & M_SHARP && tools->type == 'o' && field->lennum >= (size_t)tools->precision)
 	{
 		field->str[field->len - 1] = '0';
 		field->len--;
@@ -60,7 +60,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 	/** дополнить # для других флагов*/
 
-	if (tools->flags & M_ZERO && !(tools->precision >= 0 && is_ddioouuxx(tools->type)))
+	if (tools->flags & M_ZERO && !(!(tools->flags & M_PRECISION) && is_ddioouuxx(tools->type)))
 	{
 		while (field->len)
 			field->str[--field->len] = '0';
@@ -87,7 +87,7 @@ void	len_counting(t_prsng *tools, t_mkfld *field)
 {
 	field->len = 0;
 	field->len_empty_field = 0;
-	if (tools->precision > field->lennum)
+	if ((size_t)tools->precision > field->lennum)
 		field->len += tools->precision - field->lennum;
 	field->len += define_flaglen(field, tools);
 	if (tools->field > field->lennum + field->len)
@@ -109,7 +109,7 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 	else if (tools->type == 's')
 		{
 			field->lennum = ft_strlen(field->number.cptr);
-			if (field->lennum > tools->precision && tools->precision)
+			if (field->lennum > (size_t)tools->precision && tools->precision)
 				field->lennum = tools->precision;
 		}
 	else if (is_ddioouuxx(tools->type) || tools->type == 'p')

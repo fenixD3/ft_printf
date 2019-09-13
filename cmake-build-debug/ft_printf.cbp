@@ -92,10 +92,14 @@
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_itoa_base_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h">
+=======
+		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/is.c">
+>>>>>>> master
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_putptr.c">
