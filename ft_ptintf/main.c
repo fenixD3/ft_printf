@@ -3,7 +3,7 @@
 #include "ft_ptintf.h"
 
 #include <stdio.h>
-void 	zeroing_tools(t_prsng *tools);
+void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 
 
 
@@ -27,11 +27,15 @@ printf("%d %u\n\n\n", a, b);9223372036854775807
 printf("%o %o\n\n\n", a, b);*/
 
 
-	printf("@main_ftprintf: %####0000 33.#00d", 256);
-	printf("\n----------\n");
-	ft_printf("@main_ftprintf: %####0000 33.#00d", 256);
-	printf("\n");
+	int real;
+	int my;
 
+	/*real = printf("%s %s %s %s", "this", "is", "a", "multi");
+	printf("\n----------\n");
+	my = ft_printf("%s %s %s %s", "this", "is", "a", "multi"); ////error %05d,  256??
+	printf("\n");
+	printf("%d %d", real, my);*/
+	printf("%10.4m");
 
 //printf("%0.*k%d\n", 3, 2, 5);
 //ft_printf("%");
