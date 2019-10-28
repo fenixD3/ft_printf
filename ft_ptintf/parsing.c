@@ -68,7 +68,7 @@ _Bool	parsing_typeflag(char **format, t_prsng *tools)
 {
 	if (is_typeflag(**format))
 	{
-		if (ft_islower(**format))
+		if (ft_islower(**format) || (**format != 'C' && **format != 'S'))
 			tools->type = **format;
 		else
 		{
@@ -83,7 +83,7 @@ _Bool	parsing_typeflag(char **format, t_prsng *tools)
 
 int		parsing(char **format, t_prsng *tools)
 {
-	zeroing_tools(tools);
+	zeroing_tools(tools, 0);
 	while (**format && is_flag(**format))
 	{
 		if (is_signflag(**format))

@@ -48,6 +48,8 @@ typedef union	u_un
 	unsigned long long	ull; //for p -flag
 	char				c; // for c -flag also
 	unsigned char		uc;
+	double				db;
+	long double			ldb;
 
 	char 				*cptr;
 }				t_un;
@@ -72,7 +74,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools);
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls);
 
-void 	zeroing_tools(t_prsng *tools);
+void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 
 ///make field
 int 	organozation_by_flags_to_buff(t_prsng *tools);

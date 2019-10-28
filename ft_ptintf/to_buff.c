@@ -15,16 +15,16 @@ void	add_str_to_buff(char **format, t_prsng *tools)
 		len++;
 	if (len > BUFF_SIZE)
 	{
-		write(1, tools->buff, lenbuff);
+		tools->counter += write(1, tools->buff, lenbuff);
 		tools->buff[0] = '\0';
-		write(1, *format, len);
+		tools->counter += write(1, *format, len);
 	}
 	else if (len < BUFF_SIZE - lenbuff)
 		ft_strncat(tools->buff, *format, len);
 	else
 	{
-		write(1, tools->buff, lenbuff);
-		ft_strcpy(tools->buff, *format);
+		tools->counter += write(1, tools->buff, lenbuff);
+		ft_strncpy(tools->buff, *format, len);
 	}
 	*format += len;
 }
@@ -38,16 +38,15 @@ void to_buff(char *str, t_prsng *tools)
 	lenbuff = ft_strlen(tools->buff);
 	if (len > BUFF_SIZE)
 	{
-		write(1, tools->buff, lenbuff);
+		tools->counter += write(1, tools->buff, lenbuff);
 		tools->buff[0] = '\0';
-		write(1, str, len);
+		tools->counter += write(1, str, len);
 	}
 	else if (len < BUFF_SIZE - lenbuff)
 		ft_strcat(tools->buff, str);
 	else
 	{
-		write(1, tools->buff, lenbuff);
+		tools->counter += write(1, tools->buff, lenbuff);
 		ft_strcpy(tools->buff, str);
 	}
-	tools->counter += len;
 }
