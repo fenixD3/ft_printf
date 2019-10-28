@@ -8,7 +8,7 @@ char	*get_double(double num, t_prsng tools)
 
 	dbl.sign = num & 1 << 63 ? 1 : 0;
 	dbl.exp = (num >> 52) & 0x7FF;
-	dbl.mant = num & 0xFFFFFFFFFFFFF;
+	dbl.mant = num & 0x7FFFFFFFFFFFF;
 	if (dbl.exp == 0x7FF)
 		return (print_inf_nan(dbl));
 	else if (!dbl.exp && !dbl.mant)

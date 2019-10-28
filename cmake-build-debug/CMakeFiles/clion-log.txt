@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\da.filiptsev\Desktop\printf_hub
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ylila/Printf_Hub
 CMake Error at CMakeLists.txt:7:
   Parse error.  Expected a command name, got unquoted argument with text
   "<<<<<<<".
