@@ -1,7 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ylila/Printf_Hub
-CMake Error at CMakeLists.txt:7:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "<<<<<<<".
-
-
--- Configuring incomplete, errors occurred!
+/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mdeanne/ft_printf
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/mdeanne/ft_printf/cmake-build-debug

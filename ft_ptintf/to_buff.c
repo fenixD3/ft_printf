@@ -4,6 +4,12 @@
 
 #include "ft_ptintf.h"
 
+void	zeroing_buf(char *str, size_t i)
+{
+	while (i < BUFF_SIZE)
+		str[i++] = '\0';
+}
+
 void	add_str_to_buff(char **format, t_prsng *tools)
 {
 	int len;
@@ -16,7 +22,7 @@ void	add_str_to_buff(char **format, t_prsng *tools)
 	if (len > BUFF_SIZE)
 	{
 		tools->counter += write(1, tools->buff, lenbuff);
-		tools->buff[0] = '\0';
+		zeroing_buf(tools->buff ,0);
 		tools->counter += write(1, *format, len);
 	}
 	else if (len < BUFF_SIZE - lenbuff)
@@ -24,6 +30,7 @@ void	add_str_to_buff(char **format, t_prsng *tools)
 	else
 	{
 		tools->counter += write(1, tools->buff, lenbuff);
+		zeroing_buf(tools->buff, len);
 		ft_strncpy(tools->buff, *format, len);
 	}
 	*format += len;
@@ -39,7 +46,7 @@ void to_buff(char *str, t_prsng *tools)
 	if (len > BUFF_SIZE)
 	{
 		tools->counter += write(1, tools->buff, lenbuff);
-		tools->buff[0] = '\0';
+		zeroing_buf(tools->buff, 0);
 		tools->counter += write(1, str, len);
 	}
 	else if (len < BUFF_SIZE - lenbuff)
@@ -47,6 +54,7 @@ void to_buff(char *str, t_prsng *tools)
 	else
 	{
 		tools->counter += write(1, tools->buff, lenbuff);
+		zeroing_buf(tools->buff, len);
 		ft_strcpy(tools->buff, str);
 	}
 }
