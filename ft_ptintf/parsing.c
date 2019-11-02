@@ -64,21 +64,17 @@ void	parsing_precision(char **format, t_prsng *tools)
 		(*format)++;
 }
 
-_Bool	parsing_typeflag(char **format, t_prsng *tools)
+void	parsing_typeflag(char **format, t_prsng *tools)
 {
-	if (is_typeflag(**format))
+
+	if (ft_islower(**format) || (**format != 'C' && **format != 'S'))
+		tools->type = **format;
+	else
 	{
-		if (ft_islower(**format) || (**format != 'C' && **format != 'S'))
-			tools->type = **format;
-		else
-		{
-			tools->modifiers |= M_L;
-			tools->type = ft_tolower(**format);
-		}
-		(*format)++;
-		return (1);
+		tools->modifiers |= M_L;
+		tools->type = ft_tolower(**format);
 	}
-	return (0);
+	(*format)++;
 }
 
 int		parsing(char **format, t_prsng *tools)
@@ -94,11 +90,13 @@ int		parsing(char **format, t_prsng *tools)
 			parsing_precision(format, tools);
 		else if (is_modifiers(**format))
 			parsing_modifiers(format, tools);
-		else if (parsing_typeflag(format, tools))
-			return (1);
+		else if (is_typeflag(**format))
+			parsing_typeflag(format, tools);
 	}
 	if (!tools->type && **format)
 		tools->type = *((*format)++);
+	if (tools->precision != -1 && tools->flags & M_ZERO)
+		tools->flags &= ~M_ZERO;
 	if (tools->precision == -1)
 	{
 		tools->flags |= M_PRECISION;

@@ -33,16 +33,21 @@ void	fill_union_diouxx(t_mkfld *field, t_prsng *tools)
 	/////////////////////////??????
 }
 
-void	fill_union_csp(t_mkfld *field, t_prsng *tools)
+_Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 {
 	field->number.ull = 0;
 
 	if (tools->type == 'c')
-		field->number.c = (char)va_arg(tools->ap, int);
+			field->number.c = (char)va_arg(tools->ap, int);
 	else if (tools->type == 's')
-		field->number.cptr = va_arg(tools->ap, char*);
+		{
+			field->number.cptr = va_arg(tools->ap, char*);
+			if (!field->number.cptr && !(field->number.cptr = ft_strdup("(null)")))
+				return (0);
+		}
 	else if (tools->type == 'p')
 		field->number.ull = va_arg(tools->ap, unsigned long long);
+	return (1);
 }
 
 void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools)
@@ -75,8 +80,10 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 	/** дополнить # для других флагов*/
 
-	if ((tools->flags & M_ZERO && (!(tools->flags & M_PRECISION) && is_ddioouuxx(tools->type))) /// убрал ! после && (
-			&& !(is_ddioouuxx(tools->type) && tools->precision == 0 && !field->number.i))
+/*	if ((tools->flags & M_ZERO && (!(tools->flags & M_PRECISION) && is_ddioouuxx(tools->type))) /// убрал ! после && (
+			&& !(is_ddioouuxx(tools->type) && tools->precision == 0 && !field->number.i))   //////////////////////////////  ГДЕ-ТО ТУТ ЗАРЫТА СОБАКА!!!!!!!!!!!!!!!!!!!*/
+
+	if (tools->flags & M_ZERO)
 	{
 		while (field->len)
 			field->str[--field->len] = '0';
@@ -126,13 +133,13 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 	if (is_ddioouuxx(tools->type))
 		fill_union_diouxx(field, tools);
 	else if (is_csp(tools->type))
-		fill_union_csp(field, tools);
+		fill_union_csp(field, tools); /// need protection strdup (malloc)
 
 	field->base = define_base(tools);
 
 	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
-	else if (is_ddioouuxx(tools->type) && tools->precision == 0 && !field->number.i)
+	else if (is_ddioouuxx(tools->type) && (tools->precision == 0 && !(tools->flags & M_PRECISION)) && !field->number.i)
 		field->lennum = 0;
 	else if (tools->type == 's')
 		{

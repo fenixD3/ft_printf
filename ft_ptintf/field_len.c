@@ -10,7 +10,8 @@ size_t count_lennum(t_mkfld *field, t_prsng *tools)
 	unsigned long long	number;
 
 
-
+	if (field->number.ll == 0)
+		return (1);
 	number = reverse_if_negative(&field->number, tools);
 	lennum = 1;
 	while (number /= field->base)

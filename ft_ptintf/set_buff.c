@@ -15,7 +15,7 @@ void	str_tolower(char *str)
 
 void	get_value_by_type(t_mkfld *fld, t_prsng *tls)
 {
-	if (is_ddioouuxx(tls->type) && tls->precision == 0 && !fld->number.i)
+	if (is_ddioouuxx(tls->type) && (tls->precision == 0 && !(tls->flags & M_PRECISION)) && !fld->number.i)
 		;
 	else if (is_ddioouuxx(tls->type) || tls->type == 'p')
 		{
@@ -49,7 +49,7 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 		ft_memset(&fld->str[fld->len], '0', tls->precision - fld->lennum);
 	}
 	set_flags(fld, tls);
-	to_buff(fld->str, tls);
+	to_buff(fld->str, tls, fld);
 	free(fld->str);
 	return (1);
 }

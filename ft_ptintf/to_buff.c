@@ -10,6 +10,54 @@ void	zeroing_buf(char *str, size_t i)
 		str[i++] = '\0';
 }
 
+void buff_fill_selection(char *str, t_prsng *tools, int len)
+{
+	int lenbuff;
+
+	lenbuff = ft_strlen(tools->buff);
+	if (tools->flags & M_OLD_FLAG_CHAR)
+		lenbuff++;
+	while (str[len] && str[len] != '%')
+		len++;
+	if (len > BUFF_SIZE)
+	{
+		tools->counter += write(1, tools->buff, lenbuff);
+		zeroing_buf(tools->buff ,0);
+		tools->counter += write(1, str, len);
+	}
+	else if (len < BUFF_SIZE - lenbuff)
+		ft_strncat(tools->buff, str, len);
+	else
+	{
+		tools->counter += write(1, tools->buff, lenbuff);
+		zeroing_buf(tools->buff, len);
+		ft_strncpy(tools->buff, str, len);
+	}
+}
+
+void add_str_to_buff(char **format, t_prsng *tools)
+{
+	int len;
+
+	len = 0;
+	while ((*format)[len] && (*format)[len] != '%')
+		len++;
+
+	buff_fill_selection(*format, tools, len);
+	*format += len;
+	tools->flags &= ~M_OLD_FLAG_CHAR;
+}
+
+void to_buff(char *str, t_prsng *tools, t_mkfld *field) {
+	int	len;
+
+	len = ft_strlen(str);
+	buff_fill_selection(str, tools, len);
+	(tools->type == 'c' && !field->number.c) ?
+	(tools->flags |= M_OLD_FLAG_CHAR) : (tools->flags &= ~M_OLD_FLAG_CHAR);
+}
+
+/*
 void	add_str_to_buff(char **format, t_prsng *tools)
 {
 	int len;
@@ -57,4 +105,4 @@ void to_buff(char *str, t_prsng *tools)
 		zeroing_buf(tools->buff, len);
 		ft_strcpy(tools->buff, str);
 	}
-}
+}*/

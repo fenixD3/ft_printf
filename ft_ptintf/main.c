@@ -30,12 +30,17 @@ printf("%o %o\n\n\n", a, b);*/
 	int real;
 	int my;
 
-	real = printf("%s %s %s %s", "this", "is", "a", "multi");
+	real = printf("%#.x %#.0x", 0, 0);
 	printf("\n----------\n");
-	my = ft_printf("%s %s %s %s", "this", "is", "a", "multi"); ////error %05d,  256??
+	my = ft_printf("%#.x %#.0x", 0, 0); ////error %05d,  256??
 	printf("\n");
 	printf("%d %d", real, my);
 	//printf("%10.4m");
+
+/*	for(int i = 0; i < 32; i++)
+	{
+		printf("%d\ta%ca\n", i, (char)i);
+	}*/
 
 //printf("%0.*k%d\n", 3, 2, 5);
 //ft_printf("%");

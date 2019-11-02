@@ -13,6 +13,7 @@
 # define M_ZERO 8
 # define M_SPACE 16
 # define M_PRECISION 32
+# define M_OLD_FLAG_CHAR 64
 
 # define M_HH 1
 # define M_H 2
@@ -67,8 +68,8 @@ typedef struct	s_mkfld
 int		ft_printf(const char* format, ...);
 
 int 	parsing(char **format, t_prsng *tools);
-void	to_buff(char *str, t_prsng *tools);
-void	add_str_to_buff(char **format, t_prsng *tools);
+void to_buff(char *str, t_prsng *tools, t_mkfld *field);
+void add_str_to_buff(char **format, t_prsng *tools);
 
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
