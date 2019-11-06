@@ -104,5 +104,7 @@ _Bool	is_signflag(char c);
 _Bool	is_modifiers(char c);
 _Bool	is_flag(char c);
 
+int which_sign(t_un *number, t_prsng *tools);
+
 
 #endif

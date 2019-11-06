@@ -53,8 +53,7 @@ int		ft_printf(const char* format, ...)
 
 
 	/////здесь нужно дополнить проверкой на присутствие старого ("%c", 0) флага
-/*	(tools.type == 'c') ?
-	(tools.flags |= M_OLD_FLAG_CHAR) : (tools.flags &= ~M_OLD_FLAG_CHAR);*/
-	tools.counter += write(1, tools.buff, ft_strlen(tools.buff));
+	tools.counter += write(1, tools.buff, ft_strlen(tools.buff) +
+	((tools.type == 'c' && tools.flags & M_OLD_FLAG_CHAR) ? 1 : 0));
 	return (tools.counter);
 }

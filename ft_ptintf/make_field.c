@@ -26,10 +26,11 @@ void	fill_union_diouxx(t_mkfld *field, t_prsng *tools)
 	else if (tools->modifiers & M_H)
 		field->number.sh = (short)va_arg(tools->ap, int);
 	//////////////////////////??????
-	else if (tools->modifiers & M_H && tools->type == 'u')
+	else if (tools->modifiers & M_HH && tools->type == 'u')
 		field->number.uc = (unsigned char)va_arg(tools->ap, unsigned int);
-	else if (tools->modifiers & M_H)
+	else if (tools->modifiers & M_HH)
 		field->number.c = (char)va_arg(tools->ap, int);
+
 	/////////////////////////??????
 }
 
@@ -73,7 +74,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 		field->str[field->len - 1] = tools->type;
 		field->len -= 2;
 	}
-	else if ((tools->flags & M_SHARP) && tools->type == 'p')
+	else if (/*(tools->flags & M_SHARP) && */tools->type == 'p')
 	{
 		ft_strncpy(&field->str[field->len - 2], "0x", 2);
 		field->len -= 2;
@@ -87,7 +88,8 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	{
 		while (field->len)
 			field->str[--field->len] = '0';
-		if ((tools->flags & M_PLUS && field->number.i > 0) || field->number.i < 0 || tools->flags & M_SPACE)
+		if ((tools->flags & M_PLUS && field->number.i > 0) ||
+				which_sign(&field->number, tools) < 0 || tools->flags & M_SPACE)
 			field->len++;
 	}
 	/** дополнить для других флагов кроме diouxX*/
@@ -102,9 +104,9 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 
 
-	if (tools->flags & M_PLUS && is_signed(tools->type) && field->number.i > 0)
+	if (tools->flags & M_PLUS && is_signed(tools->type) && field->number.i >= 0)
 		field->str[--field->len] = '+';
-	else if (is_signed(tools->type) && field->number.i < 0)
+	else if (is_signed(tools->type) && which_sign(&field->number, tools) < 0)
 		field->str[--field->len] = '-';
 	else if (tools->flags & M_SPACE)
 		field->str[--field->len] = ' ';
@@ -117,10 +119,11 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 
 void	len_counting(t_prsng *tools, t_mkfld *field)
 {
-	field->len = 0;
-	field->len_empty_field = 0;
+	field->len = 0; //// можно убрать?
+	field->len_empty_field = 0; //// можно убрать?
 	if ((tools->precision > 0 && (size_t)tools->precision > field->lennum)
-		&& !(tools->type == 's' && !ft_strlen(field->number.cptr)))
+		&& !(tools->type == 's' && !ft_strlen(field->number.cptr))
+		&& tools->type != 'c')
 		field->len += tools->precision - field->lennum;
 	field->len += define_flaglen(field, tools);
 	if (tools->field > field->lennum + field->len)

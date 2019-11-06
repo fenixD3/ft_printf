@@ -10,18 +10,20 @@ unsigned long long reverse_if_negative(t_un *number, t_prsng *tools)
 	unsigned long long ret;
 
 	ret = 0;
-	if (!is_signed(tools->type) || (is_signed(tools->type) && number->i > 0))
+	if (!is_signed(tools->type) || (is_signed(tools->type) && which_sign(number, tools) > 0))
 		ret = number->ull;
 	else
 	{
 		if (tools->modifiers == 0)
-			ret = (unsigned long long)-number->i;
+			ret = -(unsigned long long)number->i;
 		else if (tools->modifiers & M_L)
-			ret = (unsigned long long)-number->l;
+			ret = -(unsigned long long)number->l;
 		else if (tools->modifiers & M_H)
-			ret = (unsigned long long)-number->sh;
+			ret = -(unsigned long long)number->sh;
 		else if (tools->modifiers & M_LL)
-			ret = (unsigned long long)-number->ll;
+			ret = -(unsigned long long)number->ll;
+		else if (tools->modifiers & M_HH)
+			ret = -(unsigned long long)number->c;
 	}
 	return (ret);
 

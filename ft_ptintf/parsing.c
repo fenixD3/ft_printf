@@ -60,7 +60,7 @@ void	parsing_precision(char **format, t_prsng *tools)
 		tools->precision = va_arg(tools->ap, int);
 	else
 		tools->precision = ft_atoi(*format);
-	while ((**format >= '1' && **format <= '9') || **format == '*')
+	while ((**format >= '0' && **format <= '9') || **format == '*')
 		(*format)++;
 }
 
@@ -77,9 +77,8 @@ void	parsing_typeflag(char **format, t_prsng *tools)
 	(*format)++;
 }
 
-int		parsing(char **format, t_prsng *tools)
+void	parsing_cyclone(char **format, t_prsng *tools)
 {
-	zeroing_tools(tools, 0);
 	while (**format && is_flag(**format))
 	{
 		if (is_signflag(**format))
@@ -91,8 +90,17 @@ int		parsing(char **format, t_prsng *tools)
 		else if (is_modifiers(**format))
 			parsing_modifiers(format, tools);
 		else if (is_typeflag(**format))
+		{
 			parsing_typeflag(format, tools);
+			break ;
+		}
 	}
+}
+
+int		parsing(char **format, t_prsng *tools)
+{
+	zeroing_tools(tools, 0);
+	parsing_cyclone(format, tools);
 	if (!tools->type && **format)
 		tools->type = *((*format)++);
 	if (tools->precision != -1 && tools->flags & M_ZERO)

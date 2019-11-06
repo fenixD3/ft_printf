@@ -26,13 +26,15 @@ a = (int)b;
 printf("%d %u\n\n\n", a, b);9223372036854775807
 printf("%o %o\n\n\n", a, b);*/
 
+	int i;
+
 
 	int real;
 	int my;
 
-	real = printf("%#.x %#.0x", 0, 0);
+	real = printf("{%3c}", 0);
 	printf("\n----------\n");
-	my = ft_printf("%#.x %#.0x", 0, 0); ////error %05d,  256??
+   my = ft_printf("{%3c}", 0); ////error %05d,  256??
 	printf("\n");
 	printf("%d %d", real, my);
 	//printf("%10.4m");

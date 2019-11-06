@@ -10,7 +10,24 @@ void	zeroing_buf(char *str, size_t i)
 		str[i++] = '\0';
 }
 
-void buff_fill_selection(char *str, t_prsng *tools, int len)
+char	*strncropcat(char *dst_start, char *src, int n)
+{
+	size_t	i;
+	char	*s1_ret;
+
+	s1_ret = dst_start;
+	i = 0;
+	while (src[i] && i < n)
+	{
+		*dst_start++ = src[i];
+		i++;
+	}
+	*dst_start = '\0';
+	return (s1_ret);
+}
+
+
+void	buff_fill_selection(char *str, t_prsng *tools, int len, int zerochar)
 {
 	int lenbuff;
 
@@ -26,7 +43,8 @@ void buff_fill_selection(char *str, t_prsng *tools, int len)
 		tools->counter += write(1, str, len);
 	}
 	else if (len < BUFF_SIZE - lenbuff)
-		ft_strncat(tools->buff, str, len);
+		strncropcat(ft_strchr(tools->buff, '\0') + zerochar, str, len);
+//		ft_strncat(tools->buff, str, len);
 	else
 	{
 		tools->counter += write(1, tools->buff, lenbuff);
@@ -43,7 +61,7 @@ void add_str_to_buff(char **format, t_prsng *tools)
 	while ((*format)[len] && (*format)[len] != '%')
 		len++;
 
-	buff_fill_selection(*format, tools, len);
+	buff_fill_selection(*format, tools, len, (tools->flags & M_OLD_FLAG_CHAR ? 1 : 0));
 	*format += len;
 	tools->flags &= ~M_OLD_FLAG_CHAR;
 }
@@ -52,7 +70,7 @@ void to_buff(char *str, t_prsng *tools, t_mkfld *field) {
 	int	len;
 
 	len = ft_strlen(str);
-	buff_fill_selection(str, tools, len);
+	buff_fill_selection(str, tools, len, 0);
 	(tools->type == 'c' && !field->number.c) ?
 	(tools->flags |= M_OLD_FLAG_CHAR) : (tools->flags &= ~M_OLD_FLAG_CHAR);
 }
