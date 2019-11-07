@@ -46,7 +46,7 @@ int		define_flaglen(t_mkfld *field, t_prsng *tools)
 	len = 0;
 	if (tools->flags & M_SHARP || tools->type == 'p')
 	{
-		if (tools->type == 'o' && (tools->flags & M_PRECISION || field->lennum <= (size_t)tools->precision))
+		if (tools->type == 'o' && ((tools->flags & M_PRECISION && which_sign(&field->number, tools) != 0) || field->lennum <= (size_t)tools->precision))
 			len++;
 		else if (((tools->type == 'x' || tools->type == 'X') && field->number.i) || tools->type == 'p')
 			len = 2;

@@ -15,7 +15,7 @@ void	str_tolower(char *str)
 
 void	get_value_by_type(t_mkfld *fld, t_prsng *tls)
 {
-	if (is_ddioouuxx(tls->type) && (tls->precision == 0 && !(tls->flags & M_PRECISION)) && !fld->number.i)
+	if (((is_ddioouuxx(tls->type) && !which_sign(&fld->number, tls)) || tls->type == 's') && (tls->precision == 0 && !(tls->flags & M_PRECISION)))
 		;
 	else if (is_ddioouuxx(tls->type) || tls->type == 'p')
 		{
@@ -43,7 +43,7 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 		fld->len -= fld->len_empty_field;
 	get_value_by_type(fld, tls);  /// дописываем для флотов
 	/// заполнение нулями избытка точности
-	if (tls->precision > 0 && fld->lennum && (size_t)tls->precision > fld->lennum)
+	if (tls->precision > 0 && fld->lennum && (size_t)tls->precision > fld->lennum && tls->type != 's')
 	{
 		fld->len -= tls->precision - fld->lennum;
 		ft_memset(&fld->str[fld->len], '0', tls->precision - fld->lennum);

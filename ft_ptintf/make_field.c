@@ -91,7 +91,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	{
 		while (field->len)
 			field->str[--field->len] = '0';
-		if ((tools->flags & M_PLUS && field->number.i > 0) ||
+		if ((tools->flags & M_PLUS && field->number.i >= 0) ||
 				which_sign(&field->number, tools) < 0 || tools->flags & M_SPACE)
 			field->len++;
 	}
@@ -107,7 +107,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 
 
-	if (tools->flags & M_PLUS && is_signed(tools->type) && field->number.i >= 0)
+	if (tools->flags & M_PLUS &&  is_signed(tools->type)&& field->number.i >= 0)
 		field->str[--field->len] = '+';
 	else if (is_signed(tools->type) && which_sign(&field->number, tools) < 0)
 		field->str[--field->len] = '-';
@@ -125,7 +125,7 @@ void	len_counting(t_prsng *tools, t_mkfld *field)
 	field->len = 0; //// можно убрать?
 	field->len_empty_field = 0; //// можно убрать?
 	if ((tools->precision > 0 && (size_t)tools->precision > field->lennum)
-		&& !(tools->type == 's' && !ft_strlen(field->number.cptr))
+		&& !(tools->type == 's' /*&& !ft_strlen(field->number.cptr)*/)
 		&& tools->type != 'c')
 		field->len += tools->precision - field->lennum;
 	field->len += define_flaglen(field, tools);
@@ -145,7 +145,7 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 
 	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
-	else if (is_ddioouuxx(tools->type) && (tools->precision == 0 && !(tools->flags & M_PRECISION)) && !field->number.i)
+	else if (((is_ddioouuxx(tools->type) && !which_sign(&field->number, tools)) || tools->type == 'p') && (tools->precision == 0 && !(tools->flags & M_PRECISION)))
 		field->lennum = 0;
 	else if (tools->type == 's')
 		{
