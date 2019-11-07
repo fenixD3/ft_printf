@@ -51,9 +51,6 @@ int		ft_printf(const char* format, ...)
 	}
 	va_end(tools.ap);
 
-
-	/////здесь нужно дополнить проверкой на присутствие старого ("%c", 0) флага
-	tools.counter += write(1, tools.buff, ft_strlen(tools.buff) +
-	((tools.type == 'c' && tools.flags & M_OLD_FLAG_CHAR) ? 1 : 0));
+	buffer_managment(&tools, NULL, 0, 1);
 	return (tools.counter);
 }

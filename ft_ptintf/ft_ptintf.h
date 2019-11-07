@@ -13,7 +13,7 @@
 # define M_ZERO 8
 # define M_SPACE 16
 # define M_PRECISION 32
-# define M_OLD_FLAG_CHAR 64
+# define M_ZERO_CHAR 64
 
 # define M_HH 1
 # define M_H 2
@@ -74,6 +74,7 @@ void add_str_to_buff(char **format, t_prsng *tools);
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls);
+void	buffer_managment(t_prsng *tools, char *str, int len, _Bool last_output);
 
 void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 
@@ -87,12 +88,8 @@ int define_flaglen(t_mkfld *field, t_prsng *tools);
 
 unsigned long long reverse_if_negative(t_un *number, t_prsng *tools);
 
-/*////meh
-char *itoa_base_printf(long long n, int base, char *str, int lennum);
-char *itoa_base_printf_unsigned(unsigned long long n, int base, char *str, int lennum);*/
 char *itoa_base_union(t_prsng *tools, t_mkfld *field, char *str);
 
-_Bool	ft_putptr_buff(void *ptr, t_prsng *tools);
 
 /// is
 _Bool	is_signed(char c);

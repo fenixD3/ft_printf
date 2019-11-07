@@ -32,9 +32,9 @@ printf("%o %o\n\n\n", a, b);*/
 	int real;
 	int my;
 
-	real = printf("{%3c}", 0);
+	real = printf("%#o", 0);
 	printf("\n----------\n");
-   my = ft_printf("{%3c}", 0); ////error %05d,  256??
+   my = ft_printf("%#o", 0); ////error %05d,  256??
 	printf("\n");
 	printf("%d %d", real, my);
 	//printf("%10.4m");

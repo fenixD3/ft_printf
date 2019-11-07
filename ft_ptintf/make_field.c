@@ -39,7 +39,10 @@ _Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 	field->number.ull = 0;
 
 	if (tools->type == 'c')
-			field->number.c = (char)va_arg(tools->ap, int);
+	{
+		if((field->number.c = (char)va_arg(tools->ap, int)) == 0)
+			tools->flags |= M_ZERO_CHAR;
+	}
 	else if (tools->type == 's')
 		{
 			field->number.cptr = va_arg(tools->ap, char*);
