@@ -150,33 +150,6 @@ ft_ptintf/field_len.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.s
 .PHONY : ft_ptintf/field_len.c.s
 
-ft_ptintf/float.o: ft_ptintf/float.c.o
-
-.PHONY : ft_ptintf/float.o
-
-# target to build an object file
-ft_ptintf/float.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.o
-.PHONY : ft_ptintf/float.c.o
-
-ft_ptintf/float.i: ft_ptintf/float.c.i
-
-.PHONY : ft_ptintf/float.i
-
-# target to preprocess a source file
-ft_ptintf/float.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.i
-.PHONY : ft_ptintf/float.c.i
-
-ft_ptintf/float.s: ft_ptintf/float.c.s
-
-.PHONY : ft_ptintf/float.s
-
-# target to generate assembly for a file
-ft_ptintf/float.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float.c.s
-.PHONY : ft_ptintf/float.c.s
-
 ft_ptintf/ft_itoa_base_printf.o: ft_ptintf/ft_itoa_base_printf.c.o
 
 .PHONY : ft_ptintf/ft_itoa_base_printf.o
@@ -230,6 +203,60 @@ ft_ptintf/ft_printf.s: ft_ptintf/ft_printf.c.s
 ft_ptintf/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.s
 .PHONY : ft_ptintf/ft_printf.c.s
+
+ft_ptintf/get_dbl_values.o: ft_ptintf/get_dbl_values.c.o
+
+.PHONY : ft_ptintf/get_dbl_values.o
+
+# target to build an object file
+ft_ptintf/get_dbl_values.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/get_dbl_values.c.o
+.PHONY : ft_ptintf/get_dbl_values.c.o
+
+ft_ptintf/get_dbl_values.i: ft_ptintf/get_dbl_values.c.i
+
+.PHONY : ft_ptintf/get_dbl_values.i
+
+# target to preprocess a source file
+ft_ptintf/get_dbl_values.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/get_dbl_values.c.i
+.PHONY : ft_ptintf/get_dbl_values.c.i
+
+ft_ptintf/get_dbl_values.s: ft_ptintf/get_dbl_values.c.s
+
+.PHONY : ft_ptintf/get_dbl_values.s
+
+# target to generate assembly for a file
+ft_ptintf/get_dbl_values.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/get_dbl_values.c.s
+.PHONY : ft_ptintf/get_dbl_values.c.s
+
+ft_ptintf/high_precision.o: ft_ptintf/high_precision.c.o
+
+.PHONY : ft_ptintf/high_precision.o
+
+# target to build an object file
+ft_ptintf/high_precision.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.o
+.PHONY : ft_ptintf/high_precision.c.o
+
+ft_ptintf/high_precision.i: ft_ptintf/high_precision.c.i
+
+.PHONY : ft_ptintf/high_precision.i
+
+# target to preprocess a source file
+ft_ptintf/high_precision.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.i
+.PHONY : ft_ptintf/high_precision.c.i
+
+ft_ptintf/high_precision.s: ft_ptintf/high_precision.c.s
+
+.PHONY : ft_ptintf/high_precision.s
+
+# target to generate assembly for a file
+ft_ptintf/high_precision.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.s
+.PHONY : ft_ptintf/high_precision.c.s
 
 ft_ptintf/is.o: ft_ptintf/is.c.o
 
@@ -2067,6 +2094,33 @@ ft_ptintf/make_field.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/make_field.c.s
 .PHONY : ft_ptintf/make_field.c.s
 
+ft_ptintf/my_float.o: ft_ptintf/my_float.c.o
+
+.PHONY : ft_ptintf/my_float.o
+
+# target to build an object file
+ft_ptintf/my_float.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/my_float.c.o
+.PHONY : ft_ptintf/my_float.c.o
+
+ft_ptintf/my_float.i: ft_ptintf/my_float.c.i
+
+.PHONY : ft_ptintf/my_float.i
+
+# target to preprocess a source file
+ft_ptintf/my_float.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/my_float.c.i
+.PHONY : ft_ptintf/my_float.c.i
+
+ft_ptintf/my_float.s: ft_ptintf/my_float.c.s
+
+.PHONY : ft_ptintf/my_float.s
+
+# target to generate assembly for a file
+ft_ptintf/my_float.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/my_float.c.s
+.PHONY : ft_ptintf/my_float.c.s
+
 ft_ptintf/parsing.o: ft_ptintf/parsing.c.o
 
 .PHONY : ft_ptintf/parsing.o
@@ -2094,32 +2148,32 @@ ft_ptintf/parsing.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.s
 .PHONY : ft_ptintf/parsing.c.s
 
-ft_ptintf/print_float.o: ft_ptintf/print_float.c.o
+ft_ptintf/print_reserve_dbl.o: ft_ptintf/print_reserve_dbl.c.o
 
-.PHONY : ft_ptintf/print_float.o
+.PHONY : ft_ptintf/print_reserve_dbl.o
 
 # target to build an object file
-ft_ptintf/print_float.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.o
-.PHONY : ft_ptintf/print_float.c.o
+ft_ptintf/print_reserve_dbl.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.o
+.PHONY : ft_ptintf/print_reserve_dbl.c.o
 
-ft_ptintf/print_float.i: ft_ptintf/print_float.c.i
+ft_ptintf/print_reserve_dbl.i: ft_ptintf/print_reserve_dbl.c.i
 
-.PHONY : ft_ptintf/print_float.i
+.PHONY : ft_ptintf/print_reserve_dbl.i
 
 # target to preprocess a source file
-ft_ptintf/print_float.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.i
-.PHONY : ft_ptintf/print_float.c.i
+ft_ptintf/print_reserve_dbl.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.i
+.PHONY : ft_ptintf/print_reserve_dbl.c.i
 
-ft_ptintf/print_float.s: ft_ptintf/print_float.c.s
+ft_ptintf/print_reserve_dbl.s: ft_ptintf/print_reserve_dbl.c.s
 
-.PHONY : ft_ptintf/print_float.s
+.PHONY : ft_ptintf/print_reserve_dbl.s
 
 # target to generate assembly for a file
-ft_ptintf/print_float.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_float.c.s
-.PHONY : ft_ptintf/print_float.c.s
+ft_ptintf/print_reserve_dbl.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.s
+.PHONY : ft_ptintf/print_reserve_dbl.c.s
 
 ft_ptintf/set_buff.o: ft_ptintf/set_buff.c.o
 
@@ -2187,15 +2241,18 @@ help:
 	@echo "... ft_ptintf/field_len.o"
 	@echo "... ft_ptintf/field_len.i"
 	@echo "... ft_ptintf/field_len.s"
-	@echo "... ft_ptintf/float.o"
-	@echo "... ft_ptintf/float.i"
-	@echo "... ft_ptintf/float.s"
 	@echo "... ft_ptintf/ft_itoa_base_printf.o"
 	@echo "... ft_ptintf/ft_itoa_base_printf.i"
 	@echo "... ft_ptintf/ft_itoa_base_printf.s"
 	@echo "... ft_ptintf/ft_printf.o"
 	@echo "... ft_ptintf/ft_printf.i"
 	@echo "... ft_ptintf/ft_printf.s"
+	@echo "... ft_ptintf/get_dbl_values.o"
+	@echo "... ft_ptintf/get_dbl_values.i"
+	@echo "... ft_ptintf/get_dbl_values.s"
+	@echo "... ft_ptintf/high_precision.o"
+	@echo "... ft_ptintf/high_precision.i"
+	@echo "... ft_ptintf/high_precision.s"
 	@echo "... ft_ptintf/is.o"
 	@echo "... ft_ptintf/is.i"
 	@echo "... ft_ptintf/is.s"
@@ -2400,12 +2457,15 @@ help:
 	@echo "... ft_ptintf/make_field.o"
 	@echo "... ft_ptintf/make_field.i"
 	@echo "... ft_ptintf/make_field.s"
+	@echo "... ft_ptintf/my_float.o"
+	@echo "... ft_ptintf/my_float.i"
+	@echo "... ft_ptintf/my_float.s"
 	@echo "... ft_ptintf/parsing.o"
 	@echo "... ft_ptintf/parsing.i"
 	@echo "... ft_ptintf/parsing.s"
-	@echo "... ft_ptintf/print_float.o"
-	@echo "... ft_ptintf/print_float.i"
-	@echo "... ft_ptintf/print_float.s"
+	@echo "... ft_ptintf/print_reserve_dbl.o"
+	@echo "... ft_ptintf/print_reserve_dbl.i"
+	@echo "... ft_ptintf/print_reserve_dbl.s"
 	@echo "... ft_ptintf/set_buff.o"
 	@echo "... ft_ptintf/set_buff.i"
 	@echo "... ft_ptintf/set_buff.s"

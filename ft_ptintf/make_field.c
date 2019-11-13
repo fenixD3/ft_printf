@@ -148,16 +148,8 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 
 void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 {
-
+	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
 	fill_union_aaeeffgg(field, tools);
-
-
-	field->base = define_base(tools);
-
-	//field->lennum = count_lennum(field, tools);
-	/// определить количество символов в числе
-
-	///len_counting(tools, field);  считаем общую строку со всеми полями для буфера
 }
 
 void	zeroing_mkfield(t_mkfld *fld)

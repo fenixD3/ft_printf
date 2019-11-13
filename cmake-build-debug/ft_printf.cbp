@@ -83,26 +83,22 @@
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/field_len.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/float.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/float.h">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_itoa_base_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
-<<<<<<< HEAD
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h">
-=======
-		<Unit filename="/Users/mdeanne/ft_printf/ft_ptintf/is.c">
->>>>>>> master
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_putptr.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/get_dbl_values.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/high_precision.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/high_precision.h">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/is.c">
@@ -312,10 +308,16 @@
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/make_field.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/my_float.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/parsing.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/print_float.c">
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/print_reserve_dbl.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/set_buff.c">
