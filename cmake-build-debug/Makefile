@@ -177,6 +177,33 @@ ft_ptintf/ft_itoa_base_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.s
 .PHONY : ft_ptintf/ft_itoa_base_printf.c.s
 
+ft_ptintf/ft_log2.o: ft_ptintf/ft_log2.c.o
+
+.PHONY : ft_ptintf/ft_log2.o
+
+# target to build an object file
+ft_ptintf/ft_log2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.o
+.PHONY : ft_ptintf/ft_log2.c.o
+
+ft_ptintf/ft_log2.i: ft_ptintf/ft_log2.c.i
+
+.PHONY : ft_ptintf/ft_log2.i
+
+# target to preprocess a source file
+ft_ptintf/ft_log2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.i
+.PHONY : ft_ptintf/ft_log2.c.i
+
+ft_ptintf/ft_log2.s: ft_ptintf/ft_log2.c.s
+
+.PHONY : ft_ptintf/ft_log2.s
+
+# target to generate assembly for a file
+ft_ptintf/ft_log2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.s
+.PHONY : ft_ptintf/ft_log2.c.s
+
 ft_ptintf/ft_printf.o: ft_ptintf/ft_printf.c.o
 
 .PHONY : ft_ptintf/ft_printf.o
@@ -203,6 +230,33 @@ ft_ptintf/ft_printf.s: ft_ptintf/ft_printf.c.s
 ft_ptintf/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_printf.c.s
 .PHONY : ft_ptintf/ft_printf.c.s
+
+ft_ptintf/ft_reverse.o: ft_ptintf/ft_reverse.c.o
+
+.PHONY : ft_ptintf/ft_reverse.o
+
+# target to build an object file
+ft_ptintf/ft_reverse.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_reverse.c.o
+.PHONY : ft_ptintf/ft_reverse.c.o
+
+ft_ptintf/ft_reverse.i: ft_ptintf/ft_reverse.c.i
+
+.PHONY : ft_ptintf/ft_reverse.i
+
+# target to preprocess a source file
+ft_ptintf/ft_reverse.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_reverse.c.i
+.PHONY : ft_ptintf/ft_reverse.c.i
+
+ft_ptintf/ft_reverse.s: ft_ptintf/ft_reverse.c.s
+
+.PHONY : ft_ptintf/ft_reverse.s
+
+# target to generate assembly for a file
+ft_ptintf/ft_reverse.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/ft_reverse.c.s
+.PHONY : ft_ptintf/ft_reverse.c.s
 
 ft_ptintf/get_dbl_values.o: ft_ptintf/get_dbl_values.c.o
 
@@ -2244,9 +2298,15 @@ help:
 	@echo "... ft_ptintf/ft_itoa_base_printf.o"
 	@echo "... ft_ptintf/ft_itoa_base_printf.i"
 	@echo "... ft_ptintf/ft_itoa_base_printf.s"
+	@echo "... ft_ptintf/ft_log2.o"
+	@echo "... ft_ptintf/ft_log2.i"
+	@echo "... ft_ptintf/ft_log2.s"
 	@echo "... ft_ptintf/ft_printf.o"
 	@echo "... ft_ptintf/ft_printf.i"
 	@echo "... ft_ptintf/ft_printf.s"
+	@echo "... ft_ptintf/ft_reverse.o"
+	@echo "... ft_ptintf/ft_reverse.i"
+	@echo "... ft_ptintf/ft_reverse.s"
 	@echo "... ft_ptintf/get_dbl_values.o"
 	@echo "... ft_ptintf/get_dbl_values.i"
 	@echo "... ft_ptintf/get_dbl_values.s"

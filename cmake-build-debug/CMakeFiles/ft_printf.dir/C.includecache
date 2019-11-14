@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+stdarg.h
+-
+libft/libft.h
+/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+stdio.h
+-
+stdbool.h
+-
+
+/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/ylila/Printf_Hub/ft_ptintf/main.c
+stdarg.h
+-
+ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+stdio.h
+-
+

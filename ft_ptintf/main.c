@@ -36,8 +36,12 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("\n");
 	printf("%d %d", real, my);*/
 	//printf("%10.4m");
-	t_prsng tools;
-	PrintDouble(&tools, 4.5);
+
+	/*t_prsng tools;
+	PrintDouble(&tools, 4.5);*/
+
+	//printf("%d\n", (uint32_t)(ft_log2(7340032) * 0.30101));
+	printf("%s\n", ft_reverse("mana"));
 
 //printf("%0.*k%d\n", 3, 2, 5);
 //ft_printf("%");

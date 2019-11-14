@@ -86,10 +86,16 @@
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_itoa_base_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_log2.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/ft_reverse.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/ylila/Printf_Hub/ft_ptintf/get_dbl_values.c">
