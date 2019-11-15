@@ -29,5 +29,6 @@ void			insert_low_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg)
 void			insert_top_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg);
 uint32_t		div_ret_remainder(t_high *hp, uint32_t divisor);
 uint32_t		mul_ret_overflow(t_high *hp, uint32_t multipl);
+char			*fill_result(char *result, t_high *hp, _Bool intg);
 
 #endif
