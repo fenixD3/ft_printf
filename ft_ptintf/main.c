@@ -40,8 +40,11 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("Int %zu\nUint %zu\nLong %zu\nUlong %zu\nLong long %zu\nUlong long %zu\n",
 		   sizeof(int), sizeof(unsigned int), sizeof(long), sizeof(unsigned long),
 		   sizeof(long long), sizeof(unsigned long long));*/
-	t_prsng tools;
-	PrintDouble(&tools, 4.5);
+
+	/*t_prsng tools;
+	PrintDouble(&tools, 4.5);*/
+
+	//printf("%d\n", (uint32_t)(ft_log2(15728640) - 22));
 
 //printf("%0.*k%d\n", 3, 2, 5);
 //ft_printf("%");

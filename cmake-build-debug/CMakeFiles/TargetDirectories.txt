@@ -1,3 +1,0 @@
-C:/Users/da.filiptsev/Desktop/Printf_Hub/cmake-build-debug/CMakeFiles/ft_printf.dir
-C:/Users/da.filiptsev/Desktop/Printf_Hub/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/da.filiptsev/Desktop/Printf_Hub/cmake-build-debug/CMakeFiles/rebuild_cache.dir
