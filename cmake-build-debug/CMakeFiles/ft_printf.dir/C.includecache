@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.c
+high_precision.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.h
+
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.h
+stdlib.h
+-
+stdint.h
+-
+libft/libft.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
+stdio.h
+-
+
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+

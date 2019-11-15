@@ -36,6 +36,10 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("\n");
 	printf("%d %d", real, my);*/
 	//printf("%10.4m");
+
+	/*printf("Int %zu\nUint %zu\nLong %zu\nUlong %zu\nLong long %zu\nUlong long %zu\n",
+		   sizeof(int), sizeof(unsigned int), sizeof(long), sizeof(unsigned long),
+		   sizeof(long long), sizeof(unsigned long long));*/
 	t_prsng tools;
 	PrintDouble(&tools, 4.5);
 

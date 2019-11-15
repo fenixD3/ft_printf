@@ -6,7 +6,7 @@
 
 _Bool		get_sign(t_double *dbl)
 {
-	return (dbl->intg >> 51);
+	return (dbl->intg >> 63);
 }
 
 int32_t		get_exp(t_double *dbl)

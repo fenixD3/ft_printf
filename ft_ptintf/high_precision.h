@@ -8,17 +8,26 @@
 # define ARRSIZE_INTG_DBL 32
 # define ARRSIZE_FRCT_DBL 34
 # include <stdlib.h>
+# include <stdint.h>
 # include "libft/libft.h"
+
+//# define div_ret_remainder(hp) div_ret_remainder(hp, 10)
 
 #include <stdio.h>
 
-typedef struct	s_high
+typedef struct	u_high
 {
-	unsigned data_intg[ARRSIZE_INTG_DBL];
-	unsigned data_frct[ARRSIZE_FRCT_DBL];
+	unsigned	data_intg[ARRSIZE_INTG_DBL];
+	unsigned	data_frct[ARRSIZE_FRCT_DBL];
+	const int	word_shift;
+	_Bool		intg;
 }				t_high;
 
-t_high			hp_initialz(_Bool intg);
-_Bool			is_zero(t_high *hp, _Bool intg);
+t_high			*hp_initializ(void);
+_Bool			hp_is_zero(t_high *hp, _Bool intg);
+void			insert_low_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg);
+void			insert_top_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg);
+uint32_t		div_ret_remainder(t_high *hp, uint32_t divisor);
+uint32_t		mul_ret_overflow(t_high *hp, uint32_t multipl);
 
 #endif
