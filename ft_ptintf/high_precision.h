@@ -7,6 +7,8 @@
 
 # define ARRSIZE_INTG_DBL 32
 # define ARRSIZE_FRCT_DBL 34
+# define ARRSIZE_INTG_LDBL 512
+# define ARRSIZE_FRCT_LDBL 514
 # include <stdlib.h>
 # include <stdint.h>
 # include "libft/libft.h"

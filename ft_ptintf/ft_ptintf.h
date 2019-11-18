@@ -105,9 +105,10 @@ _Bool	is_modifiers(char c);
 _Bool	is_flag(char c);
 
 /// for double
-char		*PrintDouble(t_prsng *tools, double number);
+char		*print_double(t_prsng *tools, double number);
 uint32_t	ft_log2(uint32_t num);
 uint64_t	ft_64log2(uint64_t num);
 char		*ft_reverse(char *str);
+char		*print_long_double(t_prsng *tools, long double number);
 
 #endif

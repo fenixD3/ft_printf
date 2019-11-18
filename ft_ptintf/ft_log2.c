@@ -16,11 +16,11 @@ uint32_t	ft_log2(uint32_t num)
 {
 	uint32_t			tmp;
 
-	if (tmp = num >> 24)
+	if ((tmp = num >> 24))
 		return (24 + log_table256[tmp]);
-	if (tmp = num >> 16)
+	if ((tmp = num >> 16))
 		return (16 + log_table256[tmp]);
-	if (tmp = num >> 8)
+	if ((tmp = num >> 8))
 		return (8 + log_table256[tmp]);
 	return (log_table256[num]);
 }
@@ -29,7 +29,7 @@ uint32_t	ft_64log2(uint64_t num)
 {
 	uint32_t	tmp;
 
-	if (tmp = num >> 32)
+	if ((tmp = num >> 32))
 		return (32 + ft_log2(tmp));
 	return (ft_log2((uint32_t)num));
 }
