@@ -32,9 +32,16 @@ printf("%o %o\n\n\n", a, b);*/
 	int real;
 	int my;
 
-	real = printf("%#.o", 42);
+/*	char *str = {"@moulitest: %#.o"};
+	int num = 0;
+	real = printf(str, num);
 	printf("\n----------\n");
-   my = ft_printf("%#.o", 42); ////error %05d,  256??
+   my = ft_printf(str, num);*/
+
+	real = printf("%#.o", 0);
+	printf("\n----------\n");
+	my = ft_printf("%#.o", 0);
+
 	printf("\n");
 	printf("%d %d", real, my);
 	//printf("%10.4m");

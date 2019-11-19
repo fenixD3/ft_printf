@@ -41,7 +41,7 @@ _Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 	if (tools->type == 'c')
 	{
 		if((field->number.c = (char)va_arg(tools->ap, int)) == 0)
-			tools->flags |= M_ZERO_CHAR;
+			tools->flags |= M_ZERO_CHAR; //  we need it?
 	}
 	else if (tools->type == 's')
 		{
@@ -66,7 +66,8 @@ void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools)
 
 void	set_flags(t_mkfld *field, t_prsng *tools)
 {
-	if (tools->flags & M_SHARP && tools->type == 'o' && field->lennum >= (size_t)tools->precision) {
+	if (tools->flags & M_SHARP && tools->type == 'o' && field->lennum >= (size_t)tools->precision && which_sign(&field->number, tools) != 0)
+	{
 		field->str[field->len - 1] = '0';
 		field->len--;
 	}
@@ -83,9 +84,6 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 		field->len -= 2;
 	}
 	/** дополнить # для других флагов*/
-
-/*	if ((tools->flags & M_ZERO && (!(tools->flags & M_PRECISION) && is_ddioouuxx(tools->type))) /// убрал ! после && (
-			&& !(is_ddioouuxx(tools->type) && tools->precision == 0 && !field->number.i))   //////////////////////////////  ГДЕ-ТО ТУТ ЗАРЫТА СОБАКА!!!!!!!!!!!!!!!!!!!*/
 
 	if (tools->flags & M_ZERO)
 	{
@@ -107,7 +105,7 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 	}
 
 
-	if (tools->flags & M_PLUS &&  is_signed(tools->type)&& field->number.i >= 0)
+	if (tools->flags & M_PLUS &&  is_signed(tools->type) && which_sign(&field->number, tools) >= 0)
 		field->str[--field->len] = '+';
 	else if (is_signed(tools->type) && which_sign(&field->number, tools) < 0)
 		field->str[--field->len] = '-';
@@ -125,7 +123,7 @@ void	len_counting(t_prsng *tools, t_mkfld *field)
 	field->len = 0; //// можно убрать?
 	field->len_empty_field = 0; //// можно убрать?
 	if ((tools->precision > 0 && (size_t)tools->precision > field->lennum)
-		&& !(tools->type == 's' /*&& !ft_strlen(field->number.cptr)*/)
+		&& tools->type != 's'
 		&& tools->type != 'c')
 		field->len += tools->precision - field->lennum;
 	field->len += define_flaglen(field, tools);
@@ -145,12 +143,12 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 
 	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
-	else if (((is_ddioouuxx(tools->type) && !which_sign(&field->number, tools)) || tools->type == 'p') && (tools->precision == 0 && !(tools->flags & M_PRECISION)))
+	else if (((is_ddioouuxx(tools->type) && tools->type!= 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') && (tools->precision == 0 && !(tools->flags & M_PRECISION_NOT_ADDED)))
 		field->lennum = 0;
 	else if (tools->type == 's')
 		{
 			field->lennum = ft_strlen(field->number.cptr);
-			if (field->lennum > (size_t)tools->precision && tools->precision)
+			if (field->lennum > (size_t)tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED))
 				field->lennum = tools->precision;
 		}
 	else if (is_ddioouuxx(tools->type) || tools->type == 'p')

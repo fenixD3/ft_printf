@@ -12,7 +12,7 @@
 # define M_SHARP 4
 # define M_ZERO 8
 # define M_SPACE 16
-# define M_PRECISION 32
+# define M_PRECISION_NOT_ADDED 32
 # define M_ZERO_CHAR 64
 
 # define M_HH 1
@@ -21,6 +21,10 @@
 # define M_LL 8
 # define M_UPPER_L 16
 
+#define NON_FORMAT 0
+#define FORMAT 1
+#define LAST 2
+
 #include "libft/libft.h"
 #include <stdio.h>
 #include <stdbool.h>
@@ -28,7 +32,7 @@
 typedef struct	s_prsng
 {
 	char	flags;
-	size_t		field;
+	size_t	field;
 	int 	precision;
 	unsigned char 	modifiers;
 	char 	type;
@@ -74,7 +78,7 @@ void add_str_to_buff(char **format, t_prsng *tools);
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls);
-void	buffer_managment(t_prsng *tools, char *str, int len, _Bool last_output);
+void	buffer_managment(t_prsng *tools, char *str, int len, int type_output);
 
 void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 

@@ -19,32 +19,51 @@ char *ft_strncropcat(char *dst_start, char *src, size_t n)
 	return (s1_ret);
 }
 
-void	write_str(t_prsng *tools, char *str, int *len)
+void write_str(t_prsng *tools, char *str, int *len, int type_output)
 {
 
 	tools->counter += write(1, str, *len);
-	ft_bzero(str, *len);
+	if (type_output == NON_FORMAT)
+		ft_bzero(str, *len);
 	*len = 0;
 }
 
-void	buffer_managment(t_prsng *tools, char *str, int len, _Bool last_output)
+void	buffer_managment(t_prsng *tools, char *str, int len, int type_output)
 {
 	static int lenbuf;
 
-	if (len + lenbuf >= BUFF_SIZE || last_output)
+	if (lenbuf && (len + lenbuf >= BUFF_SIZE || type_output == LAST))
+		write_str(tools, tools->buff, &lenbuf, type_output);
+	if (len >= BUFF_SIZE && type_output != LAST)
+		write_str(tools, str, &len, type_output);
+	else if (type_output != LAST)
+	{
+/*		if (lenbuf == 1)
+			memset(&tools->buff[lenbuf], '*', BUFF_SIZE - lenbuf);*/
+		ft_strncropcat(&tools->buff[lenbuf], str, len);
+		lenbuf += len;
+		tools->flags &= ~M_ZERO_CHAR; // we need it?
+	}
+}
+
+/*void	buffer_managment(t_prsng *tools, char *str, int len, _Bool last_output)
+{
+	static int lenbuf;
+
+	if (lenbuf && (len + lenbuf >= BUFF_SIZE || last_output))
 		write_str(tools, tools->buff, &lenbuf);
 	if (len >= BUFF_SIZE && !last_output)
 		write_str(tools, str, &len);
 	else if (!last_output)
 	{
-		if (lenbuf == 1)
-			memset(&tools->buff[lenbuf], '*', BUFF_SIZE - lenbuf);
+*//*		if (lenbuf == 1)
+			memset(&tools->buff[lenbuf], '*', BUFF_SIZE - lenbuf);*//*
 		ft_strncropcat(&tools->buff[lenbuf], str, len);
 		lenbuf += len;
-		tools->flags &= ~M_ZERO_CHAR;
+		tools->flags &= ~M_ZERO_CHAR; // we need it?
 	}
+}*/
 
-}
 
 void add_str_to_buff(char **format, t_prsng *tools)
 {
@@ -53,15 +72,14 @@ void add_str_to_buff(char **format, t_prsng *tools)
 	len = 0;
 	while ((*format)[len] && (*format)[len] != '%')
 		len++;
-	buffer_managment(tools, *format, len, 0);
+	buffer_managment(tools, *format, len, FORMAT);
 	*format += len;
 }
 
 void to_buff(char *str, t_prsng *tools, t_mkfld *field) {
 	int	len;
 
-	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0);
-	buffer_managment(tools, str, len, 0);
-
+	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0) + ((tools->type == 'c' && (tools->flags & M_MINUS) && !field->number.c) ? field->len_empty_field : 0);
+	buffer_managment(tools, str, len, NON_FORMAT);
 }
 

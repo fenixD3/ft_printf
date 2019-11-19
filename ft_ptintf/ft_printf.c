@@ -51,6 +51,6 @@ int		ft_printf(const char* format, ...)
 	}
 	va_end(tools.ap);
 
-	buffer_managment(&tools, NULL, 0, 1);
+	buffer_managment(&tools, NULL, 0, LAST);
 	return (tools.counter);
 }
