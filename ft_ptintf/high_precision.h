@@ -19,13 +19,22 @@
 
 typedef struct	u_high
 {
-	unsigned	data_intg[ARRSIZE_INTG_DBL];
-	unsigned	data_frct[ARRSIZE_FRCT_DBL];
+	unsigned	data_intg[ARRSIZE_INTG_LDBL];
+	unsigned	data_frct[ARRSIZE_FRCT_LDBL];
 	const int	word_shift;
 	_Bool		intg;
 }				t_high;
 
+/*typedef struct	u_l_high
+{
+	unsigned	data_intg[ARRSIZE_INTG_LDBL];
+	unsigned	data_frct[ARRSIZE_FRCT_LDBL];
+	const int	word_shift;
+	_Bool		intg;
+}				t_l_high;*/
+
 t_high			*hp_initializ(void);
+//t_l_high		*hp_ldbl_initializ(void);
 _Bool			hp_is_zero(t_high *hp, _Bool intg);
 void			insert_low_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg);
 void			insert_top_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg);

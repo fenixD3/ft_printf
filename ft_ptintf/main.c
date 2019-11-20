@@ -41,14 +41,18 @@ printf("%o %o\n\n\n", a, b);*/
 		   sizeof(int), sizeof(unsigned int), sizeof(long), sizeof(unsigned long),
 		   sizeof(long long), sizeof(unsigned long long));*/
 
-	/*t_prsng tools;
-	PrintDouble(&tools, 4.5);*/
+	/*printf("%s\n", print_double(NULL, DBL_MAX));
+	printf("----------------------\n");*/
 
-	//printf("%d\n", (uint32_t)(ft_log2(15728640) - 22));
+	//printf("%d\n", (uint32_t)(ft_log2(15728640)));
 	//printf("%zu\n", sizeof(unsigned long long));
-	print_long_double(NULL, 3.75);
-	printf("\n\n\n");
-	print_long_double(NULL, -3.75);
+	/*printf("%s\n", print_long_double(NULL, 0.5));
+	printf("----------------------\n");
+	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*/
+	/*printf("----------------------\n");
+	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*/
+
+	printf("%f\n", ft_ceil(-0.5));
 
 //printf("%0.*k%d\n", 3, 2, 5);
 //ft_printf("%");

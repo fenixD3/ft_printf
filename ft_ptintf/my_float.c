@@ -58,6 +58,7 @@ static char	*initialize_l_dbl(t_dbl_comp *ldblcomp, long double number)
 	return (NULL);
 }
 
+/// ft_ceil(((int32_t)ft_64log2(dblcomp.mant_val) + (dblcomp.exp_val - 52)) * LOG10_2)
 /// tools->precision should use for malloc result
 char		*print_double(t_prsng *tools, double number)
 {
@@ -68,6 +69,10 @@ char		*print_double(t_prsng *tools, double number)
 
 	if ((result = initialize_dbl(&dbl, &dblcomp, number)))
 		return (result);
+	if (!dblcomp.sign)
+		printf("%d\n", (uint32_t)((ft_64log2(dblcomp.mant_val) + dblcomp.exp_val - 52) * (LOG10_2)));
+	else
+		printf("%d\n", (int32_t)(((ft_64log2(dblcomp.mant_val) + dblcomp.exp_val - 52) * (LOG10_2)) * (-1)));
 	hp = hp_initializ();
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
@@ -77,7 +82,7 @@ char		*print_double(t_prsng *tools, double number)
 	ft_strncat(result, ".", 1);
 	insert_top_bits(hp, dblcomp.mant_High_Bits, 52 - dblcomp.exp_val - 32, 0);
 	insert_top_bits(hp, dblcomp.mant_Low_Bits, 52 - dblcomp.exp_val, 0);
-	fill_result(result, hp, 1);
+	fill_result(result, hp, 0);
 	return (result);
 }
 
@@ -89,4 +94,19 @@ char		*print_long_double(t_prsng *tools, long double number)
 
 	if ((result = initialize_l_dbl(&ldblcomp, number)))
 		return (result);
+	if (!ldblcomp.sign)
+		printf("%d\n", (uint32_t)((ft_64log2(ldblcomp.mant_val) + ldblcomp.exp_val - 63) * (LOG10_2)));
+	else
+		printf("%d\n", (int32_t)(((ft_64log2(ldblcomp.mant_val) + ldblcomp.exp_val - 52) * (LOG10_2)) * (-1)));
+	hp = hp_initializ();
+	insert_low_bits(hp, ldblcomp.mant_High_Bits, ldblcomp.exp_val + 1, 1);
+	insert_low_bits(hp, ldblcomp.mant_Low_Bits, ldblcomp.exp_val - 32 + 1, 1);
+	result = ft_strnew(20000);
+	ldblcomp.sign ? ft_strncpy(result, "-", 1) : result;
+	fill_result(result, hp, 1);
+	ft_strncat(result, ".", 1);
+	insert_top_bits(hp, ldblcomp.mant_High_Bits, 63 - ldblcomp.exp_val - 32, 0);
+	insert_top_bits(hp, ldblcomp.mant_Low_Bits, 63 - ldblcomp.exp_val, 0);
+	fill_result(result, hp, 0);
+	return (result);
 }

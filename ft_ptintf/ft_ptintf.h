@@ -6,6 +6,7 @@
 # define FT_PRINTF
 # include <stdarg.h>
 # include <stdint.h>
+# include <float.h>
 # define BUFF_SIZE 10
 
 # define M_MINUS 1
@@ -20,6 +21,8 @@
 # define M_L 4
 # define M_LL 8
 # define M_UPPER_L 16
+
+# define LOG10_2 0.30103
 
 #include "libft/libft.h"
 #include <stdio.h>
@@ -110,5 +113,6 @@ uint32_t	ft_log2(uint32_t num);
 uint64_t	ft_64log2(uint64_t num);
 char		*ft_reverse(char *str);
 char		*print_long_double(t_prsng *tools, long double number);
+double		ft_ceil(double num);
 
 #endif

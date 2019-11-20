@@ -3,7 +3,6 @@
 //
 
 #include <stdint.h>
-#define LOG10 0.30103
 
 static const char	log_table256[256] = {
 #define LT(n) n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n
