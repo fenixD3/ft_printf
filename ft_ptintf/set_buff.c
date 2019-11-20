@@ -55,3 +55,10 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 	free(fld->str);
 	return (1);
 }
+
+_Bool	set_buff_float(t_mkfld *fld, t_prsng *tls)
+{
+	to_buff(fld->str, tls, fld);
+	free(fld->str);
+	return (1);
+}

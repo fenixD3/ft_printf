@@ -1,13 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(Printf_Hub C)
+project(ft_printf C)
 
 set(CMAKE_C_STANDARD 99)
 
-include_directories(ft_ptintf)
-include_directories(ft_ptintf/libft)
-file (GLOB SRC ft_printf/libtf/*.c)
+file (GLOB SRC ft_ptintf/libft/*.c)
 
-add_executable(Printf_Hub ${SRC} ft_ptintf/main.c ft_ptintf/ft_printf.c
+add_executable(ft_printf ${SRC} ft_ptintf/main.c ft_ptintf/ft_printf.c
         ft_ptintf/ft_ptintf.h
         ft_ptintf/ft_itoa_base_printf.c ft_ptintf/parsing.c ft_ptintf/to_buff.c
         ft_ptintf/field_len.c ft_ptintf/make_field.c ft_ptintf/is.c

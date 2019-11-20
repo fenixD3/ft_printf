@@ -2,16 +2,25 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Printf_Hub" targetName="Printf_Hub" />
+      <config projectName="ft_printf" targetName="ft_printf" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c46fe7ff-4a86-42ef-ba46-bb69e563a69d" name="Default Changelist" comment="" />
+    <list default="true" id="c46fe7ff-4a86-42ef-ba46-bb69e563a69d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/make_field.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/make_field.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/my_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/my_float.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/set_buff.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/set_buff.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +59,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Printf_Hub" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Printf_Hub" TARGET_NAME="Printf_Hub" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Printf_Hub" RUN_TARGET_NAME="Printf_Hub">
+    <configuration name="ft_printf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_printf" TARGET_NAME="ft_printf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_printf" RUN_TARGET_NAME="ft_printf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -69,6 +78,7 @@
       <workItem from="1574164537137" duration="3209000" />
       <workItem from="1574188704884" duration="6496000" />
       <workItem from="1574241861412" duration="5359000" />
+      <workItem from="1574272765175" duration="3290000" />
     </task>
     <servers />
   </component>

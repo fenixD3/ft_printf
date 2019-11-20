@@ -166,8 +166,13 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 
 void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 {
-	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
 	fill_union_aaeeffgg(field, tools);
+	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
+	///protect
+	if (tools->modifiers & M_UPPER_L)
+		field->str = print_long_double(tools, field, field->number.ldb);
+	else if (tools->modifiers & M_L || !tools->modifiers)
+		field->str = print_double(tools, field, field->number.db);
 }
 
 void	zeroing_mkfield(t_mkfld *fld)
@@ -188,7 +193,7 @@ int 	organozation_by_flags_to_buff(t_prsng *tools)
 	if (is_aaeeffgg(tools->type))
 	{
 		prepare_aaeeffgg(tools, &field);
-		if (tools->type && !set_buff(&field, tools))
+		if (tools->type && !set_buff_float(&field, tools))
 			return (0);
 	}
 	else if (is_ddioouuxx(tools->type) || is_csp(tools->type) || !is_flag(tools->type))

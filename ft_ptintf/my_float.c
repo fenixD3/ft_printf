@@ -60,8 +60,10 @@ static char	*initialize_l_dbl(t_dbl_comp *ldblcomp, long double number)
 
 /// ft_ceil(((int32_t)ft_64log2(dblcomp.mant_val) + (dblcomp.exp_val - 52)) * LOG10_2)
 /// tools->precision should use for malloc result
-char		*print_double(t_prsng *tools, double number)
+char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 {
+	/// tools->flag & (#,' ') tools->precision точность число
+	/// в fld->lennum записать общий размер строки
 	t_double	dbl;
 	t_dbl_comp	dblcomp;
 	t_high		*hp;
@@ -77,6 +79,7 @@ char		*print_double(t_prsng *tools, double number)
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
 	result = ft_strnew(5000);
+	//// protect
 	dblcomp.sign ? ft_strncpy(result, "-", 1) : result;
 	fill_result(result, hp, 1);
 	ft_strncat(result, ".", 1);
@@ -86,7 +89,7 @@ char		*print_double(t_prsng *tools, double number)
 	return (result);
 }
 
-char		*print_long_double(t_prsng *tools, long double number)
+char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 {
 	t_dbl_comp	ldblcomp;
 	t_high		*hp;

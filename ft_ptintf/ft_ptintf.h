@@ -84,6 +84,7 @@ void add_str_to_buff(char **format, t_prsng *tools);
 void	set_flags(t_mkfld *field, t_prsng *tools);
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls);
+_Bool	set_buff_float(t_mkfld *fld, t_prsng *tls);
 void	buffer_managment(t_prsng *tools, char *str, int len, int type_output);
 
 void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
@@ -116,11 +117,11 @@ int which_sign(t_un *number, t_prsng *tools);
 
 
 /// for double
-char		*print_double(t_prsng *tools, double number);
+char		*print_double(t_prsng *tools, t_mkfld *fld, double number);
 uint32_t	ft_log2(uint32_t num);
 uint64_t	ft_64log2(uint64_t num);
 char		*ft_reverse(char *str);
-char		*print_long_double(t_prsng *tools, long double number);
+char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number);
 double		ft_ceil(double num);
 
 
