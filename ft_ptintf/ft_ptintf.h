@@ -5,6 +5,8 @@
 #ifndef FT_PRINTF
 # define FT_PRINTF
 # include <stdarg.h>
+# include <stdint.h>
+# include <float.h>
 # define BUFF_SIZE 10
 
 # define M_MINUS 1
@@ -21,9 +23,13 @@
 # define M_LL 8
 # define M_UPPER_L 16
 
+
 #define NON_FORMAT 0
 #define FORMAT 1
 #define LAST 2
+
+# define LOG10_2 0.30103
+
 
 #include "libft/libft.h"
 #include <stdio.h>
@@ -105,7 +111,17 @@ _Bool	is_signflag(char c);
 _Bool	is_modifiers(char c);
 _Bool	is_flag(char c);
 
+
 int which_sign(t_un *number, t_prsng *tools);
+
+
+/// for double
+char		*print_double(t_prsng *tools, double number);
+uint32_t	ft_log2(uint32_t num);
+uint64_t	ft_64log2(uint64_t num);
+char		*ft_reverse(char *str);
+char		*print_long_double(t_prsng *tools, long double number);
+double		ft_ceil(double num);
 
 
 #endif
