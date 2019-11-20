@@ -15,8 +15,10 @@ void	str_tolower(char *str)
 
 void	get_value_by_type(t_mkfld *fld, t_prsng *tls)
 {
+
 	if (((is_ddioouuxx(tls->type) && tls->type != 'o' && !which_sign(&fld->number, tls)) || tls->type == 's') && (tls->precision == 0 && !(tls->flags & M_PRECISION_NOT_ADDED)))
 		;
+	//else if (tls->type == 'o' && )
 	else if (is_ddioouuxx(tls->type) || tls->type == 'p')
 		{
 			itoa_base_union(tls, fld, &fld->str[fld->len]);

@@ -38,9 +38,14 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("\n----------\n");
    my = ft_printf(str, num);*/
 
-	real = printf("%#.o", 0);
+	//real = printf("1%o 2%.o 3%.0o 4%#o 5%#.o", 0, 0 ,0 ,0 ,0);
+	real = printf("%#.o", 1);
 	printf("\n----------\n");
-	my = ft_printf("%#.o", 0);
+	my = ft_printf("%#.o", 1);
+
+/*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
+	printf("\n----------\n");
+	my = ft_printf("@moulitest: >%#.o< >%#.0o<", 0, 0);*/
 
 	printf("\n");
 	printf("%d %d", real, my);

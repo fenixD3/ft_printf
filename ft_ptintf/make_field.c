@@ -143,8 +143,15 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 
 	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
-	else if (((is_ddioouuxx(tools->type) && tools->type!= 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') && (tools->precision == 0 && !(tools->flags & M_PRECISION_NOT_ADDED)))
+
+/*	else if ((((is_ddioouuxx(tools->type) && tools->type != 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') || (tools->type == 'o' && !(tools->flags & M_SHARP))) && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
+		field->lennum = 0;*/
+
+	else if (((is_ddioouuxx(tools->type) && tools->type != 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
 		field->lennum = 0;
+	else if (tools->type == 'o' && !(tools->flags & M_SHARP) && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
+		field->lennum = 0;
+
 	else if (tools->type == 's')
 		{
 			field->lennum = ft_strlen(field->number.cptr);
