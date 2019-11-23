@@ -15,16 +15,6 @@ t_high		*hp_initializ(void)
 	return (new);
 }
 
-/*t_l_high	*hp_ldbl_initializ(void)
-{
-	t_l_high	*new;
-
-	if (!(new = (t_l_high *)malloc(sizeof(t_l_high))))
-		return (NULL);
-	ft_memcpy(new, &(t_l_high){{0}, {0}, 32, 1}, sizeof(*new));
-	return (new);
-}*/
-
 _Bool		hp_is_zero(t_high *hp, _Bool intg)
 {
 	size_t i;
@@ -32,16 +22,17 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 	i = 0;
 	if (intg)
 	{
-		while (i < ARRSIZE_INTG_LDBL)
+		while (i < ARRSIZE_INTG_DBL)
 			if (hp->data_intg[i++] != 0)
 				return (0);
 	}
 	else
-		while (i < ARRSIZE_FRCT_LDBL)
+		while (i < ARRSIZE_FRCT_DBL)
 			if (hp->data_frct[i++] != 0)
 				return (0);
 	return (1);
 }
+
 
 char		*fill_result(char *result, t_high *hp, _Bool intg)
 {
@@ -51,7 +42,8 @@ char		*fill_result(char *result, t_high *hp, _Bool intg)
 	{
 		rem_overf = div_ret_remainder(hp, 10) + '0';
 		ft_strncat(result, &rem_overf, 1);
-		while (!hp_is_zero(hp, intg)) {
+		while (!hp_is_zero(hp, intg))
+		{
 			rem_overf = div_ret_remainder(hp, 10) + '0';
 			ft_strncat(result, &rem_overf, 1);
 		}

@@ -4,17 +4,17 @@
 
 #include "myfloat.h"
 
-_Bool		get_sign(t_double *dbl)
+_Bool		get_sign(uint64_t *dbl)
 {
-	return (dbl->intg >> 63);
+	return (*dbl >> 63);
 }
 
-int32_t		get_exp(t_double *dbl)
+int32_t		get_exp(uint64_t *dbl)
 {
-	return (dbl->intg >> 52 & 0x7FF);
+	return (*dbl >> 52 & 0x7FF);
 }
 
-uint64_t	get_mantissa(t_double *dbl)
+uint64_t	get_mantissa(uint64_t *dbl)
 {
-	return (dbl->intg & (1LL << 52) - 1);
+	return (*dbl & (1LL << 52) - 1);
 }

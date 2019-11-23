@@ -120,9 +120,11 @@ int which_sign(t_un *number, t_prsng *tools);
 char		*print_double(t_prsng *tools, t_mkfld *fld, double number);
 uint32_t	ft_log2(uint32_t num);
 uint64_t	ft_64log2(uint64_t num);
+int32_t		ft_log10(uint64_t mant_val, int32_t exp_val);
+int32_t		ft_llog10(uint64_t mant_val, int32_t exp_val);
 char		*ft_reverse(char *str);
 char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number);
 double		ft_ceil(double num);
-
+long double	ft_ceill(long double num);
 
 #endif

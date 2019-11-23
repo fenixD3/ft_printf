@@ -57,6 +57,7 @@ _Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools)
 {
 	field->number.db = 0.0;
+	field->number.ldb = 0.0;
 
 	if (tools->modifiers & M_UPPER_L)
 		field->number.ldb = va_arg(tools->ap, long double);

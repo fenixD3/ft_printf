@@ -12,14 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c46fe7ff-4a86-42ef-ba46-bb69e563a69d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ft_ptintf/ft_log10.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ft_ptintf/high_precision_intf_long.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ft_ptintf/high_precision_long.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_ceil.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_ceil.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/get_dbl_values.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/get_dbl_values.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/high_precision.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/high_precision.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/high_precision.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/high_precision.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/high_precision_intf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/high_precision_intf.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/make_field.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/make_field.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/my_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/my_float.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/set_buff.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/set_buff.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/myfloat.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/myfloat.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +43,7 @@
   </component>
   <component name="ProjectId" id="1TpkgYOYUvY8gZJMSjikXirRi70" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -79,6 +87,12 @@
       <workItem from="1574188704884" duration="6496000" />
       <workItem from="1574241861412" duration="5359000" />
       <workItem from="1574272765175" duration="3290000" />
+      <workItem from="1574358459904" duration="4628000" />
+      <workItem from="1574442222655" duration="5891000" />
+      <workItem from="1574449135695" duration="12000" />
+      <workItem from="1574449168037" duration="293000" />
+      <workItem from="1574449564544" duration="5941000" />
+      <workItem from="1574528292224" duration="6083000" />
     </task>
     <servers />
   </component>
@@ -97,5 +111,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="log_table256[18]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -1,8 +1,11 @@
 #include <stdarg.h>
 
 #include "ft_ptintf.h"
+#include "myfloat.h"
 
 #include <stdio.h>
+#include <math.h>
+#include <fcntl.h>
 void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 
 
@@ -26,11 +29,11 @@ a = (int)b;
 printf("%d %u\n\n\n", a, b);9223372036854775807
 printf("%o %o\n\n\n", a, b);*/
 
-	int i;
+/*	int i;
 
 
 	int real;
-	int my;
+	int my;*/
 
 /*	char *str = {"@moulitest: %#.o"};
 	int num = 0;
@@ -38,10 +41,53 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("\n----------\n");
    my = ft_printf(str, num);*/
 
+/*	real = printf("%.16384Lf", LDBL_MIN);
+	printf("\n----------\n");*/
 
-	real = printf("%.16384Lf", LDBL_MIN);
-	printf("\n----------\n");
-	my = ft_printf("%Lf", LDBL_MIN);
+	//printf("%d\n", ft_64log2(8301034833169298));
+
+	/*printf("FT\n%f\n", ft_ceil(-0.99));
+	printf("LB\n%f\n", ceil(-0.99));*/
+
+	double		i = 5;
+	uint64_t	*dbl;
+	int32_t		exp_val;
+	uint64_t	mant_val;
+
+	dbl = (uint64_t *)&i;
+	exp_val = get_exp(dbl);
+	if (!exp_val)
+	{
+		exp_val = 1 - OFFSET_DBL;
+		mant_val = get_mantissa(dbl);
+	}
+	else
+	{
+		exp_val -= OFFSET_DBL;
+		mant_val = (1LL << 52) | get_mantissa(dbl);
+	}
+	ft_printf("%f\n", i);
+	printf("%d\n", ft_log10(mant_val, exp_val));
+
+	int fp = open("Logs_lg", O_WRONLY);
+
+	for (double i = 0.00000005; i <= 5E307; i *= 10)
+	{
+		dbl = (uint64_t *)&i;
+		exp_val = get_exp(dbl);
+		if (!exp_val)
+		{
+			exp_val = 1 - OFFSET_DBL;
+			mant_val = get_mantissa(dbl);
+		}
+		else
+		{
+			exp_val -= OFFSET_DBL;
+			mant_val = (1LL << 52) | get_mantissa(dbl);
+		}
+		dprintf(fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
+	}
+	close(fp);
 
 /*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");

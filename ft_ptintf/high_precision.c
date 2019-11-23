@@ -10,18 +10,18 @@ static void	fill_data_bits(t_high *hp, int32_t big_shift, uint32_t res_high, uin
 
 	if (hp->intg)
 	{
-		high_ind = ARRSIZE_INTG_LDBL - 1 - big_shift;
-		if (high_ind < ARRSIZE_INTG_LDBL)
+		high_ind = ARRSIZE_INTG_DBL - 1 - big_shift;
+		if (high_ind < ARRSIZE_INTG_DBL)
 			hp->data_intg[high_ind] |= res_high;
-		if (high_ind + 1 < ARRSIZE_INTG_LDBL)
+		if (high_ind + 1 < ARRSIZE_INTG_DBL)
 			hp->data_intg[high_ind + 1] |= res_low;
 	}
 	else
 	{
-		high_ind = ARRSIZE_FRCT_LDBL - 1 - big_shift;
-		if (high_ind < ARRSIZE_FRCT_LDBL)
+		high_ind = ARRSIZE_FRCT_DBL - 1 - big_shift;
+		if (high_ind < ARRSIZE_FRCT_DBL)
 			hp->data_frct[high_ind] |= res_high;
-		if (high_ind + 1 < ARRSIZE_FRCT_LDBL)
+		if (high_ind + 1 < ARRSIZE_FRCT_DBL)
 			hp->data_frct[high_ind + 1] |= res_low;
 	}
 }
@@ -50,7 +50,7 @@ void		insert_low_bits(t_high *hp, uint32_t value, int32_t shift_amount, _Bool in
 
 void		insert_top_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg)
 {
-	insert_low_bits(hp, value, (ARRSIZE_FRCT_LDBL + 1) * hp->word_shift - shift_amount, intg);
+	insert_low_bits(hp, value, (ARRSIZE_FRCT_DBL + 1) * hp->word_shift - shift_amount, intg);
 }
 
 uint32_t	div_ret_remainder(t_high *hp, uint32_t divisor)
@@ -62,7 +62,7 @@ uint32_t	div_ret_remainder(t_high *hp, uint32_t divisor)
 
 	remainder = 0;
 	i = -1;
-	while (++i < ARRSIZE_INTG_LDBL)
+	while (++i < ARRSIZE_INTG_DBL)
 	{
 		dividend = ((uint64_t)remainder << hp->word_shift) + hp->data_intg[i];
 		result = dividend / divisor;
@@ -79,7 +79,7 @@ uint32_t	mul_ret_overflow(t_high *hp, uint32_t multipl)
 	uint64_t	result;
 
 	owerflow = 0;
-	i = ARRSIZE_FRCT_LDBL;
+	i = ARRSIZE_FRCT_DBL;
 	while (--i >= 0)
 	{
 		result = (uint64_t)multipl * hp->data_frct[i] + owerflow;
