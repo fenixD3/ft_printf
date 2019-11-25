@@ -46,10 +46,16 @@ printf("%o %o\n\n\n", a, b);*/
 
 	//printf("%d\n", ft_64log2(8301034833169298));
 
-	/*printf("FT\n%f\n", ft_ceil(-0.99));
-	printf("LB\n%f\n", ceil(-0.99));*/
+	/*printf("FT ceil\n%f\n", ft_ceil(-4.5));
+	printf("LB ceil\n%f\n", ceil(-4.5));*/
 
-	double		i = 5;
+	/*printf("FT floor\n%f\n", ft_floor(-4.5));
+	printf("LB floor\n%f\n", floor(-4.5));*/
+
+	/*printf("FT round\n%f\n", ft_round(0.4999999999999999));
+	printf("LB round\n%f\n", round(0.4999999999999999));*/
+
+	double		i = 0.99;
 	uint64_t	*dbl;
 	int32_t		exp_val;
 	uint64_t	mant_val;
@@ -69,7 +75,7 @@ printf("%o %o\n\n\n", a, b);*/
 	ft_printf("%f\n", i);
 	printf("%d\n", ft_log10(mant_val, exp_val));
 
-	int fp = open("Logs_lg", O_WRONLY);
+/*	int fp = open("Logs_lg", O_WRONLY);
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -85,9 +91,30 @@ printf("%o %o\n\n\n", a, b);*/
 			exp_val -= OFFSET_DBL;
 			mant_val = (1LL << 52) | get_mantissa(dbl);
 		}
-		dprintf(fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
+		fprintf(&fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
 	}
-	close(fp);
+	close(fp);*/
+
+	FILE *fp = fopen("Logs_lg", "w");
+
+	for (double i = 0.00000009; i <= 5E307; i *= 10)
+	{
+		dbl = (uint64_t *)&i;
+		exp_val = get_exp(dbl);
+		if (!exp_val)
+		{
+			exp_val = 1 - OFFSET_DBL;
+			mant_val = get_mantissa(dbl);
+		}
+		else
+		{
+			exp_val -= OFFSET_DBL;
+			mant_val = (1LL << 52) | get_mantissa(dbl);
+		}
+		fprintf(fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
+		fprintf(fp, "\tCeiling log value = %f\n", ((int32_t)ft_64log2(mant_val) + (exp_val - 52)) * LOG10_2 - 0.69);
+	}
+	fclose(fp);
 
 /*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");

@@ -75,7 +75,6 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 		return (result);
 	lg_10 = ft_log10(dblcomp.mant_val, dblcomp.exp_val);
 	printf("Log 10 = %d\n", lg_10);
-	//printf("Log10 = %d\n", (int32_t)ft_ceil(((int32_t)ft_64log2(dblcomp.mant_val) + (dblcomp.exp_val - 52)) * LOG10_2 - 0.69));
 	hp = hp_initializ();
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
@@ -101,7 +100,6 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 		return (result);
 	lg_10 = ft_llog10(ldblcomp.mant_val, ldblcomp.exp_val);
 	printf("Log 10 = %d\n", lg_10);
-	//printf("Log10 = %d\n", (int32_t)ft_ceill(((int32_t)ft_64log2(ldblcomp.mant_val) + (ldblcomp.exp_val - 63)) * LOG10_2 - 0.69));
 	hp = hp_ldbl_initializ();
 	/// protect
 	insert_low_lbits(hp, ldblcomp.mant_High_Bits, ldblcomp.exp_val + 1, 1);

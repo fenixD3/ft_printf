@@ -37,7 +37,7 @@ double	ft_ceil(double num)
 long double	ft_ceill(long double num)
 {
 	uint64_t		*intg;
-	uint64_t		*res_in;
+	uint64_t		*int_res;
 	struct s_comp	comp;
 	int32_t			shifted_exp;
 	long double		res;
@@ -51,8 +51,8 @@ long double	ft_ceill(long double num)
 	res = (long double)(comp.mant >> shifted_exp);
 	if (num < 0)
 		res *= -1;
-	res_in = (uint64_t *)&res;
-	if (res > 0 && (*res_in != *intg || *(res_in + 1) != *(intg + 1)))
+	int_res = (uint64_t *)&res;
+	if (res > 0 && (*int_res != *intg || *(int_res + 1) != *(intg + 1)))
 		return  (++res);
 	return (res);
 }

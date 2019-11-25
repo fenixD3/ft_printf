@@ -126,5 +126,9 @@ char		*ft_reverse(char *str);
 char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number);
 double		ft_ceil(double num);
 long double	ft_ceill(long double num);
+double		ft_floor(double num);
+long double	ft_floorl(long double num);
+double		ft_round(double num);
+long double	ft_roundl(long double num);
 
 #endif
