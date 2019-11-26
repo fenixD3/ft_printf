@@ -118,10 +118,8 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 
 
 
-void	len_counting(t_prsng *tools, t_mkfld *field)
+void	len_counting_diouxxcsp(t_prsng *tools, t_mkfld *field)
 {
-	field->len = 0; //// можно убрать?
-	field->len_empty_field = 0; //// можно убрать?
 	if ((tools->precision > 0 && (size_t)tools->precision > field->lennum)
 		&& tools->type != 's'
 		&& tools->type != 'c')
@@ -161,7 +159,7 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 	else if (is_ddioouuxx(tools->type) || tools->type == 'p')
 			field->lennum = count_lennum(field, tools);
 
-	len_counting(tools, field);
+	len_counting_diouxxcsp(tools, field);
 }
 
 void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
@@ -173,6 +171,15 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 		field->str = print_long_double(tools, field, field->number.ldb);
 	else if (tools->modifiers & M_L || !tools->modifiers)
 		field->str = print_double(tools, field, field->number.db);
+
+	/// delete this
+	field->lennum = strlen(field->str);
+	///////////////
+
+	if (field->lennum < tools->field)
+		field->len = tools->field - field->lennum ;
+	else if (field->lennum >= tools->field && (tools->flags & M_SPACE || tools->flags & M_PLUS || which_sign(&field->number, tools) < 0))
+		field->len++;
 }
 
 void	zeroing_mkfield(t_mkfld *fld)

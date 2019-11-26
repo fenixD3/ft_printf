@@ -13,12 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c46fe7ff-4a86-42ef-ba46-bb69e563a69d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/is.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/is.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/make_field.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/make_field.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/my_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/my_float.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/set_buff.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/set_buff.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,6 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1TpkgYOYUvY8gZJMSjikXirRi70" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -44,6 +42,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
@@ -78,8 +77,17 @@
       <workItem from="1574164537137" duration="3209000" />
       <workItem from="1574188704884" duration="6496000" />
       <workItem from="1574241861412" duration="5359000" />
-      <workItem from="1574272765175" duration="3290000" />
+      <workItem from="1574272765175" duration="3363000" />
+      <workItem from="1574781448755" duration="9676000" />
     </task>
+    <task id="LOCAL-00001" summary="float integrated">
+      <created>1574276194897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574276194898</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +105,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="float integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="float integrated" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_ptintf/set_buff.c</url>
+          <line>38</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

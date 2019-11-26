@@ -34,6 +34,19 @@ void	get_value_by_type(t_mkfld *fld, t_prsng *tls)
 	//// здесь вызывается ТВОЯ ФУНКЦИЯ КОПИРОВАНИЯ ГОТОВОГО ФЛОТА
 }
 
+void get_value_float(t_mkfld *fld, t_prsng *tls, char *str)
+{
+	if (tls->flags & M_MINUS)
+		fld->len_empty_field = ((tls->flags & M_SPACE || tls->flags & M_PLUS ||
+								 which_sign(&fld->number, tls) < 0) ? 1 : 0);
+	else
+		fld->len_empty_field = fld->len /*-
+							   ((tls->flags & M_SPACE ||
+								 tls->flags & M_PLUS ||
+								 which_sign(&fld->number, tls) < 0) ? 1 : 0)*/;
+
+	ft_strcpy(&str[fld->len_empty_field], fld->str);
+}
 
 _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 {
@@ -43,7 +56,7 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 	fld->str[fld->lennum + fld->len] = '\0';
 	if (tls->flags & M_MINUS)
 		fld->len -= fld->len_empty_field;
-	get_value_by_type(fld, tls);  /// дописываем для флотов
+	get_value_by_type(fld, tls);
 	/// заполнение нулями избытка точности
 	if (tls->precision > 0 && fld->lennum && (size_t)tls->precision > fld->lennum && tls->type != 's')
 	{
@@ -58,7 +71,23 @@ _Bool	set_buff(t_mkfld *fld, t_prsng *tls)
 
 _Bool	set_buff_float(t_mkfld *fld, t_prsng *tls)
 {
-	to_buff(fld->str, tls, fld);
+	char *str;
+
+	if (!(str = (char*)malloc(sizeof(char) * (fld->lennum + fld->len + 1))))
+		return (0);
+	ft_memset(str, ' ', fld->lennum + fld->len);
+	str[fld->lennum + fld->len] = '\0';
+
+	get_value_float(fld, tls, str);
+	if (tls->flags & M_ZERO)
+		ft_memset(str, '0', fld->len_empty_field);
+	if (which_sign(&fld->number,tls) < 0)
+		str[0] = '-';
+	else if (tls->flags & M_PLUS)
+		str[0] = '+';
+
+	to_buff(str, tls, fld);
 	free(fld->str);
+	free(str);
 	return (1);
 }

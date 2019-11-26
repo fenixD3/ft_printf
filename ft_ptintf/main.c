@@ -39,9 +39,9 @@ printf("%o %o\n\n\n", a, b);*/
    my = ft_printf(str, num);*/
 
 
-	real = printf("%.16384Lf", LDBL_MIN);
+	real = printf("% faa", 3.75);
 	printf("\n----------\n");
-	my = ft_printf("%Lf", LDBL_MIN);
+	my = ft_printf("% faa", 3.75);
 
 /*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");
