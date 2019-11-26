@@ -96,16 +96,16 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 	//printf("%c\n%d\n", tools->type, tools->precision);
 	if ((result = initialize_dbl(&dblcomp, number)))
 		return (result);
-	lg_10 = ft_log10(dblcomp.mant_val, dblcomp.exp_val);
+	//lg_10 = ft_log10(dblcomp.mant_val, dblcomp.exp_val);
 	if (!(hp = hp_initializ()))
 		return (NULL);
 	if (!(result = create_str(lg_10, tools, fld, dblcomp)))
 		return (NULL);
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
-	/*if (!(result = ft_strnew(lg_10 + 1 + tools->precision)))
+	if (!(result = ft_strnew(lg_10 + 1 + tools->precision)))
 		return (NULL);
-	dblcomp.sign ? ft_strncpy(result, "-", 1) : result;*/
+	dblcomp.sign ? ft_strncpy(result, "-", 1) : result;
 	fill_result(result, hp, 1, tools->precision);
 	ft_strncat(result, ".", 1);
 	insert_top_bits(hp, dblcomp.mant_High_Bits, 52 - dblcomp.exp_val - 32, 0);

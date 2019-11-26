@@ -23,7 +23,7 @@ double		ft_floor(double num)
 		return (-(num < 0));
 	if ((shifted_exp = 52 - comp.exp_val) <= 0)
 		return (num);
-	comp.mant = intg & ((1LL << 52) - 1) | (1LL << 52);
+	comp.mant = (intg & ((1LL << 52) - 1)) | (1LL << 52);
 	res = (double)(comp.mant >> shifted_exp);
 	if (num < 0)
 		res *= -1;

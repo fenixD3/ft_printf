@@ -61,7 +61,7 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("%g", -1.5);
 	ft_printf("%f\n", -1.77999999);*/
 
-	double		i = DBL_MAX;
+	/*double		i = DBL_MAX;
 	uint64_t	*dbl;
 	int32_t		exp_val;
 	uint64_t	mant_val;
@@ -86,7 +86,7 @@ printf("%o %o\n\n\n", a, b);*/
 		i < 1. ? --log10 : ++log10;
 	else if (fabs(i / ft_pow(10, log10)) > 10.0)
 		i < 1.0 ? ++log10 : --log10;
-	printf("\tNew log10 = %d\n", log10);
+	printf("\tNew log10 = %d\n", log10);*/
 
 /*	int fp = open("Logs_lg", O_WRONLY);
 
@@ -108,7 +108,7 @@ printf("%o %o\n\n\n", a, b);*/
 	}
 	close(fp);*/
 
-	FILE *fp = fopen("Logs_lg", "w");
+	/*FILE *fp = fopen("Logs_lg", "w");
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -134,7 +134,21 @@ printf("%o %o\n\n\n", a, b);*/
 			i < 1.0 ? ++log10 : --log10;
 		fprintf(fp, "\tNew log10 = %d\n", log10);
 	}
+	fclose(fp);*/
+
+	FILE *fp = fopen("Logs_lg", "w");
+
+	for (double i = 0.00000005; i <= 5E307; i *= 10)
+	{
+		double log = ft_log10(i);
+		//fprintf(fp, "Num = %.15f\n\tLog 10 = %f\n\tRounded log = %d\n\tCeil = %d\n", i, log, (int32_t)ft_round(log), (int32_t)ft_ceil(log));
+		fprintf(fp, "Num = %.15f\n\tLog 10 = %f\n", i, ft_floor(log));
+	}
 	fclose(fp);
+
+	printf("%f\n", ft_floor(ft_log10(28.734)));
+	printf("%f\n", ft_floor(ft_log10(DBL_MAX)));
+	printf("%f\n", ft_floor(ft_log10(DBL_MIN)));
 
 /*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");
