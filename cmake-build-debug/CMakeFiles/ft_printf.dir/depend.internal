@@ -42,6 +42,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/get_ldbl_values.c.obj
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/get_ldbl_values.c
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/myfloat.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.obj
+ C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.c
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
@@ -56,6 +57,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.obj
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision_intf_long.c
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.obj
+ C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/high_precision_long.c
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
@@ -248,6 +250,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.obj
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/parsing.c
 CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.obj
+ C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/print_reserve_dbl.c
 CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.obj
  C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h

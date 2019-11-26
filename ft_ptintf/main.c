@@ -55,7 +55,13 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("FT round\n%f\n", ft_round(0.4999999999999999));
 	printf("LB round\n%f\n", round(0.4999999999999999));*/
 
-	double		i = 0.99;
+	/*printf("%f\n", DBL_MAX * 2);
+	printf("%f\n", sqrt(-1));*/
+
+	/*printf("%g", -1.5);
+	ft_printf("%f\n", -1.77999999);*/
+
+	double		i = DBL_MAX;
 	uint64_t	*dbl;
 	int32_t		exp_val;
 	uint64_t	mant_val;
@@ -72,8 +78,15 @@ printf("%o %o\n\n\n", a, b);*/
 		exp_val -= OFFSET_DBL;
 		mant_val = (1LL << 52) | get_mantissa(dbl);
 	}
-	ft_printf("%f\n", i);
-	printf("%d\n", ft_log10(mant_val, exp_val));
+	int32_t log10 = ft_log10(mant_val, exp_val);
+	printf("Log 10 = %d\n", log10);
+	printf("\tDivide num to 10^log10 = %.15f\n", i / ft_pow(10, log10));
+	printf("\tCeiling log value = %f\n", ((int32_t)ft_64log2(mant_val) + (exp_val - 52)) * LOG10_2 - 0.69);
+	if (fabs(i / ft_pow(10, log10)) < 1.0)
+		i < 1. ? --log10 : ++log10;
+	else if (fabs(i / ft_pow(10, log10)) > 10.0)
+		i < 1.0 ? ++log10 : --log10;
+	printf("\tNew log10 = %d\n", log10);
 
 /*	int fp = open("Logs_lg", O_WRONLY);
 
@@ -97,7 +110,7 @@ printf("%o %o\n\n\n", a, b);*/
 
 	FILE *fp = fopen("Logs_lg", "w");
 
-	for (double i = 0.00000009; i <= 5E307; i *= 10)
+	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
 		dbl = (uint64_t *)&i;
 		exp_val = get_exp(dbl);
@@ -111,8 +124,15 @@ printf("%o %o\n\n\n", a, b);*/
 			exp_val -= OFFSET_DBL;
 			mant_val = (1LL << 52) | get_mantissa(dbl);
 		}
-		fprintf(fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
+		int32_t log10 = ft_log10(mant_val, exp_val);
+		fprintf(fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, log10, exp_val);
 		fprintf(fp, "\tCeiling log value = %f\n", ((int32_t)ft_64log2(mant_val) + (exp_val - 52)) * LOG10_2 - 0.69);
+		fprintf(fp, "\tDivide num to 10^log10 = %.15f\n", i / ft_pow(10, log10));
+		if (fabs(i / ft_pow(10, log10)) < 1.0)
+			i < 1.0 ? --log10 : ++log10;
+		else if (fabs(i / ft_pow(10, log10)) > 10.0)
+			i < 1.0 ? ++log10 : --log10;
+		fprintf(fp, "\tNew log10 = %d\n", log10);
 	}
 	fclose(fp);
 

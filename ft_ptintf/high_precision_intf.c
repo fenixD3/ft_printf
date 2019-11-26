@@ -33,8 +33,18 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 	return (1);
 }
 
+/*static char	*fill_result_fract(char *result, t_high *hp, _Bool intg, int precision)
+{
+	char	rem_overf;
 
-char		*fill_result(char *result, t_high *hp, _Bool intg)
+	while (!hp_is_zero(hp, intg))
+	{
+		rem_overf = mul_ret_overflow(hp, 10) + '0';
+		ft_strncat(result, &rem_overf, 1);
+	}
+}*/
+
+char		*fill_result(char *result, t_high *hp, _Bool intg, int precision)
 {
 	char	rem_overf;
 
@@ -54,8 +64,7 @@ char		*fill_result(char *result, t_high *hp, _Bool intg)
 	}
 	else
 	{
-		while (!hp_is_zero(hp, intg))
-		{
+		while (!hp_is_zero(hp, intg)) {
 			rem_overf = mul_ret_overflow(hp, 10) + '0';
 			ft_strncat(result, &rem_overf, 1);
 		}

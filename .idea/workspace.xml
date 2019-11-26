@@ -41,6 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1TpkgYOYUvY8gZJMSjikXirRi70" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -94,6 +95,8 @@
       <workItem from="1574449564544" duration="5941000" />
       <workItem from="1574528292224" duration="6083000" />
       <workItem from="1574671062343" duration="8118000" />
+      <workItem from="1574685968186" duration="10635000" />
+      <workItem from="1574762640870" duration="9435000" />
     </task>
     <servers />
   </component>
@@ -116,7 +119,7 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="log_table256[18]" language="ObjectiveC" />
+        <watch expression="log_table256[28]" language="ObjectiveC" />
         <watch expression="num - floor" language="ObjectiveC" />
         <watch expression="ceil - num" language="ObjectiveC" />
       </configuration>

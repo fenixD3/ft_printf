@@ -12,6 +12,7 @@
 # include <stdlib.h>
 # include <stdint.h>
 # include "libft/libft.h"
+# include "ft_ptintf.h"
 
 #include <stdio.h>
 
@@ -43,7 +44,7 @@ uint32_t		div_ret_remainder(t_high *hp, uint32_t divisor);
 uint32_t		div_ret_lremainder(t_highl *hp, uint32_t divisor);
 uint32_t		mul_ret_overflow(t_high *hp, uint32_t multipl);
 uint32_t		mul_ret_loverflow(t_highl *hp, uint32_t multipl);
-char			*fill_result(char *result, t_high *hp, _Bool intg);
+char			*fill_result(char *result, t_high *hp, _Bool intg, int precision);
 char			*fill_lresult(char *result, t_highl *hp, _Bool intg);
 
 #endif

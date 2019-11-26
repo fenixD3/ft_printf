@@ -25,8 +25,8 @@ long double	ft_roundl(long double num)
 	long double	floor;
 	long double	ceil;
 
-	floor = ft_floor(num);
-	ceil = ft_ceil(num);
+	floor = ft_floorl(num);
+	ceil = ft_ceill(num);
 	if (num - floor == ceil - num  && num > 0)
 		return (ceil);
 	else if (num - floor == ceil - num  && num < 0)

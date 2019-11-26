@@ -7,7 +7,16 @@
 
 int32_t	ft_log10(uint64_t mant_val, int32_t exp_val)
 {
-	return (ft_round(((int32_t)ft_64log2(mant_val) + (exp_val - 52)) * LOG10_2 - 0.69));
+	double	log2;
+
+	//uint32_t mant_high = ft_64log2(mant_val);
+	log2 = ((int32_t)ft_64log2(mant_val) + (exp_val - 52)) * LOG10_2 - 0.69;
+	/*if (log2 > 0)
+		return (ft_ceil(log2));
+	else
+		return (ft_floor(log2));*/
+	//return (ft_ceil(log2));
+	return (ft_round(log2));
 }
 
 int32_t	ft_llog10(uint64_t mant_val, int32_t exp_val)

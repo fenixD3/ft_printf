@@ -41,6 +41,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/get_dbl_values.c.obj: ../ft_ptintf/myfloat.h
 CMakeFiles/ft_printf.dir/ft_ptintf/get_ldbl_values.c.obj: ../ft_ptintf/get_ldbl_values.c
 CMakeFiles/ft_printf.dir/ft_ptintf/get_ldbl_values.c.obj: ../ft_ptintf/myfloat.h
 
+CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.obj: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.obj: ../ft_ptintf/high_precision.c
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.obj: ../ft_ptintf/high_precision.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.obj: ../ft_ptintf/libft/libft.h
@@ -55,6 +56,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.obj: ../ft_ptintf/
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.obj: ../ft_ptintf/high_precision_intf_long.c
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.obj: ../ft_ptintf/libft/libft.h
 
+CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.obj: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.obj: ../ft_ptintf/high_precision.h
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.obj: ../ft_ptintf/high_precision_long.c
 CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.obj: ../ft_ptintf/libft/libft.h
@@ -247,6 +249,7 @@ CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.obj: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.obj: ../ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/parsing.c.obj: ../ft_ptintf/parsing.c
 
+CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.obj: ../ft_ptintf/libft/libft.h
 CMakeFiles/ft_printf.dir/ft_ptintf/print_reserve_dbl.c.obj: ../ft_ptintf/print_reserve_dbl.c
 
 CMakeFiles/ft_printf.dir/ft_ptintf/set_buff.c.obj: ../ft_ptintf/ft_ptintf.h
