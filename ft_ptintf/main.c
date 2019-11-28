@@ -58,8 +58,10 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("%f\n", DBL_MAX * 2);
 	printf("%f\n", sqrt(-1));*/
 
-	/*printf("%g", -1.5);
-	ft_printf("%f\n", -1.77999999);*/
+	printf("%f\n", 1.7999998);
+	printf("%.20f\n", 1.7999998);
+	printf("%.21f", 1.7999998);
+	ft_printf("%f\n", 1.77998);
 
 	/*double		i = DBL_MAX;
 	uint64_t	*dbl;
@@ -136,7 +138,7 @@ printf("%o %o\n\n\n", a, b);*/
 	}
 	fclose(fp);*/
 
-	FILE *fp = fopen("Logs_lg", "w");
+	/*FILE *fp = fopen("Logs_lg", "w");
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -148,7 +150,7 @@ printf("%o %o\n\n\n", a, b);*/
 
 	printf("%f\n", ft_floor(ft_log10(28.734)));
 	printf("%f\n", ft_floor(ft_log10(DBL_MAX)));
-	printf("%f\n", ft_floor(ft_log10(DBL_MIN)));
+	printf("%f\n", ft_floor(ft_log10(DBL_MIN)));*/
 
 /*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");

@@ -67,16 +67,14 @@ static char	*create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld, t_dbl
 
 	if (tools->precision)
 		lennum = (lg_10 > 0) ? lg_10 + tools->precision : 1 + tools->precision;
-	else if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
+	else if (tools->flags & M_PRECISION_NOT_ADDED)
 		lennum = (lg_10 > 0) ? lg_10 + 6 : 1 + 6;
 	else
-		lennum = (lg_10 > 0) ? lg_10 : 1;
-	dblcomp.sign ? ++lennum : lennum;
-	tools->flags & M_SPACE && !dblcomp.sign ? ++lennum : lennum;
-	tools->flags & M_SHARP ? ++lennum : lennum;
+		lennum = (lg_10 > 0) ? lg_10 + 1 : 1 + 1;
+	if (tools->flags & M_SHARP || tools->precision || tools->flags & M_PRECISION_NOT_ADDED)
+		++lennum;
 	if (!(result = ft_strnew(lennum)))
 		return (NULL);
-	dblcomp.sign ? ft_strncpy(result, "-", 1) : result;
 	fld->lennum = lennum;
 	return (result);
 }
@@ -96,16 +94,14 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 	//printf("%c\n%d\n", tools->type, tools->precision);
 	if ((result = initialize_dbl(&dblcomp, number)))
 		return (result);
-	//lg_10 = ft_log10(dblcomp.mant_val, dblcomp.exp_val);
+	lg_10 = ft_floor(ft_log10(number));
+	printf("%d\n", lg_10);
 	if (!(hp = hp_initializ()))
 		return (NULL);
 	if (!(result = create_str(lg_10, tools, fld, dblcomp)))
 		return (NULL);
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
-	if (!(result = ft_strnew(lg_10 + 1 + tools->precision)))
-		return (NULL);
-	dblcomp.sign ? ft_strncpy(result, "-", 1) : result;
 	fill_result(result, hp, 1, tools->precision);
 	ft_strncat(result, ".", 1);
 	insert_top_bits(hp, dblcomp.mant_High_Bits, 52 - dblcomp.exp_val - 32, 0);
@@ -123,7 +119,7 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 
 	if ((result = initialize_ldbl(&ldblcomp, number)))
 		return (result);
-	lg_10 = ft_llog10(ldblcomp.mant_val, ldblcomp.exp_val);
+	//lg_10 = ft_llog10(ldblcomp.mant_val, ldblcomp.exp_val);
 	if (!(hp = hp_ldbl_initializ()))
 		return (NULL);
 	insert_low_lbits(hp, ldblcomp.mant_High_Bits, ldblcomp.exp_val + 1, 1);

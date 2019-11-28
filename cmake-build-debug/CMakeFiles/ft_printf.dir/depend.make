@@ -20,7 +20,6 @@ CMakeFiles/ft_printf.dir/ft_ptintf/ft_itoa_base_printf.c.o: ../ft_ptintf/libft/l
 CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o: ../ft_ptintf/ft_log10.c
 CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o: ../ft_ptintf/myfloat.h
 
 CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.o: ../ft_ptintf/ft_log2.c
 CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.o: ../ft_ptintf/libft/libft.h

@@ -33,41 +33,45 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 	return (1);
 }
 
-/*static char	*fill_result_fract(char *result, t_high *hp, _Bool intg, int precision)
+static void	fill_result_fract(char *result, t_high *hp, _Bool intg, int precision)
 {
 	char	rem_overf;
 
-	while (!hp_is_zero(hp, intg))
+	while (precision-- && !hp_is_zero(hp, intg))
 	{
 		rem_overf = mul_ret_overflow(hp, 10) + '0';
 		ft_strncat(result, &rem_overf, 1);
 	}
-}*/
+	if (mul_ret_overflow(hp, 10) >= 5)
+	{
+		;
+	}
+	else if (precision)
+		while (precision--)
+			ft_strncat(result, "0", 1);
+}
 
-char		*fill_result(char *result, t_high *hp, _Bool intg, int precision)
+static void	fill_result_intg(char *result, t_high *hp, _Bool intg, int precision)
 {
 	char	rem_overf;
 
-	if (intg)
+	rem_overf = div_ret_remainder(hp, 10) + '0';
+	ft_strncat(result, &rem_overf, 1);
+	while (!hp_is_zero(hp, intg))
 	{
 		rem_overf = div_ret_remainder(hp, 10) + '0';
 		ft_strncat(result, &rem_overf, 1);
-		while (!hp_is_zero(hp, intg))
-		{
-			rem_overf = div_ret_remainder(hp, 10) + '0';
-			ft_strncat(result, &rem_overf, 1);
-		}
-		if (*result == '-')
-			ft_reverse(result + 1);
-		else
-			ft_reverse(result);
 	}
+	if (*result == '-')
+		ft_reverse(result + 1);
 	else
-	{
-		while (!hp_is_zero(hp, intg)) {
-			rem_overf = mul_ret_overflow(hp, 10) + '0';
-			ft_strncat(result, &rem_overf, 1);
-		}
-	}
-	return (result);
+		ft_reverse(result);
+}
+
+void		fill_result(char *result, t_high *hp, _Bool intg, int precision)
+{
+	if (intg)
+		fill_result_intg(result, hp, intg, precision);
+	else
+		fill_result_fract(result, hp, intg, precision);
 }
