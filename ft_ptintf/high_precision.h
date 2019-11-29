@@ -11,6 +11,7 @@
 # define ARRSIZE_FRCT_LDBL 514
 # include <stdlib.h>
 # include <stdint.h>
+# include "myfloat.h"
 # include "libft/libft.h"
 # include "ft_ptintf.h"
 
@@ -44,7 +45,7 @@ uint32_t		div_ret_remainder(t_high *hp, uint32_t divisor);
 uint32_t		div_ret_lremainder(t_highl *hp, uint32_t divisor);
 uint32_t		mul_ret_overflow(t_high *hp, uint32_t multipl);
 uint32_t		mul_ret_loverflow(t_highl *hp, uint32_t multipl);
-void			fill_result(char *result, t_high *hp, _Bool intg, int precision);
+void			fill_result(t_high *hp, _Bool intg, int precision, t_result *res);
 char			*fill_lresult(char *result, t_highl *hp, _Bool intg);
 
 #endif

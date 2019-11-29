@@ -6,6 +6,7 @@
 # define MYFLOAT_H
 
 # include <stdint.h>
+# include <string.h>
 # define OFFSET_DBL 1023
 # define OFFSET_LDBL 16383
 
@@ -17,6 +18,13 @@ typedef struct	s_dbl_comp
 	uint32_t	mant_High_Bits;
 	uint32_t	mant_Low_Bits;
 }				t_dbl_comp;
+
+typedef struct	s_result
+{
+	char	*result;
+	char 	*begin;
+	size_t	len;
+}				t_result;
 
 _Bool			get_sign(uint64_t *dbl);
 int32_t			get_exp(uint64_t *dbl);

@@ -33,45 +33,75 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 	return (1);
 }
 
-static void	fill_result_fract(char *result, t_high *hp, _Bool intg, int precision)
+static void	fill_result_fract(t_high *hp, _Bool intg, int precision, t_result *res)
 {
 	char	rem_overf;
+	size_t	i;
+	int		nu;
 
-	while (precision-- && !hp_is_zero(hp, intg))
+	while (precision-- > 0 && !hp_is_zero(hp, intg))
 	{
 		rem_overf = mul_ret_overflow(hp, 10) + '0';
-		ft_strncat(result, &rem_overf, 1);
+		ft_strncat(res->result, &rem_overf, 1);
+		++res->len;
 	}
-	if (mul_ret_overflow(hp, 10) >= 5)
+	if (precision <= 0 && mul_ret_overflow(hp, 10) >= 5)
 	{
-		;
+		i = 0;
+		while (*(res->result + res->len - (++i)) == '9')
+		{
+			*(res->result + res->len - i) = '0';
+			++*(res->result + res->len - i - 1);
+		}
+		if ((*(res->result + res->len - i) == '.' && *(res->result + res->len - i + 1) == '0') ||
+		(!*(res->result + res->len - i + 1) && (ft_isdigit(*(res->result + res->len - i)) || *(res->result + res->len - i) == '.')))
+		{
+			if (*(res->result + res->len - i) == '.')
+				++i;
+			nu = ft_atoi(res->result + res->len - i);
+			if (nu % 2)
+				++*(res->result + res->len - i);
+			else if (nu == 9)
+			{
+				*(res->result + res->len - (++i)) = '0';
+				while (*(res->result + res->len - (++i)) == '0')
+					++*(res->result + res->len - i);
+			}
+		}
+		if (!i && *(res->result + res->len - 1) != '9')
+			++*(res->result + res->len - 1);
 	}
-	else if (precision)
+	else
 		while (precision--)
-			ft_strncat(result, "0", 1);
+		{
+			ft_strncat(res->result, "0", 1);
+			++res->len;
+		}
 }
 
-static void	fill_result_intg(char *result, t_high *hp, _Bool intg, int precision)
+static void	fill_result_intg(t_high *hp, _Bool intg, t_result *res)
 {
 	char	rem_overf;
 
 	rem_overf = div_ret_remainder(hp, 10) + '0';
-	ft_strncat(result, &rem_overf, 1);
+	ft_strncat(res->result, &rem_overf, 1);
+	++res->len;
 	while (!hp_is_zero(hp, intg))
 	{
 		rem_overf = div_ret_remainder(hp, 10) + '0';
-		ft_strncat(result, &rem_overf, 1);
+		ft_strncat(res->result, &rem_overf, 1);
+		++res->len;
 	}
-	if (*result == '-')
-		ft_reverse(result + 1);
-	else
-		ft_reverse(result);
+	ft_reverse(res->result);
 }
 
-void		fill_result(char *result, t_high *hp, _Bool intg, int precision)
+void		fill_result(t_high *hp, _Bool intg, int precision, t_result *res)
 {
 	if (intg)
-		fill_result_intg(result, hp, intg, precision);
+	{
+		res->len = 0;
+		fill_result_intg(hp, intg, res);
+	}
 	else
-		fill_result_fract(result, hp, intg, precision);
+		fill_result_fract(hp, intg, precision, res);
 }

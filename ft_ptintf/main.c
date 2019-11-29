@@ -59,9 +59,11 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("%f\n", sqrt(-1));*/
 
 	printf("%f\n", 1.7999998);
-	printf("%.20f\n", 1.7999998);
-	printf("%.21f", 1.7999998);
-	ft_printf("%f\n", 1.77998);
+	printf("%f\n", 1.9999998);
+	printf("%.f\n", 1.77998);
+	/*printf("%.20f\n", 1.7999998);
+	printf("%.21f\n", 1.7999998);*/
+	ft_printf("%.f\n", 1.77998);
 
 	/*double		i = DBL_MAX;
 	uint64_t	*dbl;

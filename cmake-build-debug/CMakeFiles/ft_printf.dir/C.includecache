@@ -20,6 +20,20 @@ stdio.h
 stdbool.h
 -
 
+/Users/ylila/Printf_Hub/ft_ptintf/high_precision.h
+stdlib.h
+-
+stdint.h
+-
+myfloat.h
+/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
+libft/libft.h
+/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+stdio.h
+-
+
 /Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
 string.h
 -
@@ -28,21 +42,17 @@ stdlib.h
 unistd.h
 -
 
-/Users/ylila/Printf_Hub/ft_ptintf/main.c
-stdarg.h
--
-ft_ptintf.h
-/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/my_float.c
 myfloat.h
 /Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
-stdio.h
--
-math.h
--
-fcntl.h
--
+high_precision.h
+/Users/ylila/Printf_Hub/ft_ptintf/high_precision.h
+ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
 
 /Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
 stdint.h
+-
+string.h
 -
 

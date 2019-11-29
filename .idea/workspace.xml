@@ -13,26 +13,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c46fe7ff-4a86-42ef-ba46-bb69e563a69d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/ft_log2.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_pow.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/libft/ft_pow.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_intf_long.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/high_precision_long.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/my_float.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_ptintf/my_float.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_log10.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_log10.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_log2.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_log2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/ft_ptintf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/high_precision.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/high_precision.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/high_precision_intf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/high_precision_intf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/libft/ft_pow.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/libft/ft_pow.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ptintf/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/libft/libft.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ptintf/my_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/my_float.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ptintf/myfloat.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ptintf/myfloat.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +101,8 @@
       <workItem from="1574785099887" duration="3720000" />
       <workItem from="1574954946233" duration="2181000" />
       <workItem from="1574964913829" duration="2415000" />
+      <workItem from="1575043927591" duration="4935000" />
+      <workItem from="1575051010717" duration="3825000" />
     </task>
     <servers />
   </component>
@@ -124,5 +121,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="mul_ret_overflow(hp, 10)" language="ObjectiveC" />
+        <watch expression="*(res-&gt;result + res-&gt;len - i)" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
