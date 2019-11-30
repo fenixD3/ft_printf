@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+ft_ptintf/check_float_res.o: ft_ptintf/check_float_res.c.o
+
+.PHONY : ft_ptintf/check_float_res.o
+
+# target to build an object file
+ft_ptintf/check_float_res.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/check_float_res.c.o
+.PHONY : ft_ptintf/check_float_res.c.o
+
+ft_ptintf/check_float_res.i: ft_ptintf/check_float_res.c.i
+
+.PHONY : ft_ptintf/check_float_res.i
+
+# target to preprocess a source file
+ft_ptintf/check_float_res.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/check_float_res.c.i
+.PHONY : ft_ptintf/check_float_res.c.i
+
+ft_ptintf/check_float_res.s: ft_ptintf/check_float_res.c.s
+
+.PHONY : ft_ptintf/check_float_res.s
+
+# target to generate assembly for a file
+ft_ptintf/check_float_res.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/check_float_res.c.s
+.PHONY : ft_ptintf/check_float_res.c.s
+
 ft_ptintf/field_len.o: ft_ptintf/field_len.c.o
 
 .PHONY : ft_ptintf/field_len.o
@@ -149,6 +176,33 @@ ft_ptintf/field_len.s: ft_ptintf/field_len.c.s
 ft_ptintf/field_len.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/field_len.c.s
 .PHONY : ft_ptintf/field_len.c.s
+
+ft_ptintf/float_rounding.o: ft_ptintf/float_rounding.c.o
+
+.PHONY : ft_ptintf/float_rounding.o
+
+# target to build an object file
+ft_ptintf/float_rounding.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float_rounding.c.o
+.PHONY : ft_ptintf/float_rounding.c.o
+
+ft_ptintf/float_rounding.i: ft_ptintf/float_rounding.c.i
+
+.PHONY : ft_ptintf/float_rounding.i
+
+# target to preprocess a source file
+ft_ptintf/float_rounding.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float_rounding.c.i
+.PHONY : ft_ptintf/float_rounding.c.i
+
+ft_ptintf/float_rounding.s: ft_ptintf/float_rounding.c.s
+
+.PHONY : ft_ptintf/float_rounding.s
+
+# target to generate assembly for a file
+ft_ptintf/float_rounding.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_ptintf/float_rounding.c.s
+.PHONY : ft_ptintf/float_rounding.c.s
 
 ft_ptintf/ft_ceil.o: ft_ptintf/ft_ceil.c.o
 
@@ -2508,9 +2562,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... ft_ptintf/check_float_res.o"
+	@echo "... ft_ptintf/check_float_res.i"
+	@echo "... ft_ptintf/check_float_res.s"
 	@echo "... ft_ptintf/field_len.o"
 	@echo "... ft_ptintf/field_len.i"
 	@echo "... ft_ptintf/field_len.s"
+	@echo "... ft_ptintf/float_rounding.o"
+	@echo "... ft_ptintf/float_rounding.i"
+	@echo "... ft_ptintf/float_rounding.s"
 	@echo "... ft_ptintf/ft_ceil.o"
 	@echo "... ft_ptintf/ft_ceil.i"
 	@echo "... ft_ptintf/ft_ceil.s"

@@ -3,30 +3,34 @@
 //
 
 #include "libft/libft.h"
+#include "myfloat.h"
 
-char		*print_nan(_Bool sign)
+char		*print_nan(t_result *res, _Bool sign)
 {
-	char	*result;
-
-	if (!(result = ft_strnew(4)))
+	if (!(res->result = ft_strnew(4)))
+	{
+		res->len = 0;
 		return (NULL);
-	return (sign ? ft_strcpy(result, "-NaN") : ft_strcpy(result, "+NaN"));
+	}
+	return (sign ? ft_strcpy(res->result, "-NaN") : ft_strcpy(res->result, "+NaN"));
 }
 
-char		*print_inf(_Bool sign)
+char		*print_inf(t_result *res, _Bool sign)
 {
-	char	*result;
-
-	if (!(result = ft_strnew(4)))
+	if (!(res->result = ft_strnew(4)))
+	{
+		res->len = 0;
 		return (NULL);
-	return (sign ? ft_strcpy(result, "-Inf") : ft_strcpy(result, "+Inf"));
+	}
+	return (sign ? ft_strcpy(res->result, "-Inf") : ft_strcpy(res->result, "+Inf"));
 }
 
-char		*print_zero(_Bool sign)
+char		*print_zero(t_result *res, _Bool sign)
 {
-	char	*result;
-
-	if (!(result = ft_strnew(2)))
+	if (!(res->result = ft_strnew(2)))
+	{
+		res->len = 0;
 		return (NULL);
-	return (sign ? ft_strcpy(result, "-0") : ft_strcpy(result, "+0"));
+	}
+	return (sign ? ft_strcpy(res->result, "-0") : ft_strcpy(res->result, "+0"));
 }

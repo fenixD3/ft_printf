@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/ylila/Printf_Hub/ft_ptintf/float_rounding.c
+myfloat.h
+/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
+libft/libft.h
+/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+
 /Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
 stdarg.h
 -
@@ -34,6 +40,12 @@ ft_ptintf.h
 stdio.h
 -
 
+/Users/ylila/Printf_Hub/ft_ptintf/high_precision_intf.c
+high_precision.h
+/Users/ylila/Printf_Hub/ft_ptintf/high_precision.h
+ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+
 /Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
 string.h
 -
@@ -41,14 +53,6 @@ stdlib.h
 -
 unistd.h
 -
-
-/Users/ylila/Printf_Hub/ft_ptintf/my_float.c
-myfloat.h
-/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
-high_precision.h
-/Users/ylila/Printf_Hub/ft_ptintf/high_precision.h
-ft_ptintf.h
-/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
 
 /Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
 stdint.h

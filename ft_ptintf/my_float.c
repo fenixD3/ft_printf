@@ -2,7 +2,7 @@
 #include "high_precision.h"
 #include "ft_ptintf.h"
 
-static char	*initialize_dbl(t_dbl_comp *dblcomp, double number)
+static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number)
 {
 	uint64_t	*dbl;
 
@@ -11,13 +11,13 @@ static char	*initialize_dbl(t_dbl_comp *dblcomp, double number)
 	if ((dblcomp->exp_val = get_exp(dbl)) == 0x7FF)
 	{
 		if (!get_mantissa(dbl))
-			return (print_inf(dblcomp->sign));
-		return (print_nan(dblcomp->sign));
+			return (print_inf(res, dblcomp->sign));
+		return (print_nan(res, dblcomp->sign));
 	}
 	if (!dblcomp->exp_val)
 	{
 		if (!get_mantissa(dbl))
-			return (print_zero(dblcomp->sign));
+			return (print_zero(res, dblcomp->sign));
 		dblcomp->exp_val = 1 - OFFSET_DBL;
 		dblcomp->mant_val = get_mantissa(dbl);
 	}
@@ -31,7 +31,7 @@ static char	*initialize_dbl(t_dbl_comp *dblcomp, double number)
 	return (NULL);
 }
 
-static char	*initialize_ldbl(t_dbl_comp *ldblcomp, long double number)
+/*static char	*initialize_ldbl(t_dbl_comp *ldblcomp, long double number)
 {
 	uint64_t	*ldbl;
 
@@ -58,12 +58,12 @@ static char	*initialize_ldbl(t_dbl_comp *ldblcomp, long double number)
 	ldblcomp->mant_High_Bits = ldblcomp->mant_val >> 32;
 	ldblcomp->mant_Low_Bits = ldblcomp->mant_val & 0xFFFFFFFF;
 	return (NULL);
-}
+}*/
 
-static char	*create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
+static t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 {
-	char	*result;
-	size_t	lennum;
+	t_result	res;
+	size_t		lennum;
 
 	if (tools->precision)
 		lennum = (lg_10 > 0) ? lg_10 + tools->precision : 1 + tools->precision;
@@ -76,11 +76,13 @@ static char	*create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 		lennum = (lg_10 > 0) ? lg_10: 1;
 	if (tools->flags & M_SHARP || tools->precision || tools->flags & M_PRECISION_NOT_ADDED)
 		++lennum;
-	if (!(result = ft_strnew(lennum + 1)))
-		return (NULL);
-	*result = '0';
+	if (!(res.result = ft_strnew(lennum + 1)))
+		return ((t_result){NULL, NULL, 0});
+	*res.result = '0';
+	res.begin = res.result;
+	++res.result;
 	fld->lennum = lennum;
-	return (++result);
+	return (res);
 }
 
 /// (uint32_t)ft_ceil(((int32_t)ft_64log2(dblcomp.mant_val) + (dblcomp.exp_val - 52)) * LOG10_2)
@@ -95,12 +97,15 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 	t_result	res;
 	int32_t		lg_10;
 
-	if ((res.result = initialize_dbl(&dblcomp, number)))
+	if ((res.result = initialize_dbl(&res, &dblcomp, number)))
 		return (res.result);
+	if (!res.len)
+		return (NULL);
 	lg_10 = ft_floor(ft_log10(number));
 	if (!(hp = hp_initializ()))
 		return (NULL);
-	if (!(res.result = create_str(lg_10, tools, fld)))
+	res = create_str(lg_10, tools, fld);
+	if (!res.result)
 		return (NULL);
 	insert_low_bits(hp, dblcomp.mant_High_Bits, dblcomp.exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp.mant_Low_Bits, dblcomp.exp_val - 32 + 12, 1);
@@ -113,10 +118,11 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 	insert_top_bits(hp, dblcomp.mant_High_Bits, 52 - dblcomp.exp_val - 32, 0);
 	insert_top_bits(hp, dblcomp.mant_Low_Bits, 52 - dblcomp.exp_val, 0);
 	fill_result(hp, 0, tools->precision, &res);
+	check_result(&res);
 	return (res.result);
 }
 
-char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
+/*char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 {
 	t_dbl_comp	ldblcomp;
 	t_highl		*hp;
@@ -139,4 +145,4 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	insert_top_lbits(hp, ldblcomp.mant_Low_Bits, 63 - ldblcomp.exp_val, 0);
 	fill_lresult(res, hp, 0);
 	return (res);
-}
+}*/

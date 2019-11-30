@@ -87,6 +87,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_log10.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_floor.c.o"
   "CMakeFiles/ft_printf.dir/ft_ptintf/ft_round.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/check_float_res.c.o"
+  "CMakeFiles/ft_printf.dir/ft_ptintf/float_rounding.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

@@ -171,7 +171,8 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
 	///protect
 	if (tools->modifiers & M_UPPER_L)
-		field->str = print_long_double(tools, field, field->number.ldb);
+		;
+//		field->str = print_long_double(tools, field, field->number.ldb);
 	else if (tools->modifiers & M_L || !tools->modifiers)
 		field->str = print_double(tools, field, field->number.db);
 }

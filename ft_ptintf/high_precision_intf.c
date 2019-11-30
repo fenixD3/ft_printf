@@ -37,42 +37,24 @@ static void	fill_result_fract(t_high *hp, _Bool intg, int precision, t_result *r
 {
 	char	rem_overf;
 	size_t	i;
-	int		nu;
 
-	while (precision-- > 0 && !hp_is_zero(hp, intg))
+	while (precision > 0 && !hp_is_zero(hp, intg))
 	{
 		rem_overf = mul_ret_overflow(hp, 10) + '0';
 		ft_strncat(res->result, &rem_overf, 1);
 		++res->len;
+		--precision;
 	}
 	if (precision <= 0 && mul_ret_overflow(hp, 10) >= 5)
 	{
 		i = 0;
-		while (*(res->result + res->len - (++i)) == '9')
-		{
-			*(res->result + res->len - i) = '0';
-			++*(res->result + res->len - i - 1);
-		}
-		if ((*(res->result + res->len - i) == '.' && *(res->result + res->len - i + 1) == '0') ||
-		(!*(res->result + res->len - i + 1) && (ft_isdigit(*(res->result + res->len - i)) || *(res->result + res->len - i) == '.')))
-		{
-			if (*(res->result + res->len - i) == '.')
-				++i;
-			nu = ft_atoi(res->result + res->len - i);
-			if (nu % 2)
-				++*(res->result + res->len - i);
-			else if (nu == 9)
-			{
-				*(res->result + res->len - (++i)) = '0';
-				while (*(res->result + res->len - (++i)) == '0')
-					++*(res->result + res->len - i);
-			}
-		}
-		if (!i && *(res->result + res->len - 1) != '9')
+		if (*(res->result + res->len - (++i)) == '9')
+			float_round(res, &i);
+		else if (*(res->result + res->len - 1) != '9')
 			++*(res->result + res->len - 1);
 	}
 	else
-		while (precision--)
+		while (precision-- > 0)
 		{
 			ft_strncat(res->result, "0", 1);
 			++res->len;

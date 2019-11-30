@@ -32,8 +32,10 @@ uint64_t		get_mantissa(uint64_t *dbl);
 _Bool			get_lsign(uint64_t *ldbl);
 int32_t			get_lexp(uint64_t *ldbl);
 uint64_t		get_lmantissa(uint64_t *ldbl);
-char			*print_nan(_Bool sign);
-char			*print_inf(_Bool sign);
-char			*print_zero(_Bool sign);
+char			*print_nan(t_result *res, _Bool sign);
+char			*print_inf(t_result *res, _Bool sign);
+char			*print_zero(t_result *res, _Bool sign);
+void			check_result(t_result *res);
+void			float_round(t_result *res, size_t *oft);
 
 #endif
