@@ -79,11 +79,11 @@ _Bool	set_buff_float(t_mkfld *fld, t_prsng *tls)
 	str[fld->lennum + fld->len] = '\0';
 
 	get_value_float(fld, tls, str);
-	if (tls->flags & M_ZERO)
+	if (tls->flags & M_ZERO && !ft_isalpha(*fld->str) && *fld->str != '-')
 		ft_memset(str, '0', fld->len_empty_field);
-	if (which_sign(&fld->number,tls) < 0)
+	if (!ft_isalpha(*fld->str) && *fld->str != '-' && which_sign(&fld->number,tls) < 0)
 		str[0] = '-';
-	else if (tls->flags & M_PLUS)
+	else if (!ft_isalpha(*fld->str) && *fld->str != '-' && tls->flags & M_PLUS)
 		str[0] = '+';
 
 	to_buff(str, tls, fld);

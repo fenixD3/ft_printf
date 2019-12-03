@@ -1,22 +1,104 @@
 cmake_minimum_required(VERSION 3.14)
-project(ft_printf C)
+project(Printf_Hub C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
-file (GLOB SRC ft_ptintf/libft/*.c)
+include_directories(ft_ptintf)
+include_directories(ft_ptintf/libft)
 
-add_executable(ft_printf ${SRC} ft_ptintf/main.c ft_ptintf/ft_printf.c
+add_executable(Printf_Hub
+        ft_ptintf/libft/ft_atoi.c
+        ft_ptintf/libft/ft_bzero.c
+        ft_ptintf/libft/ft_fib.c
+        ft_ptintf/libft/ft_isalnum.c
+        ft_ptintf/libft/ft_isalpha.c
+        ft_ptintf/libft/ft_isascii.c
+        ft_ptintf/libft/ft_isdigit.c
+        ft_ptintf/libft/ft_islower.c
+        ft_ptintf/libft/ft_isprint.c
+        ft_ptintf/libft/ft_isupper.c
+        ft_ptintf/libft/ft_itoa.c
+        ft_ptintf/libft/ft_lstadd.c
+        ft_ptintf/libft/ft_lstdel.c
+        ft_ptintf/libft/ft_lstdelone.c
+        ft_ptintf/libft/ft_lstiter.c
+        ft_ptintf/libft/ft_lstmap.c
+        ft_ptintf/libft/ft_lstnew.c
+        ft_ptintf/libft/ft_lstpush.c
+        ft_ptintf/libft/ft_memalloc.c
+        ft_ptintf/libft/ft_memccpy.c
+        ft_ptintf/libft/ft_memchr.c
+        ft_ptintf/libft/ft_memcmp.c
+        ft_ptintf/libft/ft_memcpy.c
+        ft_ptintf/libft/ft_memdel.c
+        ft_ptintf/libft/ft_memmove.c
+        ft_ptintf/libft/ft_memset.c
+        ft_ptintf/libft/ft_pow.c
+        ft_ptintf/libft/ft_putchar.c
+        ft_ptintf/libft/ft_putchar_fd.c
+        ft_ptintf/libft/ft_putendl.c
+        ft_ptintf/libft/ft_putendl_fd.c
+        ft_ptintf/libft/ft_putnbr.c
+        ft_ptintf/libft/ft_putnbr_fd.c
+        ft_ptintf/libft/ft_putstr.c
+        ft_ptintf/libft/ft_putstr_fd.c
+        ft_ptintf/libft/ft_sqrt.c
+        ft_ptintf/libft/ft_strcat.c
+        ft_ptintf/libft/ft_strchr.c
+        ft_ptintf/libft/ft_strclr.c
+        ft_ptintf/libft/ft_strcmp.c
+        ft_ptintf/libft/ft_strcpy.c
+        ft_ptintf/libft/ft_strdel.c
+        ft_ptintf/libft/ft_strdup.c
+        ft_ptintf/libft/ft_strequ.c
+        ft_ptintf/libft/ft_striter.c
+        ft_ptintf/libft/ft_striteri.c
+        ft_ptintf/libft/ft_strjoin.c
+        ft_ptintf/libft/ft_strlcat.c
+        ft_ptintf/libft/ft_strlen.c
+        ft_ptintf/libft/ft_strmap.c
+        ft_ptintf/libft/ft_strmapi.c
+        ft_ptintf/libft/ft_strncat.c
+        ft_ptintf/libft/ft_strncmp.c
+        ft_ptintf/libft/ft_strncpy.c
+        ft_ptintf/libft/ft_strnequ.c
+        ft_ptintf/libft/ft_strnew.c
+        ft_ptintf/libft/ft_strnstr.c
+        ft_ptintf/libft/ft_strrchr.c
+        ft_ptintf/libft/ft_strsplit.c
+        ft_ptintf/libft/ft_strstr.c
+        ft_ptintf/libft/ft_strsub.c
+        ft_ptintf/libft/ft_strtrim.c
+        ft_ptintf/libft/ft_tolower.c
+        ft_ptintf/libft/ft_toupper.c
+        ft_ptintf/libft/get_next_line.c
+        ft_ptintf/libft/get_next_line.h
+        ft_ptintf/libft/libft.h
+        ft_ptintf/check_float_res.c
+        ft_ptintf/field_len.c
+        ft_ptintf/float_rounding.c
+        ft_ptintf/ft_ceil.c
+        ft_ptintf/ft_floor.c
+        ft_ptintf/ft_itoa_base_printf.c
+        ft_ptintf/ft_log10.c
+        ft_ptintf/ft_log2.c
+        ft_ptintf/ft_printf.c
         ft_ptintf/ft_ptintf.h
-        ft_ptintf/ft_itoa_base_printf.c ft_ptintf/parsing.c ft_ptintf/to_buff.c
-        ft_ptintf/field_len.c ft_ptintf/make_field.c ft_ptintf/is.c
-        ft_ptintf/set_buff.c ft_ptintf/ft_log2.c 
         ft_ptintf/ft_reverse.c
+        ft_ptintf/ft_round.c
         ft_ptintf/get_dbl_values.c
         ft_ptintf/get_ldbl_values.c
         ft_ptintf/high_precision.c
         ft_ptintf/high_precision.h
         ft_ptintf/high_precision_intf.c
+        ft_ptintf/high_precision_intf_long.c
+        ft_ptintf/high_precision_long.c
+        ft_ptintf/is.c
+        ft_ptintf/main.c
+        ft_ptintf/make_field.c
         ft_ptintf/my_float.c
         ft_ptintf/myfloat.h
+        ft_ptintf/parsing.c
         ft_ptintf/print_reserve_dbl.c
-		ft_ptintf/ft_ceil.c ft_ptintf/high_precision_intf_long.c ft_ptintf/high_precision_long.c ft_ptintf/ft_log10.c ft_ptintf/ft_floor.c ft_ptintf/ft_round.c ft_ptintf/check_float_res.c ft_ptintf/float_rounding.c)
+        ft_ptintf/set_buff.c
+        ft_ptintf/to_buff.c)

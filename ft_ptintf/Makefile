@@ -20,14 +20,10 @@ SRC_PATH = ./
 HEAD_PATH = ./
 LIB_PATH = ./libft/
 
-SRC_FILES = field_len.c \
-            ft_itoa_base_printf.c \
-            ft_printf.c \
-            is.c \
-            make_field.c \
-            parsing.c \
-            set_buff.c \
-            to_buff.c
+SRC_FILES = check_float_res.c field_len.c float_rounding.c ft_ceil.c ft_floor.c ft_itoa_base_printf.c ft_log10.c \
+    ft_log2.c ft_printf.c ft_reverse.c ft_round.c get_dbl_values.c get_ldbl_values.c high_precision.c \
+    high_precision_intf.c high_precision_intf_long.c high_precision_long.c is.c make_field.c my_float.c parsing.c \
+    print_reserve_dbl.c set_buff.c to_buff.c
 
 SRCS = $(addprefix $(SRC_PATH),$(SRC_FILES))
 

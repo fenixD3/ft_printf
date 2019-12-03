@@ -4,6 +4,7 @@
 
 #include "libft/libft.h"
 #include "myfloat.h"
+#include "ft_ptintf.h"
 
 char		*print_nan(t_result *res, const char type)
 {
@@ -29,12 +30,19 @@ char		*print_inf(t_result *res, _Bool sign, const char type)
 	return (sign ? ft_strcpy(res->result, "-inf") : ft_strcpy(res->result, "inf"));
 }
 
-char		*print_zero(t_result *res, _Bool sign)
+char		*print_zero(t_result *res, t_prsng *tools)
 {
 	if (!(res->result = ft_strnew(2)))
 	{
 		res->len = 0;
 		return (NULL);
 	}
-	return (sign ? ft_strcpy(res->result, "-0") : ft_strcpy(res->result, "+0"));
+	ft_strcpy(res->result, "0");
+	if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
+		tools->precision = 6;
+	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED || tools->flags & M_SHARP)
+		ft_strncat(res->result, ".", 1);
+	while (tools->precision-- > 0)
+		ft_strncat(res->result, "0", 1);
+	return (res->result);
 }

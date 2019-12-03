@@ -133,7 +133,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ft_printf
+CMAKE_PROJECT_NAME:STATIC=Printf_Hub
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -194,14 +194,14 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Printf_Hub_BINARY_DIR:STATIC=/Users/ylila/Printf_Hub/cmake-build-debug
+
+//Value Computed by CMake
+Printf_Hub_SOURCE_DIR:STATIC=/Users/ylila/Printf_Hub
+
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
-
-//Value Computed by CMake
-ft_printf_BINARY_DIR:STATIC=/Users/ylila/Printf_Hub/cmake-build-debug
-
-//Value Computed by CMake
-ft_printf_SOURCE_DIR:STATIC=/Users/ylila/Printf_Hub
 
 
 ########################

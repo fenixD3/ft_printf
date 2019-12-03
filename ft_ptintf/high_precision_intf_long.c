@@ -33,31 +33,53 @@ _Bool		hp_is_lzero(t_highl *hp, _Bool intg)
 	return (1);
 }
 
-char		*fill_lresult(char *result, t_highl *hp, _Bool intg)
+static void	fill_lresult_fract(t_highl *hp, _Bool intg, int precision, t_result *res)
+{
+	char	rem_overf;
+	int		nxt_nu;
+	int		prec;
+
+	ft_memcpy(&prec, &precision, sizeof(int));
+	while (precision > 0 && !hp_is_lzero(hp, intg))
+	{
+		rem_overf = mul_ret_loverflow(hp, 10) + '0';
+		ft_strncat(res->result, &rem_overf, 1);
+		++res->len;
+		--precision;
+	}
+	if (precision <= 0 && (nxt_nu = mul_ret_loverflow(hp, 10)) >= 5)
+		float_round(res, nxt_nu, prec);
+	else
+		while (precision-- > 0)
+		{
+			ft_strncat(res->result, "0", 1);
+			++res->len;
+		}
+}
+
+static void	fill_lresult_intg(t_highl *hp, _Bool intg, t_result *res)
 {
 	char	rem_overf;
 
-	if (intg)
+	rem_overf = div_ret_lremainder(hp, 10) + '0';
+	ft_strncat(res->result, &rem_overf, 1);
+	++res->len;
+	while (!hp_is_lzero(hp, intg))
 	{
 		rem_overf = div_ret_lremainder(hp, 10) + '0';
-		ft_strncat(result, &rem_overf, 1);
-		while (!hp_is_lzero(hp, intg))
-		{
-			rem_overf = div_ret_lremainder(hp, 10) + '0';
-			ft_strncat(result, &rem_overf, 1);
-		}
-		if (*result == '-')
-			ft_reverse(result + 1);
-		else
-			ft_reverse(result);
+		ft_strncat(res->result, &rem_overf, 1);
+		++res->len;
+	}
+	ft_reverse(res->result);
+}
+
+void		fill_lresult(t_highl *hp, _Bool intg, int precision, t_result *res)
+{
+	if (intg)
+	{
+		res->len = 0;
+		fill_lresult_intg(hp, intg, res);
 	}
 	else
-	{
-		while (!hp_is_lzero(hp, intg))
-		{
-			rem_overf = mul_ret_loverflow(hp, 10) + '0';
-			ft_strncat(result, &rem_overf, 1);
-		}
-	}
-	return (result);
+		fill_lresult_fract(hp, intg, precision, res);
 }

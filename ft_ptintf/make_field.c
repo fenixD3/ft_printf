@@ -168,10 +168,9 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 	fill_union_aaeeffgg(field, tools);
 	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
 	///protect
-	if (tools->modifiers & M_UPPER_L)
-		;
-//		field->str = print_long_double(tools, field, field->number.ldb);
-	else if (tools->modifiers & M_L || !tools->modifiers)
+	if ((tools->modifiers & M_UPPER_L))
+		field->str = print_long_double(tools, field, field->number.ldb);
+	else
 		field->str = print_double(tools, field, field->number.db);
 
 	/// delete this
@@ -180,7 +179,7 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 
 	if (field->lennum < tools->field)
 		field->len = tools->field - field->lennum ;
-	else if (field->lennum >= tools->field && (tools->flags & M_SPACE || tools->flags & M_PLUS || which_sign(&field->number, tools) < 0))
+	else if (!ft_isalpha(*field->str) && *field->str != '-' && field->lennum >= tools->field && (tools->flags & M_SPACE || tools->flags & M_PLUS || which_sign(&field->number, tools) < 0))
 		field->len++;
 }
 
@@ -202,7 +201,7 @@ int 	organozation_by_flags_to_buff(t_prsng *tools)
 	if (is_aaeeffgg(tools->type))
 	{
 		prepare_aaeeffgg(tools, &field);
-		if (tools->type && !set_buff_float(&field, tools))
+		if (!set_buff_float(&field, tools))
 			return (0);
 	}
 	else if (is_ddioouuxx(tools->type) || is_csp(tools->type) || !is_flag(tools->type))

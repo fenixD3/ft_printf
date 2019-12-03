@@ -45,9 +45,9 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("\n----------\n");*/
 
 
-	real = printf("% faa", 3.75);
+	/*real = printf("% faa", 3.75);
 	printf("\n----------\n");
-	my = ft_printf("% faa", 3.75);
+	my = ft_printf("% faa", 3.75);*/
 
 	//printf("%d\n", ft_64log2(8301034833169298));
 
@@ -69,10 +69,11 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("%#.13f\n", 67.99999999999999);*/
 	/*printf("%.20f\n", 1.7999998);
 	printf("%.21f\n", 1.7999998);*/
-	printf("%10.f\n", sqrt(-100));
-	ft_printf("%10.f\n", sqrt(-100));
-	printf("%.f\n", -DBL_MAX * 2);
-	ft_printf("%f\n", -DBL_MAX * 2);
+	/*printf("%+#f\n", 0.);
+	ft_printf("%+#f\n", 0.);
+	printf("%+#Lf\n", -0 / 1000.L);
+	ft_printf("%+#Lf\n", -0 / 1000.L);*/
+	ft_printf("%llllllf", 42.5);
 
 	/*double		i = DBL_MAX;
 	uint64_t	*dbl;

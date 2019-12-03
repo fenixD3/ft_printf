@@ -7,6 +7,7 @@
 
 # include <stdint.h>
 # include <string.h>
+# include "ft_ptintf.h"
 # define OFFSET_DBL 1023
 # define OFFSET_LDBL 16383
 
@@ -23,7 +24,7 @@ typedef struct	s_result
 {
 	char	*result;
 	char 	*begin;
-	size_t	len;
+	ssize_t	len;
 }				t_result;
 
 _Bool			get_sign(uint64_t *dbl);
@@ -34,7 +35,7 @@ int32_t			get_lexp(uint64_t *ldbl);
 uint64_t		get_lmantissa(uint64_t *ldbl);
 char			*print_nan(t_result *res, const char type);
 char			*print_inf(t_result *res, _Bool sign, const char type);
-char			*print_zero(t_result *res, _Bool sign);
+char			*print_zero(t_result *res, t_prsng *tools);
 void			check_result(t_result *res);
 void			float_round(t_result *res, const int nxt_nu, const int precision);
 
