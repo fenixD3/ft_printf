@@ -57,6 +57,7 @@ _Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools)
 {
 	field->number.db = 0.0;
+	field->number.ldb = 0.0;
 
 	if (tools->modifiers & M_UPPER_L)
 		field->number.ldb = va_arg(tools->ap, long double);
@@ -168,7 +169,8 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 	///вызов PrintDouble/LDouble(tools, field->number.db(ldb));
 	///protect
 	if (tools->modifiers & M_UPPER_L)
-		field->str = print_long_double(tools, field, field->number.ldb);
+		;
+//		field->str = print_long_double(tools, field, field->number.ldb);
 	else if (tools->modifiers & M_L || !tools->modifiers)
 		field->str = print_double(tools, field, field->number.db);
 

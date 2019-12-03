@@ -19,4 +19,4 @@ add_executable(ft_printf ${SRC} ft_ptintf/main.c ft_ptintf/ft_printf.c
         ft_ptintf/my_float.c
         ft_ptintf/myfloat.h
         ft_ptintf/print_reserve_dbl.c
-		ft_ptintf/ft_ceil.c)
+		ft_ptintf/ft_ceil.c ft_ptintf/high_precision_intf_long.c ft_ptintf/high_precision_long.c ft_ptintf/ft_log10.c ft_ptintf/ft_floor.c ft_ptintf/ft_round.c ft_ptintf/check_float_res.c ft_ptintf/float_rounding.c)

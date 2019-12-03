@@ -3,32 +3,18 @@
 //
 
 #include <stdint.h>
+#include "myfloat.h"
+#include "libft/libft.h"
 
-static const char	log_table256[256] = {
-#define LT(n) n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n
-		0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3,
-		LT(4), LT(5), LT(5), LT(6), LT(6), LT(6), LT(6),
-		LT(7), LT(7), LT(7), LT(7), LT(7), LT(7), LT(7), LT(7)
-};
 
-uint32_t	ft_log2(uint32_t num)
+double	ft_log2(long double num)
 {
-	uint32_t			tmp;
+	uint64_t	*dbl;
+	int32_t		exp;
+	long double	pow;
 
-	if ((tmp = num >> 24))
-		return (24 + log_table256[tmp]);
-	if ((tmp = num >> 16))
-		return (16 + log_table256[tmp]);
-	if ((tmp = num >> 8))
-		return (8 + log_table256[tmp]);
-	return (log_table256[num]);
-}
-
-uint32_t	ft_64log2(uint64_t num)
-{
-	uint32_t	tmp;
-
-	if ((tmp = num >> 32))
-		return (32 + ft_log2(tmp));
-	return (ft_log2((uint32_t)num));
+	dbl = (uint64_t *)&num;
+	exp = get_lexp(dbl) - 16383;
+	pow = ft_pow(2, exp);
+	return (exp + ((num - pow) / pow));
 }

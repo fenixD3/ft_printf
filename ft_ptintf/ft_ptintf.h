@@ -118,11 +118,15 @@ int which_sign(t_un *number, t_prsng *tools);
 
 /// for double
 char		*print_double(t_prsng *tools, t_mkfld *fld, double number);
-uint32_t	ft_log2(uint32_t num);
-uint64_t	ft_64log2(uint64_t num);
+double		ft_log2(long double num);
+double		ft_log10(long double num);
 char		*ft_reverse(char *str);
 char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number);
 double		ft_ceil(double num);
-
+long double	ft_ceill(long double num);
+double		ft_floor(double num);
+long double	ft_floorl(long double num);
+double		ft_round(double num);
+long double	ft_roundl(long double num);
 
 #endif

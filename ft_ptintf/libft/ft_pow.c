@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-double	ft_pow(double num, long long power)
+long double	ft_pow(long double num, long long power)
 {
-	double	res;
-	_Bool	flg;
+	long double	res;
+	_Bool		flg;
 
 	res = 1.;
 	flg = 1;
