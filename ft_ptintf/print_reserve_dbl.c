@@ -5,24 +5,28 @@
 #include "libft/libft.h"
 #include "myfloat.h"
 
-char		*print_nan(t_result *res, _Bool sign)
+char		*print_nan(t_result *res, const char type)
 {
 	if (!(res->result = ft_strnew(4)))
 	{
 		res->len = 0;
 		return (NULL);
 	}
-	return (sign ? ft_strcpy(res->result, "-NaN") : ft_strcpy(res->result, "+NaN"));
+	if (type == 'F')
+		return (ft_strcpy(res->result, "NAN"));
+	return (ft_strcpy(res->result, "nan"));
 }
 
-char		*print_inf(t_result *res, _Bool sign)
+char		*print_inf(t_result *res, _Bool sign, const char type)
 {
 	if (!(res->result = ft_strnew(4)))
 	{
 		res->len = 0;
 		return (NULL);
 	}
-	return (sign ? ft_strcpy(res->result, "-Inf") : ft_strcpy(res->result, "+Inf"));
+	if (type == 'F')
+		return (sign ? ft_strcpy(res->result, "-INf") : ft_strcpy(res->result, "INf"));
+	return (sign ? ft_strcpy(res->result, "-inf") : ft_strcpy(res->result, "inf"));
 }
 
 char		*print_zero(t_result *res, _Bool sign)

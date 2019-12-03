@@ -36,8 +36,10 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 static void	fill_result_fract(t_high *hp, _Bool intg, int precision, t_result *res)
 {
 	char	rem_overf;
-	size_t	i;
+	int		nxt_nu;
+	int		prec;
 
+	ft_memcpy(&prec, &precision, sizeof(int));
 	while (precision > 0 && !hp_is_zero(hp, intg))
 	{
 		rem_overf = mul_ret_overflow(hp, 10) + '0';
@@ -45,14 +47,8 @@ static void	fill_result_fract(t_high *hp, _Bool intg, int precision, t_result *r
 		++res->len;
 		--precision;
 	}
-	if (precision <= 0 && mul_ret_overflow(hp, 10) >= 5)
-	{
-		i = 0;
-		if (*(res->result + res->len - (++i)) == '9')
-			float_round(res, &i);
-		else if (*(res->result + res->len - 1) != '9')
-			++*(res->result + res->len - 1);
-	}
+	if (precision <= 0 && (nxt_nu = mul_ret_overflow(hp, 10)) >= 5)
+		float_round(res, nxt_nu, prec);
 	else
 		while (precision-- > 0)
 		{

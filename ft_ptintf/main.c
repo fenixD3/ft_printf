@@ -58,10 +58,16 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("%f\n", DBL_MAX * 2);
 	printf("%f\n", sqrt(-1));*/
 
-	printf("%#.f\n", 1.5);
+	/*printf("%.200f\n", 67.76845654865499);
+	printf("%.14f\n", 67.76845654865499);
+	printf("%.200f\n", 67.99999999999999);
+	printf("%#.13f\n", 67.99999999999999);*/
 	/*printf("%.20f\n", 1.7999998);
 	printf("%.21f\n", 1.7999998);*/
-	ft_printf("%#.f\n", 1.5);
+	printf("%10.f\n", sqrt(-100));
+	ft_printf("%10.f\n", sqrt(-100));
+	printf("%.f\n", -DBL_MAX * 2);
+	ft_printf("%f\n", -DBL_MAX * 2);
 
 	/*double		i = DBL_MAX;
 	uint64_t	*dbl;

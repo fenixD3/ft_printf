@@ -5,28 +5,53 @@
 #include "myfloat.h"
 #include "libft/libft.h"
 
-void	float_round(t_result *res, size_t *oft)
+static void	round_intg_nearest(t_result *res, const int nxt_nu)
 {
-	int		nu;
+	size_t	i;
+	int 	nu;
 
-	while (*(res->result + res->len - *(++oft)) == '9')
+	i = 0;
+	if (*(res->result + res->len - (++i)) == '.')
+		++i;
+	if (nxt_nu == 5)
 	{
-		*(res->result + res->len - *oft) = '0';
-		++*(res->result + res->len - *oft - 1);
-	}
-	if ((*(res->result + res->len - *oft) == '.' && *(res->result + res->len - *oft + 1) == '0') ||
-		(!*(res->result + res->len - *oft + 1) && (ft_isdigit(*(res->result + res->len - *oft)) || *(res->result + res->len - *oft) == '.')))
-	{
-		if (*(res->result + res->len - *oft) == '.')
-			++oft;
-		nu = ft_atoi(res->result + res->len - *oft);
-		if (nu % 2)
-			++*(res->result + res->len - *oft);
-		else if (nu == 9)
+		nu = atoi(res->result + res->len - i);
+		if (nu == 9)
 		{
-			*(res->result + res->len - *(++oft)) = '0';
-			while (*(res->result + res->len - *(++oft)) == '0')
-				++*(res->result + res->len - *oft);
+			*(res->result + res->len - i) = '0';
+			while (*(res->result + res->len - ++i) == '9')
+				*(res->result + res->len - i) = '0';
+			++*(res->result + res->len - i);
 		}
+		else if (nu % 2)
+			++*(res->result + res->len - i);
 	}
+	else
+	{
+		while (*(res->result + res->len - i) == '9')
+			*(res->result + res->len - i++) = '0';
+		++*(res->result + res->len - i);
+	}
+}
+
+static void	precision_rounding(t_result *res)
+{
+	size_t	i;
+
+	i = 0;
+	while (*(res->result + res->len - ++i) == '9' || *(res->result + res->len - i) == '.')
+	{
+		if (*(res->result + res->len - i) == '.')
+			continue ;
+		*(res->result + res->len - i) = '0';
+	}
+	++*(res->result + res->len - i);
+}
+
+void		float_round(t_result *res, const int nxt_nu, const int prec)
+{
+	if (!prec)
+		round_intg_nearest(res, nxt_nu);
+	else
+		precision_rounding(res);
 }

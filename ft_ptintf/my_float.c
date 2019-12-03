@@ -2,7 +2,7 @@
 #include "high_precision.h"
 #include "ft_ptintf.h"
 
-static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number)
+static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number, t_prsng *tools)
 {
 	uint64_t	*dbl;
 
@@ -11,8 +11,8 @@ static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number)
 	if ((dblcomp->exp_val = get_exp(dbl)) == 0x7FF)
 	{
 		if (!get_mantissa(dbl))
-			return (print_inf(res, dblcomp->sign));
-		return (print_nan(res, dblcomp->sign));
+			return (print_inf(res, dblcomp->sign, tools->type));
+		return (print_nan(res, tools->type));
 	}
 	if (!dblcomp->exp_val)
 	{
@@ -97,7 +97,7 @@ char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
 	t_result	res;
 	int32_t		lg_10;
 
-	if ((res.result = initialize_dbl(&res, &dblcomp, number)))
+	if ((res.result = initialize_dbl(&res, &dblcomp, number, tools)))
 		return (res.result);
 	if (!res.len)
 		return (NULL);
