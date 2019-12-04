@@ -28,7 +28,8 @@ _Bool 	is_ddioouuxx(char c)
 
 _Bool 	is_aaeeffgg(char c)
 {
-	if (c == 'f' /*aAeEFgG*/)
+	if (c == 'f' || c == 'F' || c == 'e' || c == 'E' || c == 'a' || c == 'A' ||
+		c == 'g' || c =='G')
 		return (1);
 	return (0);
 }

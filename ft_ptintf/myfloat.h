@@ -25,6 +25,8 @@ typedef struct	s_result
 	char	*result;
 	char 	*begin;
 	ssize_t	len;
+	int32_t	lg_10;
+	char 	*buff;
 }				t_result;
 
 _Bool			get_sign(uint64_t *dbl);
@@ -39,5 +41,6 @@ char			*print_zero(t_result *res, t_prsng *tools);
 void			check_result(t_result *res);
 void			float_round(t_result *res, const int nxt_nu, const int precision);
 t_result		create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld);
+void			check_e_intg_res(t_result *res);
 
 #endif

@@ -35,7 +35,7 @@ static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp, t_prsn
 {
 	insert_low_bits(hp, dblcomp->mant_High_Bits, dblcomp->exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp->mant_Low_Bits, dblcomp->exp_val - 32 + 12, 1);
-	fill_result(hp, 1, tools->precision, res);
+	fill_result(hp, 1, tools, res);
 	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED || tools->flags & M_SHARP)
 	{
 		ft_strncat(res->result, ".", 1);
@@ -43,25 +43,24 @@ static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp, t_prsn
 	}
 	insert_top_bits(hp, dblcomp->mant_High_Bits, 52 - dblcomp->exp_val - 32, 0);
 	insert_top_bits(hp, dblcomp->mant_Low_Bits, 52 - dblcomp->exp_val, 0);
-	fill_result(hp, 0, tools->precision, res);
+	fill_result(hp, 0, tools, res);
 }
 
-char		*print_double(t_prsng *tools,  t_mkfld *fld, double number)
+char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 {
 	t_dbl_comp	dblcomp;
 	t_high		*hp;
 	t_result	res;
-	int32_t		lg_10;
 
 	res.len = -1;
 	if ((res.result = initialize_dbl(&res, &dblcomp, number, tools)))
 		return (res.result);
 	if (!res.len)
 		return (NULL);
-	lg_10 = ft_floor(ft_log10(number));
+	res.lg_10 = ft_floor(ft_log10(number));
 	if (!(hp = hp_initializ()))
 		return (NULL);
-	res = create_str(lg_10, tools, fld);
+	res = create_str(res.lg_10, tools, fld);
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &dblcomp, tools);
