@@ -74,7 +74,7 @@ add_executable(Printf_Hub
         ft_ptintf/libft/get_next_line.c
         ft_ptintf/libft/get_next_line.h
         ft_ptintf/libft/libft.h
-        ft_ptintf/check_float_res.c
+        ft_ptintf/check_create_float_res.c
         ft_ptintf/field_len.c
         ft_ptintf/float_rounding.c
         ft_ptintf/ft_ceil.c
@@ -101,4 +101,4 @@ add_executable(Printf_Hub
         ft_ptintf/parsing.c
         ft_ptintf/print_reserve_dbl.c
         ft_ptintf/set_buff.c
-        ft_ptintf/to_buff.c)
+        ft_ptintf/to_buff.c ft_ptintf/my_long_float.c)

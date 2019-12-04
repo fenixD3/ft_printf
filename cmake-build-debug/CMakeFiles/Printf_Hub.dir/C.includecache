@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h
 stdarg.h
 -
 stdint.h
@@ -14,13 +14,13 @@ stdint.h
 float.h
 -
 libft/libft.h
-/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
 stdio.h
 -
 stdbool.h
 -
 
-/Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/libft/libft.h
 string.h
 -
 stdlib.h
@@ -28,13 +28,13 @@ stdlib.h
 unistd.h
 -
 
-/Users/ylila/Printf_Hub/ft_ptintf/main.c
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/main.c
 stdarg.h
 -
 ft_ptintf.h
-/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h
 myfloat.h
-/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/myfloat.h
 stdio.h
 -
 math.h
@@ -42,11 +42,11 @@ math.h
 fcntl.h
 -
 
-/Users/ylila/Printf_Hub/ft_ptintf/myfloat.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/myfloat.h
 stdint.h
 -
 string.h
 -
 ft_ptintf.h
-/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+C:/Users/da.filiptsev/Desktop/Printf_Hub/ft_ptintf/ft_ptintf.h
 
