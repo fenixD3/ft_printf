@@ -73,7 +73,10 @@ printf("%o %o\n\n\n", a, b);*/
 	ft_printf("%+#f\n", 0.);
 	printf("%+#Lf\n", -0 / 1000.L);
 	ft_printf("%+#Lf\n", -0 / 1000.L);*/
-	ft_printf("%llllllf", 42.5);
+	   printf("%-57lc", "W");
+	printf("\n----------\n");
+	ft_printf("%-57lc", "W");
+
 
 	/*double		i = DBL_MAX;
 	uint64_t	*dbl;

@@ -7,7 +7,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 # include <float.h>
-# define BUFF_SIZE 10
+# define BUFF_SIZE  60
 
 # define M_MINUS 1
 # define M_PLUS 2

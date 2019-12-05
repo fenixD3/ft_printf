@@ -1,6 +1,14 @@
-//
-// Created by Mort Deanne on 2019-08-25.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   make_field.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/05 23:01:13 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/05 23:01:17 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_ptintf.h"
 
@@ -84,8 +92,6 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 		ft_strncpy(&field->str[field->len - 2], "0x", 2);
 		field->len -= 2;
 	}
-	/** дополнить # для других флагов*/
-
 	if (tools->flags & M_ZERO)
 	{
 		while (field->len)
@@ -94,9 +100,6 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 				which_sign(&field->number, tools) < 0 || tools->flags & M_SPACE)
 			field->len++;
 	}
-	/** дополнить для других флагов кроме diouxX*/
-
-	/** пишем поверх нулей "0x"*/
 	if ((tools->flags & M_SHARP && (tools->flags & M_ZERO) != 0 &&
 			  ((tools->type == 'x' || tools->type == 'X') && field->number.i)))
 	{
@@ -104,15 +107,12 @@ void	set_flags(t_mkfld *field, t_prsng *tools)
 		field->str[1] = tools->type;
 		field->len -= 2;
 	}
-
-
 	if (tools->flags & M_PLUS &&  is_signed(tools->type) && which_sign(&field->number, tools) >= 0)
 		field->str[--field->len] = '+';
 	else if (is_signed(tools->type) && which_sign(&field->number, tools) < 0)
 		field->str[--field->len] = '-';
-	else if (tools->flags & M_SPACE)
+	else if (tools->flags & M_SPACE && is_signed(tools->type)) ///added && is_signed(tools->type)
 		field->str[--field->len] = ' ';
-
 }
 
 
@@ -137,29 +137,25 @@ void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 		fill_union_diouxx(field, tools);
 	else if (is_csp(tools->type))
 		fill_union_csp(field, tools); /// need protection strdup (malloc)
-
 	field->base = define_base(tools);
-
 	if (tools->type && (tools->type == 'c' || !is_flag(tools->type)))
 		field->lennum = 1;
-
-/*	else if ((((is_ddioouuxx(tools->type) && tools->type != 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') || (tools->type == 'o' && !(tools->flags & M_SHARP))) && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
-		field->lennum = 0;*/
-
-	else if (((is_ddioouuxx(tools->type) && tools->type != 'o' && !which_sign(&field->number, tools)) || tools->type == 'p') && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
+	else if (((is_ddioouuxx(tools->type) && tools->type != 'o' &&
+			!which_sign(&field->number, tools)) || tools->type == 'p') &&
+			(!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
 		field->lennum = 0;
-	else if (tools->type == 'o' && !(tools->flags & M_SHARP) && (!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
+	else if (tools->type == 'o' && !(tools->flags & M_SHARP) &&
+			(!tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED)))
 		field->lennum = 0;
-
 	else if (tools->type == 's')
 		{
 			field->lennum = ft_strlen(field->number.cptr);
-			if (field->lennum > (size_t)tools->precision && !(tools->flags & M_PRECISION_NOT_ADDED))
+			if (field->lennum > (size_t)tools->precision &&
+				!(tools->flags & M_PRECISION_NOT_ADDED))
 				field->lennum = tools->precision;
 		}
 	else if (is_ddioouuxx(tools->type) || tools->type == 'p')
 			field->lennum = count_lennum(field, tools);
-
 	len_counting_diouxxcsp(tools, field);
 }
 

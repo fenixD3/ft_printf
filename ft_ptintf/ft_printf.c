@@ -1,10 +1,18 @@
-//
-// Created by Mort Deanne on 2019-08-20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/05 22:57:32 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/05 22:57:37 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_ptintf.h"
 
-void		param_processing(char **format, t_prsng *tools)
+void	param_processing(char **format, t_prsng *tools)
 {
 	(*format)++;
 	if (!parsing(format, tools))
@@ -12,7 +20,7 @@ void		param_processing(char **format, t_prsng *tools)
 	organozation_by_flags_to_buff(tools);
 }
 
-void zeroing_tools(t_prsng *tools, _Bool zeroing_counter)
+void	zeroing_tools(t_prsng *tools, _Bool zeroing_counter)
 {
 	size_t i;
 
@@ -21,8 +29,8 @@ void zeroing_tools(t_prsng *tools, _Bool zeroing_counter)
 	tools->precision = -1;
 	tools->modifiers = 0;
 	tools->type = 0;
-
-	if (zeroing_counter) {
+	if (zeroing_counter)
+	{
 		tools->counter = 0;
 		i = 0;
 		while (i++ < BUFF_SIZE)
@@ -30,7 +38,7 @@ void zeroing_tools(t_prsng *tools, _Bool zeroing_counter)
 	}
 }
 
-int		ft_printf(const char* format, ...)
+int		ft_printf(const char *format, ...)
 {
 	t_prsng	tools;
 	char	*f_not_const;
@@ -50,7 +58,6 @@ int		ft_printf(const char* format, ...)
 			add_str_to_buff(&f_not_const, &tools);
 	}
 	va_end(tools.ap);
-
 	buffer_managment(&tools, NULL, 0, LAST);
 	return (tools.counter);
 }

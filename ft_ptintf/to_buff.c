@@ -1,10 +1,18 @@
-//
-// Created by Mort Deanne on 2019-08-22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   to_buff.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/05 23:05:05 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/05 23:05:09 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_ptintf.h"
 
-char *ft_strncropcat(char *dst_start, char *src, size_t n)
+char	*ft_strncropcat(char *dst_start, char *src, size_t n)
 {
 	size_t	i;
 	char	*s1_ret;
@@ -19,9 +27,8 @@ char *ft_strncropcat(char *dst_start, char *src, size_t n)
 	return (s1_ret);
 }
 
-void write_str(t_prsng *tools, char *str, int *len, int type_output)
+void	write_str(t_prsng *tools, char *str, int *len, int type_output)
 {
-
 	tools->counter += write(1, str, *len);
 	if (type_output == NON_FORMAT)
 		ft_bzero(str, *len);
@@ -38,34 +45,13 @@ void	buffer_managment(t_prsng *tools, char *str, int len, int type_output)
 		write_str(tools, str, &len, type_output);
 	else if (type_output != LAST)
 	{
-/*		if (lenbuf == 1)
-			memset(&tools->buff[lenbuf], '*', BUFF_SIZE - lenbuf);*/
 		ft_strncropcat(&tools->buff[lenbuf], str, len);
 		lenbuf += len;
 		tools->flags &= ~M_ZERO_CHAR; // we need it?
 	}
 }
 
-/*void	buffer_managment(t_prsng *tools, char *str, int len, _Bool last_output)
-{
-	static int lenbuf;
-
-	if (lenbuf && (len + lenbuf >= BUFF_SIZE || last_output))
-		write_str(tools, tools->buff, &lenbuf);
-	if (len >= BUFF_SIZE && !last_output)
-		write_str(tools, str, &len);
-	else if (!last_output)
-	{
-*//*		if (lenbuf == 1)
-			memset(&tools->buff[lenbuf], '*', BUFF_SIZE - lenbuf);*//*
-		ft_strncropcat(&tools->buff[lenbuf], str, len);
-		lenbuf += len;
-		tools->flags &= ~M_ZERO_CHAR; // we need it?
-	}
-}*/
-
-
-void add_str_to_buff(char **format, t_prsng *tools)
+void	add_str_to_buff(char **format, t_prsng *tools)
 {
 	int len;
 
@@ -76,10 +62,12 @@ void add_str_to_buff(char **format, t_prsng *tools)
 	*format += len;
 }
 
-void to_buff(char *str, t_prsng *tools, t_mkfld *field) {
+void	to_buff(char *str, t_prsng *tools, t_mkfld *field) {
 	int	len;
 
-	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0) + ((tools->type == 'c' && (tools->flags & M_MINUS) && !field->number.c) ? field->len_empty_field : 0);
+	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0) +
+		((tools->type == 'c' && (tools->flags & M_MINUS) && !field->number.c) ?
+		field->len_empty_field : 0);
 	buffer_managment(tools, str, len, NON_FORMAT);
 }
 

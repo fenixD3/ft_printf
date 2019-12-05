@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ft_ptintf/pft" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ft_ptintf/printf-unit-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/printf-unit-test" vcs="Git" />
   </component>
 </project>

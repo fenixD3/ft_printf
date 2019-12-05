@@ -1,6 +1,14 @@
-//
-// Created by Mort Deanne on 2019-08-20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/05 23:01:36 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/05 23:01:40 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_ptintf.h"
 
@@ -36,7 +44,6 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 		tools->modifiers |= M_L;
 	else if (**format == 'L')
 		tools->modifiers |= M_UPPER_L;
-
 	if (*(*format + 1) == 'h' || *(*format + 1) == 'l')
 		(*format) += 2;
 	else
@@ -70,8 +77,6 @@ void	parsing_precision(char **format, t_prsng *tools)
 	(*format)++;
 	if (**format == '*')
 		{
-/*			if ((tools->precision = va_arg(tools->ap, int)) < 0)
-					tools->precision = -1;*/
 		tools->precision = va_arg(tools->ap, int);
 			(*format)++;
 		}
@@ -102,7 +107,8 @@ void	parsing_cyclone(char **format, t_prsng *tools)
 	{
 		if (is_signflag(**format))
 			parsing_flags(format, tools);
-		else if (((**format >= '1' && **format <= '9') || **format == '*') && *(*format - 1) != '.')
+		else if (((**format >= '1' && **format <= '9') || **format == '*')
+				&& *(*format - 1) != '.')
 			parsing_field(format, tools);
 		else if (**format == '.')
 			parsing_precision(format, tools);
@@ -122,12 +128,13 @@ int		parsing(char **format, t_prsng *tools)
 	parsing_cyclone(format, tools);
 	if (!tools->type && **format)
 		tools->type = *((*format)++);
-	if (tools->precision > 0 && tools->flags & M_ZERO)
-		tools->flags &= ~M_ZERO;
 	if (tools->precision < 0)
 	{
 		tools->flags |= M_PRECISION_NOT_ADDED;
 		tools->precision = 0;
 	}
+	if (!(tools->flags & M_PRECISION_NOT_ADDED) &&
+		tools->flags & M_ZERO && is_ddioouuxx(tools->type))
+		tools->flags &= ~M_ZERO;
 	return (0);
 }
