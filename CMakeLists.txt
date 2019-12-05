@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 project(Printf_Hub C)
 
 set(CMAKE_C_STANDARD 11)
@@ -97,8 +97,9 @@ add_executable(Printf_Hub
         ft_ptintf/main.c
         ft_ptintf/make_field.c
         ft_ptintf/my_float.c
+        ft_ptintf/my_long_float.c
         ft_ptintf/myfloat.h
         ft_ptintf/parsing.c
         ft_ptintf/print_reserve_dbl.c
         ft_ptintf/set_buff.c
-        ft_ptintf/to_buff.c ft_ptintf/my_long_float.c)
+        ft_ptintf/to_buff.c ft_ptintf/flags_intf.c)

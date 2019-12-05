@@ -4,7 +4,6 @@
 
 #include "myfloat.h"
 #include "libft/libft.h"
-#define ABS(x) (x >= 0) ? x : -x
 
 static void	create_for_e(t_prsng *tools, size_t *lennum, const int32_t lg_10)
 {
@@ -21,7 +20,7 @@ static void	create_for_e(t_prsng *tools, size_t *lennum, const int32_t lg_10)
 		++*lennum;
 	if (lg_10 >= 0)
 	{
-		if (ft_isdigit(lg_10))
+		if (lg_10 >= 0 && lg_10 <= 9)
 			*lennum += 1 + ft_strlen(ft_itoa(lg_10)) + 1 + 1;
 		else
 			*lennum += 1 + ft_strlen(ft_itoa(lg_10)) + 1;
@@ -59,13 +58,14 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 		create_for_e(tools, &lennum, lg_10);
 	else if (tools->type == 'f' || tools->type == 'F')
 		create_for_f(tools, &lennum, lg_10);
-	res.buff = ft_strnew(lg_10);
+	res.buff = ft_strnew(ABS(lg_10));
 	if (!res.buff || !(res.result = ft_strnew(lennum + 1)))
 		return ((t_result){NULL, NULL, 0});
 	*res.result = '0';
 	res.begin = res.result;
 	++res.result;
 	fld->lennum = lennum;
+	res.lg_10 = lg_10;
 	return (res);
 }
 
@@ -81,8 +81,9 @@ void	check_result(t_result *res)
 	return ;
 }
 
-void	check_e_intg_res(t_result *res)
+void	clear_res_buff(t_result *res)
 {
-	if (res->len > 1 && res->buff != '0')
-		;
+	free(res->buff);
+	res->buff = NULL;
+	res->bf_len = 0;
 }

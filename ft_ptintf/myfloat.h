@@ -10,6 +10,7 @@
 # include "ft_ptintf.h"
 # define OFFSET_DBL 1023
 # define OFFSET_LDBL 16383
+# define ABS(x) (x >= 0) ? x : -x
 
 typedef struct	s_dbl_comp
 {
@@ -27,6 +28,7 @@ typedef struct	s_result
 	ssize_t	len;
 	int32_t	lg_10;
 	char 	*buff;
+	size_t	bf_len;
 }				t_result;
 
 _Bool			get_sign(uint64_t *dbl);
@@ -42,5 +44,9 @@ void			check_result(t_result *res);
 void			float_round(t_result *res, const int nxt_nu, const int precision);
 t_result		create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld);
 void			check_e_intg_res(t_result *res);
+void			clear_res_buff(t_result *res);
+void			fill_exp_chars(t_result *res, const char type);
+void			add_point(t_result *res, t_prsng *tools);
+void			fill_fucking_first_char(t_result *res, t_prsng *tools);
 
 #endif

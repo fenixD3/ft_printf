@@ -73,9 +73,9 @@ printf("%o %o\n\n\n", a, b);*/
 	ft_printf("%+#f\n", 0.);
 	printf("%+#Lf\n", -0 / 1000.L);
 	ft_printf("%+#Lf\n", -0 / 1000.L);*/
-	//ft_printf("%e\n", 0.5);
-	printf("%f\n", -0x00000000);
-	printf("%e", 0.5);
+	printf("%.e\n", 0.5);
+	ft_printf("%.e\n", 0.5);
+
 
 
 	/*double		i = DBL_MAX;
