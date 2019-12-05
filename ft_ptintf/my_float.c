@@ -40,6 +40,7 @@ static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp, t_prsn
 		add_point(res, tools);
 	insert_top_bits(hp, dblcomp->mant_High_Bits, 52 - dblcomp->exp_val - 32, 0);
 	insert_top_bits(hp, dblcomp->mant_Low_Bits, 52 - dblcomp->exp_val, 0);
+	res->bf_len = 0;
 	fill_result(hp, 0, tools, res);
 	if (tools->type == 'e' || tools->type == 'E')
 		fill_exp_chars(res, tools->type);
@@ -50,7 +51,9 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	t_dbl_comp	dblcomp;
 	t_high		*hp;
 	t_result	res;
+	int 		precision;
 
+	precision = tools->precision;
 	res.len = -1;
 	if ((res.result = initialize_dbl(&res, &dblcomp, number, tools)))
 		return (res.result);
@@ -63,6 +66,9 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &dblcomp, tools);
-	check_result(&res);
+	check_result(&res, tools, precision);
+	if (!res.len)
+		return (NULL);
+	free_hp(hp);
 	return (res.result);
 }

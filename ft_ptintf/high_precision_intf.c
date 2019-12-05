@@ -41,20 +41,17 @@ static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools, t_result *
 	int		prec;
 
 	ft_memcpy(&prec, &tools->precision, sizeof(int));
+	if (!*res->result && (tools->type == 'e' || tools->type == 'E'))
+		fill_fucking_e(res, tools, hp, &prec);
 	while (prec > 0 && !hp_is_zero(hp, intg))
 	{
 		rem_overf = mul_ret_overflow(hp, 10) + '0';
 		ft_strncat(res->result, &rem_overf, 1);
 		++res->len;
-		if (res->len == 1)
-			add_point(res, tools);
-		else
-			--prec;
+		--prec;
 	}
-	if (!*res->result && (tools->type == 'e' || tools->type == 'E'))
-		fill_fucking_first_char(res, tools);
 	if (prec <= 0 && (nxt_nu = mul_ret_overflow(hp, 10)) >= 5)
-		float_round(res, nxt_nu, prec);
+		float_round(res, nxt_nu);
 	else
 		while (prec-- > 0)
 		{
@@ -99,15 +96,16 @@ void		fill_result(t_high *hp, _Bool intg, t_prsng *tools, t_result *res)
 	{
 		if (res->buff)
 		{
-			while (++*res->buff && tools->precision--)
+			while (++res->buff && *res->buff && tools->precision-- && ++res->bf_len)
 			{
-				ft_strncpy(res->result, res->buff, 1);
+				ft_strncat(res->result, res->buff, 1);
 				++res->len;
 			}
 			if (*res->buff && *res->buff >= '5')
-				float_round(res, *res->buff - '0', tools->precision);
+				float_round(res, *res->buff - '0');
 			else if (!*res->buff)
 				fill_result_fract(hp, intg, tools, res);
+			res->buff -= res->bf_len + 1;
 			clear_res_buff(res);
 		}
 		else

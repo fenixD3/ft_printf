@@ -39,15 +39,15 @@ static void	process(t_result *res, t_highl *hp, const t_dbl_comp *ldblcomp, t_pr
 {
 	insert_low_lbits(hp, ldblcomp->mant_High_Bits, ldblcomp->exp_val + 1, 1);
 	insert_low_lbits(hp, ldblcomp->mant_Low_Bits, ldblcomp->exp_val - 32 + 1, 1);
-	fill_lresult(hp, 1, tools->precision, res);
-	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED || tools->flags & M_SHARP)
-	{
-		ft_strncat(res->result, ".", 1);
-		++res->len;
-	}
+	fill_lresult(hp, 1, tools, res);
+	if (*res->result)
+		add_point(res, tools);
 	insert_top_lbits(hp, ldblcomp->mant_High_Bits, 63 - ldblcomp->exp_val - 32, 0);
 	insert_top_lbits(hp, ldblcomp->mant_Low_Bits, 63 - ldblcomp->exp_val, 0);
-	fill_lresult(hp, 0, tools->precision, res);
+	res->bf_len = 0;
+	fill_lresult(hp, 0, tools, res);
+	if (tools->type == 'e' || tools->type == 'E')
+		fill_exp_chars(res, tools->type);
 }
 
 char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
@@ -55,20 +55,24 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	t_dbl_comp	ldblcomp;
 	t_highl		*hp;
 	t_result	res;
-	int32_t		lg_10;
+	int 		precision;
 
+	precision = tools->precision;
 	res.len = -1;
 	if ((res.result = initialize_ldbl(&res, &ldblcomp, number, tools)))
 		return (res.result);
 	if (!res.len)
 		return (NULL);
-	lg_10 = ft_floor(ft_log10(number));
+	res.lg_10 = ft_floor(ft_log10(number));
 	if (!(hp = hp_ldbl_initializ()))
 		return (NULL);
-	res = create_str(lg_10, tools, fld);
+	res = create_str(res.lg_10, tools, fld);
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &ldblcomp, tools);
-	check_result(&res);
+	check_result(&res, tools, precision);
+	if (!res.len)
+		return (NULL);
+	free_l_hp(hp);
 	return (res.result);
 }

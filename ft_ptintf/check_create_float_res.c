@@ -69,21 +69,30 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 	return (res);
 }
 
-void	check_result(t_result *res)
+void	check_result(t_result *res, t_prsng *tools, int prec)
 {
 	if (res->result != res->begin)
 	{
-		res->begin = ft_strnew(res->len);
-		ft_strncpy(res->begin, res->result, res->len);
-		free(--res->result);
-		res->result = res->begin;
+		if (*res->begin != '0')
+		{
+			if ((tools->type == 'e' || tools->type == 'E'))
+				rewrite_e_result(res, tools, prec);
+			else
+			{
+				--res->result;
+				++res->len;
+			}
+		}
+		else
+		{
+			if (!(res->begin = ft_strnew(res->len)))
+			{
+				res->len = 0;
+				return ;
+			}
+			ft_strncpy(res->begin, res->result, res->len);
+			free(--res->result);
+			res->result = res->begin;
+		}
 	}
-	return ;
-}
-
-void	clear_res_buff(t_result *res)
-{
-	free(res->buff);
-	res->buff = NULL;
-	res->bf_len = 0;
 }
