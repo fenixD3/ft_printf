@@ -53,16 +53,18 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	t_result	res;
 	int 		precision;
 
-	precision = tools->precision;
 	res.len = -1;
 	if ((res.result = initialize_dbl(&res, &dblcomp, number, tools)))
 		return (res.result);
 	if (!res.len)
 		return (NULL);
+	if (ft_tolower(tools->type) == 'g' || ft_tolower(tools->type) == 'a')
+		return (calculate_g_a_result(tools, fld));
 	res.lg_10 = ft_floor(ft_log10(number));
 	if (!(hp = hp_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
+	precision = tools->precision;
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &dblcomp, tools);

@@ -64,15 +64,15 @@ static void	fill_lresult_intg(t_highl *hp, _Bool intg, t_result *res, char type)
 	char	rem_overf;
 
 	rem_overf = div_ret_lremainder(hp, 10) + '0';
-	ft_strncat(res->result, &rem_overf, 1);
-	++res->len;
+	ft_strncat(res->buff, &rem_overf, 1);
+	++res->bf_len;
 	while (!hp_is_lzero(hp, intg))
 	{
 		rem_overf = div_ret_lremainder(hp, 10) + '0';
-		ft_strncat(res->result, &rem_overf, 1);
-		++res->len;
+		ft_strncat(res->buff, &rem_overf, 1);
+		++res->bf_len;
 	}
-	ft_reverse(res->result);
+	ft_reverse(res->buff);
 	if ((type == 'e' || type == 'E') && (res->bf_len > 1 || *res->buff == '0'))
 		check_e_intg_res(res);
 	else

@@ -57,7 +57,6 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	t_result	res;
 	int 		precision;
 
-	precision = tools->precision;
 	res.len = -1;
 	if ((res.result = initialize_ldbl(&res, &ldblcomp, number, tools)))
 		return (res.result);
@@ -67,6 +66,7 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	if (!(hp = hp_ldbl_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
+	precision = tools->precision;
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &ldblcomp, tools);

@@ -46,12 +46,11 @@ void	fill_fucking_e(t_result *res, t_prsng *tools, t_high *hp, int *prec)
 	++res->len;
 	--*prec;
 	add_point(res, tools);
-	while(*prec >= 0 && !hp_is_zero(hp, 0))
+	while((*prec)-- >= 0 && !hp_is_zero(hp, 0))
 	{
 		curr_nu = mul_ret_overflow(hp, 10) + '0';
 		ft_strncat(res->result, &curr_nu, 1);
 		++res->len;
-		--*prec;
 	}
 }
 
@@ -65,12 +64,11 @@ void	fill_fucking_l_e(t_result *res, t_prsng *tools, t_highl *hp, int *prec)
 	++res->len;
 	--*prec;
 	add_point(res, tools);
-	while(*prec >= 0 && !hp_is_lzero(hp, 0))
+	while((*prec)-- >= 0 && !hp_is_lzero(hp, 0))
 	{
 		curr_nu = mul_ret_loverflow(hp, 10) + '0';
 		ft_strncat(res->result, &curr_nu, 1);
 		++res->len;
-		--*prec;
 	}
 }
 

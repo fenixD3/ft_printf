@@ -62,7 +62,7 @@ static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools, t_result *
 
 static void	fill_result_intg(t_high *hp, _Bool intg, t_result *res, char type)
 {
-	char		rem_overf;
+	char	rem_overf;
 
 	rem_overf = div_ret_remainder(hp, 10) + '0';
 	ft_strncat(res->buff, &rem_overf, 1);

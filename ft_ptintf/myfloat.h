@@ -48,5 +48,6 @@ void			clear_res_buff(t_result *res);
 void			fill_exp_chars(t_result *res, const char type);
 void			add_point(t_result *res, t_prsng *tools);
 void			rewrite_e_result(t_result *res, t_prsng *tools, int prec);
-
+char			*calculate_g_a_result(t_prsng *tools, t_mkfld *fld);
+char			*compaing_f_e(char *res_f, char *res_e);
 #endif
