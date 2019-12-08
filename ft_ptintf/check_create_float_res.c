@@ -37,14 +37,14 @@ static void	create_for_e(t_prsng *tools, size_t *lennum, const int32_t lg_10)
 static void	create_for_f(t_prsng *tools, size_t *lennum, const int32_t lg_10)
 {
 	if (tools->precision)
-		*lennum = (lg_10 > 0) ? lg_10 + tools->precision : 1 + tools->precision;
+		*lennum = (lg_10 > 0) ? lg_10 + 1 + tools->precision : 1 + tools->precision;
 	else if (tools->flags & M_PRECISION_NOT_ADDED)
 	{
-		*lennum = (lg_10 > 0) ? lg_10 + 6 : 1 + 6;
+		*lennum = (lg_10 > 0) ? lg_10 + 1 + 6 : 1 + 6;
 		tools->precision = 6;
 	}
 	else
-		*lennum = (lg_10 > 0) ? lg_10: 1;
+		*lennum = (lg_10 > 0) ? lg_10 + 1: 1;
 	if (tools->flags & M_SHARP || tools->precision || tools->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 }
@@ -69,7 +69,7 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 	return (res);
 }
 
-void	check_result(t_result *res, t_prsng *tools, int prec)
+void	check_result(t_result *res, t_prsng *tools, int prec, t_mkfld *fld)
 {
 	if (res->result != res->begin)
 	{
@@ -95,4 +95,5 @@ void	check_result(t_result *res, t_prsng *tools, int prec)
 			res->result = res->begin;
 		}
 	}
+	fld->lennum = res->len;
 }

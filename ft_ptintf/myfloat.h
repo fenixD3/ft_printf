@@ -39,8 +39,8 @@ int32_t			get_lexp(uint64_t *ldbl);
 uint64_t		get_lmantissa(uint64_t *ldbl);
 char			*print_nan(t_result *res, const char type);
 char			*print_inf(t_result *res, _Bool sign, const char type);
-char			*print_zero(t_result *res, t_prsng *tools);
-void			check_result(t_result *res, t_prsng *tools, int prec);
+char			*print_zero(t_result *res, _Bool sign, t_prsng *tools);
+void			check_result(t_result *res, t_prsng *tools, int prec, t_mkfld *fld);
 void			float_round(t_result *res, const int nxt_nu);
 t_result		create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld);
 void			check_e_intg_res(t_result *res);
@@ -48,6 +48,9 @@ void			clear_res_buff(t_result *res);
 void			fill_exp_chars(t_result *res, const char type);
 void			add_point(t_result *res, t_prsng *tools);
 void			rewrite_e_result(t_result *res, t_prsng *tools, int prec);
-char			*calculate_g_a_result(t_prsng *tools, t_mkfld *fld);
-char			*compaing_f_e(char *res_f, char *res_e);
+char			*calculate_g_a_result(t_prsng *tools, t_mkfld *fld, int lg_10);
+char			*get_g_result(t_prsng *tools, t_mkfld *fld, int lg_10);
+char			*delete_lst_zeroes(char *res, t_mkfld *fld, const char type);
+char			*prepare_to_round(char *res, int prec, t_mkfld *fld, t_prsng *tools);
+
 #endif

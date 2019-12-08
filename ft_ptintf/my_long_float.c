@@ -21,7 +21,7 @@ static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp, long double nu
 	if (!ldblcomp->exp_val)
 	{
 		if (!get_lmantissa(ldbl))
-			return (print_zero(res, tools));
+			return (print_zero(res, ldblcomp->sign, tools));
 		ldblcomp->exp_val = 1 - OFFSET_LDBL;
 		ldblcomp->mant_val = get_lmantissa(ldbl);
 	}
@@ -70,7 +70,7 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &ldblcomp, tools);
-	check_result(&res, tools, precision);
+	check_result(&res, tools, precision, fld);
 	if (!res.len)
 		return (NULL);
 	free_l_hp(hp);

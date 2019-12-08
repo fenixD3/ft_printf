@@ -17,7 +17,7 @@ static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number, t
 	if (!dblcomp->exp_val)
 	{
 		if (!get_mantissa(dbl))
-			return (print_zero(res, tools));
+			return (print_zero(res, dblcomp->sign, tools));
 		dblcomp->exp_val = 1 - OFFSET_DBL;
 		dblcomp->mant_val = get_mantissa(dbl);
 	}
@@ -58,9 +58,9 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 		return (res.result);
 	if (!res.len)
 		return (NULL);
-	if (ft_tolower(tools->type) == 'g' || ft_tolower(tools->type) == 'a')
-		return (calculate_g_a_result(tools, fld));
 	res.lg_10 = ft_floor(ft_log10(number));
+	if (ft_tolower(tools->type) == 'g' || ft_tolower(tools->type) == 'a')
+		return (calculate_g_a_result(tools, fld, res.lg_10));
 	if (!(hp = hp_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
@@ -68,7 +68,7 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &dblcomp, tools);
-	check_result(&res, tools, precision);
+	check_result(&res, tools, precision, fld);
 	if (!res.len)
 		return (NULL);
 	free_hp(hp);
