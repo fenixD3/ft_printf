@@ -4,7 +4,8 @@
 
 #include "high_precision.h"
 
-static void	fill_data_bits(t_high *hp, int32_t big_shift, uint32_t res_high, uint32_t res_low)
+static void	fill_data_bits(t_high *hp, int32_t big_shift, uint32_t res_high,
+						uint32_t res_low)
 {
 	uint32_t	high_ind;
 
@@ -26,7 +27,8 @@ static void	fill_data_bits(t_high *hp, int32_t big_shift, uint32_t res_high, uin
 	}
 }
 
-void		insert_low_bits(t_high *hp, uint32_t value, int32_t shift_amount, _Bool intg)
+void		insert_low_bits(t_high *hp, uint32_t value, int32_t shift_amount,
+							_Bool intg)
 {
 	int32_t		sub_shift;
 	int32_t		big_shift;
@@ -48,9 +50,11 @@ void		insert_low_bits(t_high *hp, uint32_t value, int32_t shift_amount, _Bool in
 	fill_data_bits(hp, big_shift, res_high, res_low);
 }
 
-void		insert_top_bits(t_high *hp, uint32_t value, int shift_amount, _Bool intg)
+void		insert_top_bits(t_high *hp, uint32_t value, int shift_amount,
+							_Bool intg)
 {
-	insert_low_bits(hp, value, (ARRSIZE_FRCT_DBL + 1) * hp->word_shift - shift_amount, intg);
+	insert_low_bits(hp, value,
+			(ARRSIZE_FRCT_DBL + 1) * hp->word_shift - shift_amount, intg);
 }
 
 uint32_t	div_ret_remainder(t_high *hp, uint32_t divisor)

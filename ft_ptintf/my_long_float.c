@@ -6,7 +6,8 @@
 #include "high_precision.h"
 #include "ft_ptintf.h"
 
-static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp, long double number, t_prsng *tools)
+static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp,
+		long double number, t_prsng *tools)
 {
 	uint64_t	*ldbl;
 
@@ -35,7 +36,8 @@ static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp, long double nu
 	return (NULL);
 }
 
-static void	process(t_result *res, t_highl *hp, const t_dbl_comp *ldblcomp, t_prsng *tools)
+static void	process(t_result *res, t_highl *hp, const t_dbl_comp *ldblcomp,
+		t_prsng *tools)
 {
 	insert_low_lbits(hp, ldblcomp->mant_High_Bits, ldblcomp->exp_val + 1, 1);
 	insert_low_lbits(hp, ldblcomp->mant_Low_Bits, ldblcomp->exp_val - 32 + 1, 1);
@@ -63,6 +65,8 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	if (!res.len)
 		return (NULL);
 	res.lg_10 = ft_floor(ft_log10(number));
+	if (ft_tolower(tools->type) == 'g' || ft_tolower(tools->type) == 'a')
+		return (calculate_g_a_result(tools, fld, res.lg_10));
 	if (!(hp = hp_ldbl_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);

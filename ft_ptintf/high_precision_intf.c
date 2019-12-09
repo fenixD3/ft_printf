@@ -34,7 +34,8 @@ _Bool		hp_is_zero(t_high *hp, _Bool intg)
 	return (1);
 }
 
-static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools, t_result *res)
+static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools,
+							t_result *res)
 {
 	char	rem_overf;
 	int		nxt_nu;

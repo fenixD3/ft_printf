@@ -4,7 +4,8 @@
 
 #include "high_precision.h"
 
-static void	fill_data_lbits(t_highl *hp, int32_t big_shift, uint32_t res_high, uint32_t res_low)
+static void	fill_data_lbits(t_highl *hp, int32_t big_shift, uint32_t res_high,
+							uint32_t res_low)
 {
 	uint32_t	high_ind;
 
@@ -26,7 +27,8 @@ static void	fill_data_lbits(t_highl *hp, int32_t big_shift, uint32_t res_high, u
 	}
 }
 
-void		insert_low_lbits(t_highl *hp, uint32_t value, int32_t shift_amount, _Bool intg)
+void		insert_low_lbits(t_highl *hp, uint32_t value, int32_t shift_amount,
+							_Bool intg)
 {
 	int32_t		sub_shift;
 	int32_t		big_shift;
@@ -48,9 +50,11 @@ void		insert_low_lbits(t_highl *hp, uint32_t value, int32_t shift_amount, _Bool 
 	fill_data_lbits(hp, big_shift, res_high, res_low);
 }
 
-void		insert_top_lbits(t_highl *hp, uint32_t value, int shift_amount, _Bool intg)
+void		insert_top_lbits(t_highl *hp, uint32_t value, int shift_amount,
+							_Bool intg)
 {
-	insert_low_lbits(hp, value, (ARRSIZE_FRCT_LDBL + 1) * hp->word_shift - shift_amount, intg);
+	insert_low_lbits(hp, value,
+			(ARRSIZE_FRCT_LDBL + 1) * hp->word_shift - shift_amount, intg);
 }
 
 uint32_t	div_ret_lremainder(t_highl *hp, uint32_t divisor)

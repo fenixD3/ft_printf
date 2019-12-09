@@ -128,5 +128,6 @@ double		ft_floor(double num);
 long double	ft_floorl(long double num);
 double		ft_round(double num);
 long double	ft_roundl(long double num);
+char		*get_binary(uint64_t num);
 
 #endif

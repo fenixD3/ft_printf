@@ -102,4 +102,4 @@ add_executable(Printf_Hub
         ft_ptintf/parsing.c
         ft_ptintf/print_reserve_dbl.c
         ft_ptintf/set_buff.c
-        ft_ptintf/to_buff.c ft_ptintf/e_flag_intf.c ft_ptintf/frees_for_float.c ft_ptintf/float_intf.c ft_ptintf/g_flag_intf.c)
+        ft_ptintf/to_buff.c ft_ptintf/e_flag_intf.c ft_ptintf/frees_for_float.c ft_ptintf/float_intf.c ft_ptintf/g_flag_intf.c ft_ptintf/get_binary.c)

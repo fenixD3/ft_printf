@@ -174,7 +174,8 @@ void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
 		field->str = print_double(tools, field, field->number.db);
 
 	/// delete this
-	field->lennum = strlen(field->str);
+	if (*field->str == '-' || *field->str == '0')
+		field->lennum = strlen(field->str);
 	///////////////
 
 	if (field->lennum < tools->field)

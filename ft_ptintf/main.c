@@ -66,22 +66,29 @@ printf("%o %o\n\n\n", a, b);*/
 	/*printf("%.200f\n", 67.76845654865499);
 	printf("%.14f\n", 67.76845654865499);
 	printf("%.200f\n", 67.99999999999999);
-	printf("%#.13f\n", 67.99999999999999);*/
-	/*printf("%.20f\n", 1.7999998);
-	printf("%.21f\n", 1.7999998);*/
-	/*printf("%+#f\n", 0.);
+	printf("%#.13f\n", 67.99999999999999);
+	printf("%.20f\n", 1.7999998);
+	printf("%.21f\n", 1.7999998);
+	printf("%+#f\n", 0.);
 	ft_printf("%+#f\n", 0.);
 	printf("%+#Lf\n", -0 / 1000.L);
-	ft_printf("%+#Lf\n", -0 / 1000.L);*/
-	/*printf("%e\n", 0.9988);
+	ft_printf("%+#Lf\n", -0 / 1000.L);
+	printf("%e\n", 0.9988);
 	ft_printf("%e\n", 0.9988);*/
 
-	/*printf("%.g\n", 512.89898988);
-	ft_printf("%.g\n", 512.89898988);
-	printf("%.g\n", 1000.99);
-	ft_printf("%.g\n", 1000.99);
-	printf("%.g\n", 0000.0099);*/
-	ft_printf("%.g\n", 0000.0099);
+	/*ft_printf("%LF\n", LDBL_MAX);
+	ft_printf("%.16383LF\n", LDBL_MIN);*/
+	/*ft_printf("%F\n", DBL_MAX);
+	ft_printf("%.1024F\n", DBL_MIN);
+	ft_printf("%E\n", DBL_MAX);
+	ft_printf("%E\n", DBL_MIN);*/
+
+	/*printf("%.Lg\n", 512.89898988L);
+	ft_printf("%.Lg\n", 512.89898988L);
+	printf("%.Lg\n", 1000.99L);
+	ft_printf("%.Lg\n", 1000.99L);*/
+	/*printf("%.3g\n", 0000.0099);
+	ft_printf("%.3g\n", 0000.0099);*/
 
 	/*printf("%a\n", 3.75);
 	printf("%a\n", -3.75);*/
@@ -223,5 +230,8 @@ printf("%o %o\n\n\n", a, b);*/
 //	to_buff("789", &tools);
 //	ft_putchar('-');
 //	to_buff("BBB", &tools);
+
+	get_binary(34);
+	get_binary(-34);
 	return 0;
 }

@@ -2,7 +2,8 @@
 #include "high_precision.h"
 #include "ft_ptintf.h"
 
-static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number, t_prsng *tools)
+static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number,
+		t_prsng *tools)
 {
 	uint64_t	*dbl;
 
@@ -31,7 +32,8 @@ static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number, t
 	return (NULL);
 }
 
-static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp, t_prsng *tools)
+static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp,
+		t_prsng *tools)
 {
 	insert_low_bits(hp, dblcomp->mant_High_Bits, dblcomp->exp_val + 12, 1);
 	insert_low_bits(hp, dblcomp->mant_Low_Bits, dblcomp->exp_val - 32 + 12, 1);

@@ -5,18 +5,18 @@
 #include "myfloat.h"
 #include "libft/libft.h"
 
-static void	create_for_e(t_prsng *tools, size_t *lennum, const int32_t lg_10)
+static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
-	if (tools->precision)
-		*lennum = 1 + tools->precision;
-	else if (tools->flags & M_PRECISION_NOT_ADDED)
+	if (tls->precision)
+		*lennum = 1 + tls->precision;
+	else if (tls->flags & M_PRECISION_NOT_ADDED)
 	{
 		*lennum = 1 + 6;
-		tools->precision = 6;
+		tls->precision = 6;
 	}
 	else
 		*lennum = 1;
-	if (tools->flags & M_SHARP || tools->precision || tools->flags & M_PRECISION_NOT_ADDED)
+	if (tls->flags & M_SHARP || tls->precision || tls->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 	if (lg_10 >= 0)
 	{
@@ -45,7 +45,8 @@ static void	create_for_f(t_prsng *tools, size_t *lennum, const int32_t lg_10)
 	}
 	else
 		*lennum = (lg_10 > 0) ? lg_10 + 1: 1;
-	if (tools->flags & M_SHARP || tools->precision || tools->flags & M_PRECISION_NOT_ADDED)
+	if (tools->flags & M_SHARP || tools->precision ||
+			tools->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 }
 

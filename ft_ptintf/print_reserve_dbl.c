@@ -26,15 +26,18 @@ char		*print_inf(t_result *res, _Bool sign, const char type)
 		return (NULL);
 	}
 	if (type == 'F')
-		return (sign ? ft_strcpy(res->result, "-INf") : ft_strcpy(res->result, "INf"));
-	return (sign ? ft_strcpy(res->result, "-inf") : ft_strcpy(res->result, "inf"));
+		return (sign ? ft_strcpy(res->result, "-INf") :
+				ft_strcpy(res->result, "INf"));
+	return (sign ? ft_strcpy(res->result, "-inf") :
+			ft_strcpy(res->result, "inf"));
 }
 
 static void	fill_reserve_zero(t_prsng *tools, t_result *res)
 {
 	if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
 		tools->precision = 6;
-	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED || tools->flags & M_SHARP)
+	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED ||
+		tools->flags & M_SHARP)
 		ft_strncat(res->result, ".", 1);
 	while (tools->precision-- > 0)
 		ft_strncat(res->result, "0", 1);
@@ -56,7 +59,6 @@ char		*print_zero(t_result *res, _Bool sign, t_prsng *tools)
 			res->len = 0;
 			return (NULL);
 		}
-	/// add for a
 	sign ? ft_strcpy(res->result, "-0") : ft_strcpy(res->result, "0");
 	fill_reserve_zero(tools, res);
 	if (ft_tolower(tools->type) == 'e')

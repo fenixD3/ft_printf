@@ -20,11 +20,13 @@ void	fill_exp_chars(t_result *res, const char type)
 	char	*num_str;
 	size_t	size_num_str;
 
-	type == 'e' ? ft_strncat(res->result, "e", 1) : ft_strncat(res->result, "E", 1);
+	type == 'e' ? ft_strncat(res->result, "e", 1) :
+				ft_strncat(res->result, "E", 1);
 	++res->len;
 	num_str = ft_itoa(ABS(res->lg_10));
 	size_num_str = ft_strlen(num_str);
-	res->lg_10 >= 0 ? ft_strncat(res->result, "+", 1) : ft_strncat(res->result, "-", 1);
+	res->lg_10 >= 0 ? ft_strncat(res->result, "+", 1) :
+					ft_strncat(res->result, "-", 1);
 	++res->len;
 	if (ABS(res->lg_10) >= 0 && ABS(res->lg_10) <= 9)
 	{
