@@ -231,7 +231,10 @@ printf("%o %o\n\n\n", a, b);*/
 //	ft_putchar('-');
 //	to_buff("BBB", &tools);
 
-	get_binary(34);
-	get_binary(-34);
+	int i = 34;
+	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));
+	i = -i;
+	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));
+
 	return 0;
 }

@@ -29,11 +29,12 @@
 #define LAST 2
 
 # define LOG10_2 0.30103
-
+# define get_binaryd(num, size) get_binary(num, size, 'd')
 
 #include "libft/libft.h"
 #include <stdio.h>
 #include <stdbool.h>
+
 
 typedef struct	s_prsng
 {
@@ -128,6 +129,6 @@ double		ft_floor(double num);
 long double	ft_floorl(long double num);
 double		ft_round(double num);
 long double	ft_roundl(long double num);
-char		*get_binary(uint64_t num);
+char		*get_binary(uint64_t *num, size_t bit_size, const char type);
 
 #endif
