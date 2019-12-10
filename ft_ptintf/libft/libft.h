@@ -95,5 +95,14 @@ int				ft_isupper(int c);
 int				ft_islower(int c);
 int				ft_fib(int n);
 int				ft_sqrt(int num, _Bool precision);
+double			ft_log2(long double num);
+double			ft_log10(long double num);
+char			*ft_reverse(char *str);
+double			ft_ceil(double num);
+long double		ft_ceill(long double num);
+double			ft_floor(double num);
+long double		ft_floorl(long double num);
+double			ft_round(double num);
+long double		ft_roundl(long double num);
 
 #endif

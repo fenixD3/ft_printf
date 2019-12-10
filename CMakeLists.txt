@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.14.5)
+cmake_minimum_required(VERSION 3.15)
 project(Printf_Hub C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
 include_directories(ft_ptintf)
+include_directories(ft_ptintf/includes)
 include_directories(ft_ptintf/libft)
 
 add_executable(Printf_Hub
@@ -74,32 +75,37 @@ add_executable(Printf_Hub
         ft_ptintf/libft/get_next_line.c
         ft_ptintf/libft/get_next_line.h
         ft_ptintf/libft/libft.h
-        ft_ptintf/check_create_float_res.c
-        ft_ptintf/field_len.c
-        ft_ptintf/float_rounding.c
-        ft_ptintf/ft_ceil.c
-        ft_ptintf/ft_floor.c
-        ft_ptintf/ft_itoa_base_printf.c
-        ft_ptintf/ft_log10.c
-        ft_ptintf/ft_log2.c
-        ft_ptintf/ft_printf.c
-        ft_ptintf/ft_ptintf.h
-        ft_ptintf/ft_reverse.c
-        ft_ptintf/ft_round.c
-        ft_ptintf/get_dbl_values.c
-        ft_ptintf/get_ldbl_values.c
-        ft_ptintf/high_precision.c
-        ft_ptintf/high_precision.h
-        ft_ptintf/high_precision_intf.c
-        ft_ptintf/high_precision_intf_long.c
-        ft_ptintf/high_precision_long.c
-        ft_ptintf/is.c
-        ft_ptintf/main.c
-        ft_ptintf/make_field.c
-        ft_ptintf/my_float.c
-        ft_ptintf/my_long_float.c
-        ft_ptintf/myfloat.h
-        ft_ptintf/parsing.c
-        ft_ptintf/print_reserve_dbl.c
-        ft_ptintf/set_buff.c
-        ft_ptintf/to_buff.c ft_ptintf/e_flag_intf.c ft_ptintf/frees_for_float.c ft_ptintf/float_intf.c ft_ptintf/g_flag_intf.c ft_ptintf/get_binary.c)
+        ft_ptintf/srcsFloat/check_create_float_res.c
+        ft_ptintf/srcsFloat/e_flag_intf.c
+        ft_ptintf/srcs/field_len.c
+        ft_ptintf/srcsFloat/float_intf.c
+        ft_ptintf/srcsFloat/float_rounding.c
+        ft_ptintf/srcsFloat/frees_for_float.c
+        ft_ptintf/libft/ft_ceil.c
+        ft_ptintf/libft/ft_floor.c
+        ft_ptintf/srcs/ft_itoa_base_printf.c
+        ft_ptintf/srcsFloat/ft_log10.c
+        ft_ptintf/srcsFloat/ft_log2.c
+        ft_ptintf/srcs/ft_printf.c
+        ft_ptintf/includes/ft_ptintf.h
+        ft_ptintf/libft/ft_reverse.c
+        ft_ptintf/libft/ft_round.c
+        ft_ptintf/srcsFloat/g_flag_intf.c
+        ft_ptintf/srcs/get_binary.c
+        ft_ptintf/srcsFloat/get_dbl_values.c
+        ft_ptintf/srcsFloat/get_ldbl_values.c
+        ft_ptintf/srcsFloat/high_precision.c
+        ft_ptintf/includes/high_precision.h
+        ft_ptintf/srcsFloat/high_precision_intf.c
+        ft_ptintf/srcsFloat/high_precision_intf_long.c
+        ft_ptintf/srcsFloat/high_precision_long.c
+        ft_ptintf/srcs/is.c
+        ft_ptintf/srcs/main.c
+        ft_ptintf/srcs/make_field.c
+        ft_ptintf/srcsFloat/my_float.c
+        ft_ptintf/srcsFloat/my_long_float.c
+        ft_ptintf/includes/myfloat.h
+        ft_ptintf/srcs/parsing.c
+        ft_ptintf/srcsFloat/print_reserve_dbl.c
+        ft_ptintf/srcs/set_buff.c
+        ft_ptintf/srcs/to_buff.c)
