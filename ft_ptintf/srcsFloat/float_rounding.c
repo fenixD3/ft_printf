@@ -1,13 +1,22 @@
-//
-// Created by Yeste Lila on 2019-11-30.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   float_rounding.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:07:35 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:28:09 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "myfloat.h"
 #include "libft.h"
 
 static void	nine_rounding(t_result *res, size_t i)
 {
-	while (*(res->result + res->len - i) == '9' || *(res->result + res->len - i) == '.')
+	while (*(res->result + res->len - i) == '9' ||
+		*(res->result + res->len - i) == '.')
 	{
 		if (*(res->result + res->len - i) == '.')
 		{
@@ -22,7 +31,7 @@ static void	nine_rounding(t_result *res, size_t i)
 void		float_round(t_result *res, const int nxt_nu)
 {
 	size_t	i;
-	int 	nu;
+	int		nu;
 
 	i = 0;
 	if (*(res->result + res->len - (++i)) == '.')

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   my_float.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:09:17 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:17:34 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "high_precision.h"
 #include "ft_ptintf.h"
 
@@ -52,7 +64,7 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	t_dbl_comp	dblcomp;
 	t_high		*hp;
 	t_result	res;
-	int 		precision;
+	int			precision;
 
 	res.len = -1;
 	if ((res.result = initialize_dbl(&res, &dblcomp, number, tools)))

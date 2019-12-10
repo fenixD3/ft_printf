@@ -1,6 +1,14 @@
-//
-// Created by Yeste Lila on 2019-11-22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   high_precision_long.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:22:57 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:30:48 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "high_precision.h"
 
@@ -33,7 +41,7 @@ void		insert_low_lbits(t_highl *hp, uint32_t value, int32_t shift_amount,
 	int32_t		sub_shift;
 	int32_t		big_shift;
 	uint64_t	result;
-	uint32_t 	res_low;
+	uint32_t	res_low;
 	uint32_t	res_high;
 
 	if (shift_amount <= 0)

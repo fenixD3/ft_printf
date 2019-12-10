@@ -1,6 +1,14 @@
-//
-// Created by da.filiptsev on 05.12.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   e_flag_intf.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:07:22 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:11:18 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "high_precision.h"
 
@@ -48,7 +56,7 @@ void	fill_fucking_e(t_result *res, t_prsng *tools, t_high *hp, int *prec)
 	++res->len;
 	--*prec;
 	add_point(res, tools);
-	while((*prec)-- >= 0 && !hp_is_zero(hp, 0))
+	while ((*prec)-- >= 0 && !hp_is_zero(hp, 0))
 	{
 		curr_nu = mul_ret_overflow(hp, 10) + '0';
 		ft_strncat(res->result, &curr_nu, 1);
@@ -66,7 +74,7 @@ void	fill_fucking_l_e(t_result *res, t_prsng *tools, t_highl *hp, int *prec)
 	++res->len;
 	--*prec;
 	add_point(res, tools);
-	while((*prec)-- >= 0 && !hp_is_lzero(hp, 0))
+	while ((*prec)-- >= 0 && !hp_is_lzero(hp, 0))
 	{
 		curr_nu = mul_ret_loverflow(hp, 10) + '0';
 		ft_strncat(res->result, &curr_nu, 1);

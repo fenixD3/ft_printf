@@ -1,6 +1,14 @@
-//
-// Created by Yeste Lila on 2019-12-08.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   g_flag_intf.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:08:03 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:33:52 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "myfloat.h"
 
@@ -17,8 +25,7 @@ char		*get_g_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 		if (!(res = print_long_double(tools, fld, fld->number.ldb)))
 			return (NULL);
 	}
-	else
-	if (!(res = print_double(tools, fld, fld->number.db)))
+	else if (!(res = print_double(tools, fld, fld->number.db)))
 		return (NULL);
 	return (res);
 }
@@ -26,8 +33,8 @@ char		*get_g_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 char		*delete_lst_zeroes(char *res, t_mkfld *fld, const char type)
 {
 	size_t	i;
-	char 	*res_only_sign;
-	char 	*lst_d;
+	char	*res_only_sign;
+	char	*lst_d;
 	char	*first_d;
 	size_t	delta;
 
@@ -64,7 +71,7 @@ static int	last_char_prec(char *res, int prec, int *sign_cnt)
 			++*sign_cnt;
 	}
 	lst_i = i;
-	while(*(res + lst_i) && ft_tolower(*(res + lst_i)) != 'e')
+	while (*(res + lst_i) && ft_tolower(*(res + lst_i)) != 'e')
 	{
 		++lst_i;
 		++*sign_cnt;
@@ -72,11 +79,11 @@ static int	last_char_prec(char *res, int prec, int *sign_cnt)
 	return (i);
 }
 
-static char *trunc_dgt(char *res, int prec, size_t lennum, const char type)
+static char	*trunc_dgt(char *res, int prec, size_t lennum, const char type)
 {
 	int		i;
 	char	*trunc_res;
-	int 	sign_cnt;
+	int		sign_cnt;
 
 	i = last_char_prec(res, prec, &sign_cnt);
 	if (!(trunc_res = ft_strnew(lennum)))
@@ -96,9 +103,9 @@ static char *trunc_dgt(char *res, int prec, size_t lennum, const char type)
 char		*prepare_to_round(char *res, int prec, t_mkfld *fld, t_prsng *tools)
 {
 	int			sign_cnt;
-	int 		lst_i;
+	int			lst_i;
 	t_result	rnd_res;
-	char 		nxt_chr;
+	char		nxt_chr;
 
 	lst_i = last_char_prec(res, prec, &sign_cnt);
 	nxt_chr = *(res + lst_i);

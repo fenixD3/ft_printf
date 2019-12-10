@@ -1,6 +1,14 @@
-//
-// Created by da.filiptsev on 13.11.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_reserve_dbl.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:37:08 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:46:59 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "myfloat.h"
 
@@ -24,10 +32,12 @@ char		*print_inf(t_result *res, _Bool sign, const char type)
 		return (NULL);
 	}
 	if (type == 'F')
-		return (sign ? ft_strcpy(res->result, "-INf") :
-				ft_strcpy(res->result, "INf"));
-	return (sign ? ft_strcpy(res->result, "-inf") :
-			ft_strcpy(res->result, "inf"));
+	{
+		return (sign ?
+				ft_strcpy(res->result, "-INf") : ft_strcpy(res->result, "INf"));
+	}
+	return (sign ?
+			ft_strcpy(res->result, "-inf") : ft_strcpy(res->result, "inf"));
 }
 
 static void	fill_reserve_zero(t_prsng *tools, t_result *res)

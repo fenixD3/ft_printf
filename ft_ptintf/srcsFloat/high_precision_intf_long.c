@@ -1,6 +1,14 @@
-//
-// Created by Yeste Lila on 2019-11-22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   high_precision_intf_long.c                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:18:41 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:25:33 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "high_precision.h"
 #include "ft_ptintf.h"
@@ -84,31 +92,31 @@ static void	fill_lresult_intg(t_highl *hp, _Bool intg, t_result *res, char type)
 	}
 }
 
-void		fill_lresult(t_highl *hp, _Bool intg, t_prsng *tools, t_result *res)
+void		fill_lresult(t_highl *hp, _Bool intg, t_prsng *tls, t_result *rs)
 {
 	if (intg)
 	{
-		res->len = 0;
-		res->bf_len = 0;
-		fill_lresult_intg(hp, intg, res, tools->type);
+		rs->len = 0;
+		rs->bf_len = 0;
+		fill_lresult_intg(hp, intg, rs, tls->type);
 	}
 	else
 	{
-		if (res->buff)
+		if (rs->buff)
 		{
-			while (++res->buff && *res->buff && tools->precision-- && ++res->bf_len)
+			while (++rs->buff && *rs->buff && tls->precision-- && ++rs->bf_len)
 			{
-				ft_strncat(res->result, res->buff, 1);
-				++res->len;
+				ft_strncat(rs->result, rs->buff, 1);
+				++rs->len;
 			}
-			if (*res->buff && *res->buff >= '5')
-				float_round(res, *res->buff - '0');
-			else if (!*res->buff)
-				fill_lresult_fract(hp, intg, tools, res);
-			res->buff -= res->bf_len + 1;
-			clear_res_buff(res);
+			if (*rs->buff && *rs->buff >= '5')
+				float_round(rs, *rs->buff - '0');
+			else if (!*rs->buff)
+				fill_lresult_fract(hp, intg, tls, res);
+			rs->buff -= rs->bf_len + 1;
+			clear_res_buff(rs);
 		}
 		else
-			fill_lresult_fract(hp, intg, tools, res);
+			fill_lresult_fract(hp, intg, tls, res);
 	}
 }

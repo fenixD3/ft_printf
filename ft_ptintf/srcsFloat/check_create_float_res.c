@@ -1,6 +1,14 @@
-//
-// Created by Yeste Lila on 2019-11-30.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_create_float_res.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:07:14 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 22:47:43 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "myfloat.h"
 #include "libft.h"
@@ -34,19 +42,19 @@ static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 	}
 }
 
-static void	create_for_f(t_prsng *tools, size_t *lennum, const int32_t lg_10)
+static void	create_for_f(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
-	if (tools->precision)
-		*lennum = (lg_10 > 0) ? lg_10 + 1 + tools->precision : 1 + tools->precision;
-	else if (tools->flags & M_PRECISION_NOT_ADDED)
+	if (tls->precision)
+		*lennum = (lg_10 > 0) ? lg_10 + 1 + tls->precision : 1 + tls->precision;
+	else if (tls->flags & M_PRECISION_NOT_ADDED)
 	{
 		*lennum = (lg_10 > 0) ? lg_10 + 1 + 6 : 1 + 6;
-		tools->precision = 6;
+		tls->precision = 6;
 	}
 	else
-		*lennum = (lg_10 > 0) ? lg_10 + 1: 1;
-	if (tools->flags & M_SHARP || tools->precision ||
-			tools->flags & M_PRECISION_NOT_ADDED)
+		*lennum = (lg_10 > 0) ? lg_10 + 1 : 1;
+	if (tls->flags & M_SHARP || tls->precision ||
+			tls->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 }
 
@@ -70,7 +78,7 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 	return (res);
 }
 
-void	check_result(t_result *res, t_prsng *tools, int prec, t_mkfld *fld)
+void		check_result(t_result *res, t_prsng *tools, int prec, t_mkfld *fld)
 {
 	if (res->result != res->begin)
 	{
