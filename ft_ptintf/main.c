@@ -231,10 +231,13 @@ printf("%o %o\n\n\n", a, b);*/
 //	ft_putchar('-');
 //	to_buff("BBB", &tools);
 
-	int i = 34;
+	/*int i = 34;
 	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));
 	i = -i;
-	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));
-
+	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));*/
+	/*double d = 3.75;
+	printf("%s\n", get_binary((uint64_t *)&d, sizeof(d) * 8, 'f'));
+	long double ld = 3.75;
+	printf("%s\n", get_binary((uint64_t *)&ld, 80, 'd'));*/
 	return 0;
 }

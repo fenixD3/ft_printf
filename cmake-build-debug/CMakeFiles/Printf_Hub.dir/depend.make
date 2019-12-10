@@ -73,6 +73,7 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/g_flag_intf.c.o: ../ft_ptintf/myfloat.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/get_binary.c.o: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/get_binary.c.o: ../ft_ptintf/get_binary.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/get_binary.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/get_binary.c.o: ../ft_ptintf/myfloat.h
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/get_dbl_values.c.o: ../ft_ptintf/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/get_dbl_values.c.o: ../ft_ptintf/get_dbl_values.c

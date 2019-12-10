@@ -29,7 +29,7 @@
 #define LAST 2
 
 # define LOG10_2 0.30103
-# define get_binaryd(num, size) get_binary(num, size, 'd')
+# define get_binaryd(num, size) get_binary(num, size, 'i')
 
 #include "libft/libft.h"
 #include <stdio.h>
@@ -122,13 +122,15 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number);
 double		ft_log2(long double num);
 double		ft_log10(long double num);
 char		*ft_reverse(char *str);
-char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number);
+char		*print_long_double(t_prsng *tools, t_mkfld *fld,
+								long double number);
 double		ft_ceil(double num);
 long double	ft_ceill(long double num);
 double		ft_floor(double num);
 long double	ft_floorl(long double num);
 double		ft_round(double num);
 long double	ft_roundl(long double num);
-char		*get_binary(uint64_t *num, size_t bit_size, const char type);
+char		*get_binary(uint64_t *num, size_t bit_size, const char type,
+						t_mkfld *fld);
 
 #endif
