@@ -8,7 +8,7 @@
 
 char		*print_nan(t_result *res, const char type)
 {
-	if (!(res->result = ft_strnew(4)))
+	if (!(res->result = ft_strnew(3)))
 	{
 		res->len = 0;
 		return (NULL);
@@ -26,23 +26,45 @@ char		*print_inf(t_result *res, _Bool sign, const char type)
 		return (NULL);
 	}
 	if (type == 'F')
-		return (sign ? ft_strcpy(res->result, "-INf") : ft_strcpy(res->result, "INf"));
-	return (sign ? ft_strcpy(res->result, "-inf") : ft_strcpy(res->result, "inf"));
+		return (sign ? ft_strcpy(res->result, "-INf") :
+				ft_strcpy(res->result, "INf"));
+	return (sign ? ft_strcpy(res->result, "-inf") :
+			ft_strcpy(res->result, "inf"));
 }
 
-char		*print_zero(t_result *res, t_prsng *tools)
+static void	fill_reserve_zero(t_prsng *tools, t_result *res)
 {
-	if (!(res->result = ft_strnew(2)))
-	{
-		res->len = 0;
-		return (NULL);
-	}
-	ft_strcpy(res->result, "0");
 	if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
 		tools->precision = 6;
-	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED || tools->flags & M_SHARP)
+	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED ||
+		tools->flags & M_SHARP)
 		ft_strncat(res->result, ".", 1);
 	while (tools->precision-- > 0)
 		ft_strncat(res->result, "0", 1);
+}
+
+char		*print_zero(t_result *res, _Bool sign, t_prsng *tools)
+{
+	if (ft_tolower(tools->type) == 'f')
+	{
+		if (!(res->result = ft_strnew(2)))
+		{
+			res->len = 0;
+			return (NULL);
+		}
+	}
+	else if (ft_tolower(tools->type) == 'e')
+		if (!(res->result = ft_strnew(13)))
+		{
+			res->len = 0;
+			return (NULL);
+		}
+	sign ? ft_strcpy(res->result, "-0") : ft_strcpy(res->result, "0");
+	fill_reserve_zero(tools, res);
+	if (ft_tolower(tools->type) == 'e')
+	{
+		res->lg_10 = 0;
+		fill_exp_chars(res, tools->type);
+	}
 	return (res->result);
 }
