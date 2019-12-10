@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ylila/Printf_Hub
+CMAKE_SOURCE_DIR = /Users/mdeanne/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ylila/Printf_Hub/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mdeanne/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ylila/Printf_Hub/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2013,6 +2013,33 @@ ft_ptintf/srcs/field_len.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.s
 .PHONY : ft_ptintf/srcs/field_len.c.s
 
+ft_ptintf/srcs/fill_union.o: ft_ptintf/srcs/fill_union.c.o
+
+.PHONY : ft_ptintf/srcs/fill_union.o
+
+# target to build an object file
+ft_ptintf/srcs/fill_union.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.o
+.PHONY : ft_ptintf/srcs/fill_union.c.o
+
+ft_ptintf/srcs/fill_union.i: ft_ptintf/srcs/fill_union.c.i
+
+.PHONY : ft_ptintf/srcs/fill_union.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/fill_union.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.i
+.PHONY : ft_ptintf/srcs/fill_union.c.i
+
+ft_ptintf/srcs/fill_union.s: ft_ptintf/srcs/fill_union.c.s
+
+.PHONY : ft_ptintf/srcs/fill_union.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/fill_union.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.s
+.PHONY : ft_ptintf/srcs/fill_union.c.s
+
 ft_ptintf/srcs/ft_itoa_base_printf.o: ft_ptintf/srcs/ft_itoa_base_printf.c.o
 
 .PHONY : ft_ptintf/srcs/ft_itoa_base_printf.o
@@ -2094,32 +2121,59 @@ ft_ptintf/srcs/get_binary.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/get_binary.c.s
 .PHONY : ft_ptintf/srcs/get_binary.c.s
 
-ft_ptintf/srcs/is.o: ft_ptintf/srcs/is.c.o
+ft_ptintf/srcs/is_parser.o: ft_ptintf/srcs/is_parser.c.o
 
-.PHONY : ft_ptintf/srcs/is.o
+.PHONY : ft_ptintf/srcs/is_parser.o
 
 # target to build an object file
-ft_ptintf/srcs/is.c.o:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.o
-.PHONY : ft_ptintf/srcs/is.c.o
+ft_ptintf/srcs/is_parser.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.o
+.PHONY : ft_ptintf/srcs/is_parser.c.o
 
-ft_ptintf/srcs/is.i: ft_ptintf/srcs/is.c.i
+ft_ptintf/srcs/is_parser.i: ft_ptintf/srcs/is_parser.c.i
 
-.PHONY : ft_ptintf/srcs/is.i
+.PHONY : ft_ptintf/srcs/is_parser.i
 
 # target to preprocess a source file
-ft_ptintf/srcs/is.c.i:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.i
-.PHONY : ft_ptintf/srcs/is.c.i
+ft_ptintf/srcs/is_parser.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.i
+.PHONY : ft_ptintf/srcs/is_parser.c.i
 
-ft_ptintf/srcs/is.s: ft_ptintf/srcs/is.c.s
+ft_ptintf/srcs/is_parser.s: ft_ptintf/srcs/is_parser.c.s
 
-.PHONY : ft_ptintf/srcs/is.s
+.PHONY : ft_ptintf/srcs/is_parser.s
 
 # target to generate assembly for a file
-ft_ptintf/srcs/is.c.s:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.s
-.PHONY : ft_ptintf/srcs/is.c.s
+ft_ptintf/srcs/is_parser.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.s
+.PHONY : ft_ptintf/srcs/is_parser.c.s
+
+ft_ptintf/srcs/is_typeflags.o: ft_ptintf/srcs/is_typeflags.c.o
+
+.PHONY : ft_ptintf/srcs/is_typeflags.o
+
+# target to build an object file
+ft_ptintf/srcs/is_typeflags.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.o
+.PHONY : ft_ptintf/srcs/is_typeflags.c.o
+
+ft_ptintf/srcs/is_typeflags.i: ft_ptintf/srcs/is_typeflags.c.i
+
+.PHONY : ft_ptintf/srcs/is_typeflags.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/is_typeflags.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.i
+.PHONY : ft_ptintf/srcs/is_typeflags.c.i
+
+ft_ptintf/srcs/is_typeflags.s: ft_ptintf/srcs/is_typeflags.c.s
+
+.PHONY : ft_ptintf/srcs/is_typeflags.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/is_typeflags.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.s
+.PHONY : ft_ptintf/srcs/is_typeflags.c.s
 
 ft_ptintf/srcs/main.o: ft_ptintf/srcs/main.c.o
 
@@ -2175,32 +2229,86 @@ ft_ptintf/srcs/make_field.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/make_field.c.s
 .PHONY : ft_ptintf/srcs/make_field.c.s
 
-ft_ptintf/srcs/parsing.o: ft_ptintf/srcs/parsing.c.o
+ft_ptintf/srcs/parsing_funcs.o: ft_ptintf/srcs/parsing_funcs.c.o
 
-.PHONY : ft_ptintf/srcs/parsing.o
+.PHONY : ft_ptintf/srcs/parsing_funcs.o
 
 # target to build an object file
-ft_ptintf/srcs/parsing.c.o:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.o
-.PHONY : ft_ptintf/srcs/parsing.c.o
+ft_ptintf/srcs/parsing_funcs.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.o
+.PHONY : ft_ptintf/srcs/parsing_funcs.c.o
 
-ft_ptintf/srcs/parsing.i: ft_ptintf/srcs/parsing.c.i
+ft_ptintf/srcs/parsing_funcs.i: ft_ptintf/srcs/parsing_funcs.c.i
 
-.PHONY : ft_ptintf/srcs/parsing.i
+.PHONY : ft_ptintf/srcs/parsing_funcs.i
 
 # target to preprocess a source file
-ft_ptintf/srcs/parsing.c.i:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.i
-.PHONY : ft_ptintf/srcs/parsing.c.i
+ft_ptintf/srcs/parsing_funcs.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.i
+.PHONY : ft_ptintf/srcs/parsing_funcs.c.i
 
-ft_ptintf/srcs/parsing.s: ft_ptintf/srcs/parsing.c.s
+ft_ptintf/srcs/parsing_funcs.s: ft_ptintf/srcs/parsing_funcs.c.s
 
-.PHONY : ft_ptintf/srcs/parsing.s
+.PHONY : ft_ptintf/srcs/parsing_funcs.s
 
 # target to generate assembly for a file
-ft_ptintf/srcs/parsing.c.s:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.s
-.PHONY : ft_ptintf/srcs/parsing.c.s
+ft_ptintf/srcs/parsing_funcs.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.s
+.PHONY : ft_ptintf/srcs/parsing_funcs.c.s
+
+ft_ptintf/srcs/parsing_generaly.o: ft_ptintf/srcs/parsing_generaly.c.o
+
+.PHONY : ft_ptintf/srcs/parsing_generaly.o
+
+# target to build an object file
+ft_ptintf/srcs/parsing_generaly.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.o
+.PHONY : ft_ptintf/srcs/parsing_generaly.c.o
+
+ft_ptintf/srcs/parsing_generaly.i: ft_ptintf/srcs/parsing_generaly.c.i
+
+.PHONY : ft_ptintf/srcs/parsing_generaly.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/parsing_generaly.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.i
+.PHONY : ft_ptintf/srcs/parsing_generaly.c.i
+
+ft_ptintf/srcs/parsing_generaly.s: ft_ptintf/srcs/parsing_generaly.c.s
+
+.PHONY : ft_ptintf/srcs/parsing_generaly.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/parsing_generaly.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.s
+.PHONY : ft_ptintf/srcs/parsing_generaly.c.s
+
+ft_ptintf/srcs/prepare_lennum.o: ft_ptintf/srcs/prepare_lennum.c.o
+
+.PHONY : ft_ptintf/srcs/prepare_lennum.o
+
+# target to build an object file
+ft_ptintf/srcs/prepare_lennum.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o
+.PHONY : ft_ptintf/srcs/prepare_lennum.c.o
+
+ft_ptintf/srcs/prepare_lennum.i: ft_ptintf/srcs/prepare_lennum.c.i
+
+.PHONY : ft_ptintf/srcs/prepare_lennum.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/prepare_lennum.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.i
+.PHONY : ft_ptintf/srcs/prepare_lennum.c.i
+
+ft_ptintf/srcs/prepare_lennum.s: ft_ptintf/srcs/prepare_lennum.c.s
+
+.PHONY : ft_ptintf/srcs/prepare_lennum.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/prepare_lennum.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.s
+.PHONY : ft_ptintf/srcs/prepare_lennum.c.s
 
 ft_ptintf/srcs/set_buff.o: ft_ptintf/srcs/set_buff.c.o
 
@@ -2229,6 +2337,33 @@ ft_ptintf/srcs/set_buff.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.s
 .PHONY : ft_ptintf/srcs/set_buff.c.s
 
+ft_ptintf/srcs/set_flags.o: ft_ptintf/srcs/set_flags.c.o
+
+.PHONY : ft_ptintf/srcs/set_flags.o
+
+# target to build an object file
+ft_ptintf/srcs/set_flags.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o
+.PHONY : ft_ptintf/srcs/set_flags.c.o
+
+ft_ptintf/srcs/set_flags.i: ft_ptintf/srcs/set_flags.c.i
+
+.PHONY : ft_ptintf/srcs/set_flags.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/set_flags.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.i
+.PHONY : ft_ptintf/srcs/set_flags.c.i
+
+ft_ptintf/srcs/set_flags.s: ft_ptintf/srcs/set_flags.c.s
+
+.PHONY : ft_ptintf/srcs/set_flags.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/set_flags.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.s
+.PHONY : ft_ptintf/srcs/set_flags.c.s
+
 ft_ptintf/srcs/to_buff.o: ft_ptintf/srcs/to_buff.c.o
 
 .PHONY : ft_ptintf/srcs/to_buff.o
@@ -2255,6 +2390,60 @@ ft_ptintf/srcs/to_buff.s: ft_ptintf/srcs/to_buff.c.s
 ft_ptintf/srcs/to_buff.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.s
 .PHONY : ft_ptintf/srcs/to_buff.c.s
+
+ft_ptintf/srcs/which_sign.o: ft_ptintf/srcs/which_sign.c.o
+
+.PHONY : ft_ptintf/srcs/which_sign.o
+
+# target to build an object file
+ft_ptintf/srcs/which_sign.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o
+.PHONY : ft_ptintf/srcs/which_sign.c.o
+
+ft_ptintf/srcs/which_sign.i: ft_ptintf/srcs/which_sign.c.i
+
+.PHONY : ft_ptintf/srcs/which_sign.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/which_sign.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.i
+.PHONY : ft_ptintf/srcs/which_sign.c.i
+
+ft_ptintf/srcs/which_sign.s: ft_ptintf/srcs/which_sign.c.s
+
+.PHONY : ft_ptintf/srcs/which_sign.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/which_sign.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.s
+.PHONY : ft_ptintf/srcs/which_sign.c.s
+
+ft_ptintf/srcs/zeroing.o: ft_ptintf/srcs/zeroing.c.o
+
+.PHONY : ft_ptintf/srcs/zeroing.o
+
+# target to build an object file
+ft_ptintf/srcs/zeroing.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o
+.PHONY : ft_ptintf/srcs/zeroing.c.o
+
+ft_ptintf/srcs/zeroing.i: ft_ptintf/srcs/zeroing.c.i
+
+.PHONY : ft_ptintf/srcs/zeroing.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/zeroing.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.i
+.PHONY : ft_ptintf/srcs/zeroing.c.i
+
+ft_ptintf/srcs/zeroing.s: ft_ptintf/srcs/zeroing.c.s
+
+.PHONY : ft_ptintf/srcs/zeroing.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/zeroing.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.s
+.PHONY : ft_ptintf/srcs/zeroing.c.s
 
 ft_ptintf/srcsFloat/check_create_float_res.o: ft_ptintf/srcsFloat/check_create_float_res.c.o
 
@@ -2934,6 +3123,9 @@ help:
 	@echo "... ft_ptintf/srcs/field_len.o"
 	@echo "... ft_ptintf/srcs/field_len.i"
 	@echo "... ft_ptintf/srcs/field_len.s"
+	@echo "... ft_ptintf/srcs/fill_union.o"
+	@echo "... ft_ptintf/srcs/fill_union.i"
+	@echo "... ft_ptintf/srcs/fill_union.s"
 	@echo "... ft_ptintf/srcs/ft_itoa_base_printf.o"
 	@echo "... ft_ptintf/srcs/ft_itoa_base_printf.i"
 	@echo "... ft_ptintf/srcs/ft_itoa_base_printf.s"
@@ -2943,24 +3135,42 @@ help:
 	@echo "... ft_ptintf/srcs/get_binary.o"
 	@echo "... ft_ptintf/srcs/get_binary.i"
 	@echo "... ft_ptintf/srcs/get_binary.s"
-	@echo "... ft_ptintf/srcs/is.o"
-	@echo "... ft_ptintf/srcs/is.i"
-	@echo "... ft_ptintf/srcs/is.s"
+	@echo "... ft_ptintf/srcs/is_parser.o"
+	@echo "... ft_ptintf/srcs/is_parser.i"
+	@echo "... ft_ptintf/srcs/is_parser.s"
+	@echo "... ft_ptintf/srcs/is_typeflags.o"
+	@echo "... ft_ptintf/srcs/is_typeflags.i"
+	@echo "... ft_ptintf/srcs/is_typeflags.s"
 	@echo "... ft_ptintf/srcs/main.o"
 	@echo "... ft_ptintf/srcs/main.i"
 	@echo "... ft_ptintf/srcs/main.s"
 	@echo "... ft_ptintf/srcs/make_field.o"
 	@echo "... ft_ptintf/srcs/make_field.i"
 	@echo "... ft_ptintf/srcs/make_field.s"
-	@echo "... ft_ptintf/srcs/parsing.o"
-	@echo "... ft_ptintf/srcs/parsing.i"
-	@echo "... ft_ptintf/srcs/parsing.s"
+	@echo "... ft_ptintf/srcs/parsing_funcs.o"
+	@echo "... ft_ptintf/srcs/parsing_funcs.i"
+	@echo "... ft_ptintf/srcs/parsing_funcs.s"
+	@echo "... ft_ptintf/srcs/parsing_generaly.o"
+	@echo "... ft_ptintf/srcs/parsing_generaly.i"
+	@echo "... ft_ptintf/srcs/parsing_generaly.s"
+	@echo "... ft_ptintf/srcs/prepare_lennum.o"
+	@echo "... ft_ptintf/srcs/prepare_lennum.i"
+	@echo "... ft_ptintf/srcs/prepare_lennum.s"
 	@echo "... ft_ptintf/srcs/set_buff.o"
 	@echo "... ft_ptintf/srcs/set_buff.i"
 	@echo "... ft_ptintf/srcs/set_buff.s"
+	@echo "... ft_ptintf/srcs/set_flags.o"
+	@echo "... ft_ptintf/srcs/set_flags.i"
+	@echo "... ft_ptintf/srcs/set_flags.s"
 	@echo "... ft_ptintf/srcs/to_buff.o"
 	@echo "... ft_ptintf/srcs/to_buff.i"
 	@echo "... ft_ptintf/srcs/to_buff.s"
+	@echo "... ft_ptintf/srcs/which_sign.o"
+	@echo "... ft_ptintf/srcs/which_sign.i"
+	@echo "... ft_ptintf/srcs/which_sign.s"
+	@echo "... ft_ptintf/srcs/zeroing.o"
+	@echo "... ft_ptintf/srcs/zeroing.i"
+	@echo "... ft_ptintf/srcs/zeroing.s"
 	@echo "... ft_ptintf/srcsFloat/check_create_float_res.o"
 	@echo "... ft_ptintf/srcsFloat/check_create_float_res.i"
 	@echo "... ft_ptintf/srcsFloat/check_create_float_res.s"

@@ -6,12 +6,17 @@
 #include <stdio.h>
 #include <math.h>
 #include <fcntl.h>
-void zeroing_tools(t_prsng *tools, _Bool zeroing_counter);
 
 
 
 
 int main() {
+
+	ft_printf("%bc\n",34);
+	ft_printf("%bc", -34);
+	//printf("\n");
+	//ft_printf("%#bf", -10.18);
+///  флаг 0, +, отрицательное значение,
 
 
 

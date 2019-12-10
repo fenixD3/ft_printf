@@ -20,24 +20,6 @@ void	param_processing(char **format, t_prsng *tools)
 	organozation_by_flags_to_buff(tools);
 }
 
-void	zeroing_tools(t_prsng *tools, _Bool zeroing_counter)
-{
-	size_t i;
-
-	tools->flags = 0;
-	tools->field = 0;
-	tools->precision = -1;
-	tools->modifiers = 0;
-	tools->type = 0;
-	if (zeroing_counter)
-	{
-		tools->counter = 0;
-		i = 0;
-		while (i++ < BUFF_SIZE)
-			tools->buff[i] = 0;
-	}
-}
-
 int		ft_printf(const char *format, ...)
 {
 	t_prsng	tools;

@@ -99,13 +99,13 @@ add_executable(Printf_Hub
         ft_ptintf/srcsFloat/high_precision_intf.c
         ft_ptintf/srcsFloat/high_precision_intf_long.c
         ft_ptintf/srcsFloat/high_precision_long.c
-        ft_ptintf/srcs/is.c
+        ft_ptintf/srcs/is_parser.c
         ft_ptintf/srcs/main.c
         ft_ptintf/srcs/make_field.c
         ft_ptintf/srcsFloat/my_float.c
         ft_ptintf/srcsFloat/my_long_float.c
         ft_ptintf/includes/myfloat.h
-        ft_ptintf/srcs/parsing.c
+        ft_ptintf/srcs/parsing_generaly.c
         ft_ptintf/srcsFloat/print_reserve_dbl.c
         ft_ptintf/srcs/set_buff.c
-        ft_ptintf/srcs/to_buff.c)
+        ft_ptintf/srcs/to_buff.c ft_ptintf/srcs/is_typeflags.c ft_ptintf/srcs/which_sign.c ft_ptintf/srcs/fill_union.c ft_ptintf/srcs/zeroing.c ft_ptintf/srcs/set_flags.c ft_ptintf/srcs/parsing_funcs.c ft_ptintf/srcs/prepare_lennum.c)

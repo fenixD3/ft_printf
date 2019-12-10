@@ -1,16 +1,24 @@
-//
-// Created by Mort Deanne on 2019-08-20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base_printf.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:00:56 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/10 22:01:06 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//#include "libft.h"
 #include "ft_ptintf.h"
 
-unsigned long long reverse_if_negative(t_un *number, t_prsng *tools)
+unsigned long long	reverse_if_negative(t_un *number, t_prsng *tools)
 {
 	unsigned long long ret;
 
 	ret = 0;
-	if (!is_signed(tools->type) || (is_signed(tools->type) && which_sign(number, tools) > 0))
+	if (!is_signed(tools->type) ||
+		(is_signed(tools->type) && which_sign(number, tools) > 0))
 		ret = number->ull;
 	else
 	{
@@ -26,10 +34,9 @@ unsigned long long reverse_if_negative(t_un *number, t_prsng *tools)
 			ret = -(unsigned long long)number->c;
 	}
 	return (ret);
-
 }
 
-char *itoa_base_union(t_prsng *tools, t_mkfld *field, char *str)
+char				*itoa_base_union(t_prsng *tools, t_mkfld *field, char *str)
 {
 	unsigned long long	n;
 	size_t				lennum;

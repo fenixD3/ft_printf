@@ -14,8 +14,9 @@
 # define M_SHARP 4
 # define M_ZERO 8
 # define M_SPACE 16
-# define M_PRECISION_NOT_ADDED 32
-# define M_ZERO_CHAR 64
+# define M_B 32
+# define M_PRECISION_NOT_ADDED 64
+# define M_ZERO_CHAR 128
 
 # define M_HH 1
 # define M_H 2
@@ -29,7 +30,7 @@
 #define LAST 2
 
 # define LOG10_2 0.30103
-# define get_binaryd(num, size) get_binary(num, size, 'i')
+# define get_binaryd(num, size, fld) get_binary(num, size, fld, 'i')
 
 #include "libft.h"
 #include <stdio.h>
@@ -121,7 +122,27 @@ int which_sign(t_un *number, t_prsng *tools);
 char		*print_double(t_prsng *tools, t_mkfld *fld, double number);
 char		*print_long_double(t_prsng *tools, t_mkfld *fld,
 								long double number);
-char		*get_binary(uint64_t *num, size_t bit_size, const char type,
-						t_mkfld *fld);
+char		*get_binary(uint64_t *num, size_t bit_size, t_mkfld *fld,
+						const char type);
+
+
+
+////add funcs
+void	fill_union_diouxx(t_mkfld *field, t_prsng *tools);
+_Bool	fill_union_csp(t_mkfld *field, t_prsng *tools);
+void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools);
+void	len_counting_diouxxcsp(t_prsng *tools, t_mkfld *field);
+void	zeroing_mkfield(t_mkfld *fld);
+
+void 	parsing_flags(char **format, t_prsng *tools);
+void	parsing_modifiers(char **format, t_prsng *tools);
+void	parsing_field(char **format, t_prsng *tools);
+void	parsing_precision(char **format, t_prsng *tools);
+void	parsing_typeflag(char **format, t_prsng *tools);
+
+void	diouxxcsp_lennum(t_prsng *tools, t_mkfld *field);
+void	aaeeffgg_lennum_len(t_prsng *tools, t_mkfld *field);
+
+void	get_binaryd_by_type(t_prsng *tools, t_mkfld *fld);
 
 #endif

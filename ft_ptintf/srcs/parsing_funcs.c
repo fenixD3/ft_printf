@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   parsing_funcs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 23:01:36 by mdeanne           #+#    #+#             */
-/*   Updated: 2019/12/05 23:01:40 by mdeanne          ###   ########.fr       */
+/*   Created: 2019/12/10 22:50:04 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/10 22:50:06 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ptintf.h"
 
-void 	parsing_flags(char **format, t_prsng *tools)
+void	parsing_flags(char **format, t_prsng *tools)
 {
 	while (1)
 	{
@@ -26,6 +26,8 @@ void 	parsing_flags(char **format, t_prsng *tools)
 			tools->flags |= M_ZERO;
 		else if (**format == ' ')
 			tools->flags |= M_SPACE;
+		else if (**format == 'b')
+			tools->flags |= M_B;
 		else if (!is_signflag(**format))
 			break ;
 		(*format)++;
@@ -40,7 +42,7 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 		tools->modifiers |= M_LL;
 	else if (**format == 'h')
 		tools->modifiers |= M_H;
-	else if (**format =='l')
+	else if (**format == 'l')
 		tools->modifiers |= M_L;
 	else if (**format == 'L')
 		tools->modifiers |= M_UPPER_L;
@@ -53,6 +55,7 @@ void	parsing_modifiers(char **format, t_prsng *tools)
 void	parsing_field(char **format, t_prsng *tools)
 {
 	long long tmp;
+
 	if (**format == '*')
 	{
 		if ((tmp = va_arg(tools->ap, int)) < 0)
@@ -76,10 +79,10 @@ void	parsing_precision(char **format, t_prsng *tools)
 {
 	(*format)++;
 	if (**format == '*')
-		{
+	{
 		tools->precision = va_arg(tools->ap, int);
-			(*format)++;
-		}
+		(*format)++;
+	}
 	else
 	{
 		tools->precision = ft_atoi(*format);
@@ -90,7 +93,6 @@ void	parsing_precision(char **format, t_prsng *tools)
 
 void	parsing_typeflag(char **format, t_prsng *tools)
 {
-
 	if (ft_islower(**format) || (**format != 'C' && **format != 'S'))
 		tools->type = **format;
 	else
@@ -99,42 +101,4 @@ void	parsing_typeflag(char **format, t_prsng *tools)
 		tools->type = ft_tolower(**format);
 	}
 	(*format)++;
-}
-
-void	parsing_cyclone(char **format, t_prsng *tools)
-{
-	while (**format && (is_flag(**format) || **format == '*'))
-	{
-		if (is_signflag(**format))
-			parsing_flags(format, tools);
-		else if (((**format >= '1' && **format <= '9') || **format == '*')
-				&& *(*format - 1) != '.')
-			parsing_field(format, tools);
-		else if (**format == '.')
-			parsing_precision(format, tools);
-		else if (is_modifiers(**format))
-			parsing_modifiers(format, tools);
-		else if (is_typeflag(**format))
-		{
-			parsing_typeflag(format, tools);
-			break ;
-		}
-	}
-}
-
-int		parsing(char **format, t_prsng *tools)
-{
-	zeroing_tools(tools, 0);
-	parsing_cyclone(format, tools);
-	if (!tools->type && **format)
-		tools->type = *((*format)++);
-	if (tools->precision < 0)
-	{
-		tools->flags |= M_PRECISION_NOT_ADDED;
-		tools->precision = 0;
-	}
-	if (!(tools->flags & M_PRECISION_NOT_ADDED) &&
-		tools->flags & M_ZERO && is_ddioouuxx(tools->type))
-		tools->flags &= ~M_ZERO;
-	return (0);
 }

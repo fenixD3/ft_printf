@@ -47,7 +47,7 @@ void	buffer_managment(t_prsng *tools, char *str, int len, int type_output)
 	{
 		ft_strncropcat(&tools->buff[lenbuf], str, len);
 		lenbuf += len;
-		tools->flags &= ~M_ZERO_CHAR; // we need it?
+		tools->flags &= ~M_ZERO_CHAR;
 	}
 }
 
@@ -62,7 +62,8 @@ void	add_str_to_buff(char **format, t_prsng *tools)
 	*format += len;
 }
 
-void	to_buff(char *str, t_prsng *tools, t_mkfld *field) {
+void	to_buff(char *str, t_prsng *tools, t_mkfld *field)
+{
 	int	len;
 
 	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0) +
@@ -70,4 +71,3 @@ void	to_buff(char *str, t_prsng *tools, t_mkfld *field) {
 		field->len_empty_field : 0);
 	buffer_managment(tools, str, len, NON_FORMAT);
 }
-

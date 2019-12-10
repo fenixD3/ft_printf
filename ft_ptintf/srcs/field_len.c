@@ -66,3 +66,15 @@ int		define_flaglen(t_mkfld *field, t_prsng *tools)
 		len++;
 	return (len);
 }
+
+void	len_counting_diouxxcsp(t_prsng *tools, t_mkfld *field)
+{
+	if ((tools->precision > 0 && (size_t)tools->precision > field->lennum)
+		&& tools->type != 's'
+		&& tools->type != 'c')
+		field->len += tools->precision - field->lennum;
+	field->len += define_flaglen(field, tools);
+	if (tools->field > field->lennum + field->len)
+		field->len_empty_field = tools->field - field->lennum - field->len;
+	field->len += field->len_empty_field;
+}

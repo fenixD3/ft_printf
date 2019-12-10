@@ -1,6 +1,14 @@
-//
-// Created by da.filiptsev on 09.12.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_binary.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 22:03:40 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/12/10 22:03:45 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "myfloat.h"
 
@@ -8,9 +16,9 @@ static void	fix_point_binary(char *res, uint64_t *num, size_t bit_size,
 								size_t whr_space)
 {
 	uint64_t	tmp;
-	char 		bit;
+	char		bit;
 	size_t		space;
-	ssize_t 	size;
+	ssize_t		size;
 
 	space = 0;
 	size = bit_size;
@@ -57,12 +65,11 @@ static void	ldouble_binary(char *res, uint64_t *num)
 	fix_point_binary(res + 2 + 16, (uint64_t *)&mant, 64, 64);
 }
 
-char		*get_binary(uint64_t *num, size_t bit_size, const char type,
-						t_mkfld *fld)
+char		*get_binary(uint64_t *num, size_t bit_size, t_mkfld *fld,
+						const char type)
 {
 	char		*res;
 
-	fld->lennum = bit_size + 3;
 	if (!(res = ft_strnew(fld->lennum)))
 		return (NULL);
 	if (type == 'i')
@@ -72,4 +79,18 @@ char		*get_binary(uint64_t *num, size_t bit_size, const char type,
 	else if (type == 'd')
 		ldouble_binary(res, num);
 	return (res);
+}
+
+void		get_binaryd_by_type(t_prsng *tools, t_mkfld *fld)
+{
+	if (tools->modifiers == 0)
+		fld->str = get_binaryd((uint64_t *)&fld->number.i, sizeof(int) * 8, fld);
+	else if (tools->modifiers & M_LL)
+		fld->str = get_binaryd((uint64_t *)&fld->number.ll, sizeof(long long) * 8, fld);
+	else if (tools->modifiers & M_L)
+		fld->str = get_binaryd((uint64_t *)&fld->number.l, sizeof(long) * 8, fld);
+	else if (tools->modifiers & M_H)
+		fld->str = get_binaryd((uint64_t *)&fld->number.sh, sizeof(short) * 8, fld);
+	else if (tools->modifiers & M_HH)
+		fld->str = get_binaryd((uint64_t *)&fld->number.c, sizeof(char) * 8, fld);
 }
