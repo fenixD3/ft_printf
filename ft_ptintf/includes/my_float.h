@@ -1,9 +1,17 @@
-//
-// Created by da.filiptsev on 13.11.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   my_float.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 23:31:43 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 23:35:08 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef MYFLOAT_H
-# define MYFLOAT_H
+#ifndef MY_FLOAT_H
+# define MY_FLOAT_H
 
 # include <stdint.h>
 # include <string.h>
@@ -17,17 +25,17 @@ typedef struct	s_dbl_comp
 	_Bool		sign;
 	int32_t		exp_val;
 	uint64_t	mant_val;
-	uint32_t	mant_High_Bits;
-	uint32_t	mant_Low_Bits;
+	uint32_t	mant_high_bits;
+	uint32_t	mant_low_bits;
 }				t_dbl_comp;
 
 typedef struct	s_result
 {
 	char	*result;
-	char 	*begin;
+	char	*begin;
 	ssize_t	len;
 	int32_t	lg_10;
-	char 	*buff;
+	char	*buff;
 	size_t	bf_len;
 }				t_result;
 

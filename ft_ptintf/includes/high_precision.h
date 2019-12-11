@@ -1,9 +1,17 @@
-//
-// Created by da.filiptsev on 13.11.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   high_precision.h                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/10 23:29:49 by ylila             #+#    #+#             */
+/*   Updated: 2019/12/10 23:30:38 by ylila            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef DTOA_HIGH_PRECISION_H
-# define DTOA_HIGH_PRECISION_H
+#ifndef HIGH_PRECISION_H
+# define HIGH_PRECISION_H
 
 # define ARRSIZE_INTG_DBL 32
 # define ARRSIZE_FRCT_DBL 34
@@ -14,9 +22,7 @@
 # include "myfloat.h"
 # include "ft_ptintf.h"
 
-#include <stdio.h>
-
-typedef struct	u_high
+typedef struct	s_high
 {
 	unsigned	data_intg[ARRSIZE_INTG_DBL];
 	unsigned	data_frct[ARRSIZE_FRCT_DBL];
@@ -24,7 +30,7 @@ typedef struct	u_high
 	_Bool		intg;
 }				t_high;
 
-typedef struct	u_highl
+typedef struct	s_highl
 {
 	unsigned	data_intg[ARRSIZE_INTG_LDBL];
 	unsigned	data_frct[ARRSIZE_FRCT_LDBL];
