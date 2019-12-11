@@ -6,7 +6,7 @@
 /*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 22:40:18 by ylila             #+#    #+#             */
-/*   Updated: 2019/12/10 22:43:58 by ylila            ###   ########.fr       */
+/*   Updated: 2019/12/11 21:06:49 by ylila            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools,
 	int		nxt_nu;
 	int		prec;
 
-	ft_memcpy(&prec, &tools->precision, sizeof(int));
+	ft_memcpy(&prec, &tools->prec, sizeof(int));
 	if (!*res->result && (tools->type == 'e' || tools->type == 'E'))
 		fill_fucking_e(res, tools, hp, &prec);
 	while (prec > 0 && !hp_is_zero(hp, intg))
@@ -104,7 +104,7 @@ void		fill_result(t_high *hp, _Bool intg, t_prsng *tls, t_result *rs)
 	{
 		if (rs->buff)
 		{
-			while (++rs->buff && *rs->buff && tls->precision-- && ++rs->bf_len)
+			while (++rs->buff && *rs->buff && tls->prec-- && ++rs->bf_len)
 			{
 				ft_strncat(rs->result, rs->buff, 1);
 				++rs->len;

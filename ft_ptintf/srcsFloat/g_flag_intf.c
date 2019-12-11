@@ -6,7 +6,7 @@
 /*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 22:08:03 by ylila             #+#    #+#             */
-/*   Updated: 2019/12/10 22:33:52 by ylila            ###   ########.fr       */
+/*   Updated: 2019/12/11 21:07:36 by ylila            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ char		*get_g_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 {
 	char	*res;
 
-	if ((lg_10 < -4 || lg_10 >= ((!tools->precision) ? 1 : tools->precision)))
+	if ((lg_10 < -4 || lg_10 >= ((!tools->prec) ? 1 : tools->prec)))
 		tools->type = (tools->type == 'g') ? 'e' : 'E';
 	else
 		tools->type = (tools->type == 'g') ? 'f' : 'F';
-	if (tools->modifiers & M_UPPER_L)
+	if (tools->mdfirs & M_UPPER_L)
 	{
-		if (!(res = print_long_double(tools, fld, fld->number.ldb)))
+		if (!(res = print_long_double(tools, fld, fld->nmbr.ldb)))
 			return (NULL);
 	}
-	else if (!(res = print_double(tools, fld, fld->number.db)))
+	else if (!(res = print_double(tools, fld, fld->nmbr.db)))
 		return (NULL);
 	return (res);
 }

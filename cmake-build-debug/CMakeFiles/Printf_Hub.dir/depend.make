@@ -6,15 +6,13 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_atoi.c.o: ../ft_ptintf/libft/ft_ato
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_bzero.c.o: ../ft_ptintf/libft/ft_bzero.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_bzero.c.o: ../ft_ptintf/libft/libft.h
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_ceil.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_ceil.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_ceil.c.o: ../ft_ptintf/libft/ft_ceil.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_ceil.c.o: ../ft_ptintf/libft/libft.h
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_fib.c.o: ../ft_ptintf/libft/ft_fib.c
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_floor.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_floor.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_floor.c.o: ../ft_ptintf/libft/ft_floor.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_floor.c.o: ../ft_ptintf/libft/libft.h
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_isalnum.c.o: ../ft_ptintf/libft/ft_isalnum.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_isalnum.c.o: ../ft_ptintf/libft/libft.h
@@ -34,15 +32,6 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_isupper.c.o: ../ft_ptintf/libft/ft_
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_itoa.c.o: ../ft_ptintf/libft/ft_itoa.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_itoa.c.o: ../ft_ptintf/libft/libft.h
-
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log10.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log10.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log10.c.o: ../ft_ptintf/libft/ft_log10.c
-
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log2.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log2.c.o: ../ft_ptintf/includes/myfloat.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log2.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_log2.c.o: ../ft_ptintf/libft/ft_log2.c
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_lstadd.c.o: ../ft_ptintf/libft/ft_lstadd.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_lstadd.c.o: ../ft_ptintf/libft/libft.h
@@ -108,12 +97,11 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_putstr.c.o: ../ft_ptintf/libft/libf
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_putstr_fd.c.o: ../ft_ptintf/libft/ft_putstr_fd.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_putstr_fd.c.o: ../ft_ptintf/libft/libft.h
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_reverse.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_reverse.c.o: ../ft_ptintf/libft/ft_reverse.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_reverse.c.o: ../ft_ptintf/libft/libft.h
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_round.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_round.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_round.c.o: ../ft_ptintf/libft/ft_round.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_round.c.o: ../ft_ptintf/libft/libft.h
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/ft_sqrt.c.o: ../ft_ptintf/libft/ft_sqrt.c
 
@@ -194,6 +182,10 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/includes/ft
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/srcs/field_len.c
 
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/fill_union.c.o: ../ft_ptintf/srcs/fill_union.c
+
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/ft_itoa_base_printf.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/ft_itoa_base_printf.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/ft_itoa_base_printf.c.o: ../ft_ptintf/srcs/ft_itoa_base_printf.c
@@ -207,9 +199,11 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/get_binary.c.o: ../ft_ptintf/includes/m
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/get_binary.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/get_binary.c.o: ../ft_ptintf/srcs/get_binary.c
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is.c.o: ../ft_ptintf/srcs/is.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.o: ../ft_ptintf/srcs/is_parser.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.o: ../ft_ptintf/srcs/is_typeflags.c
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.o: ../ft_ptintf/includes/myfloat.h
@@ -220,17 +214,37 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/make_field.c.o: ../ft_ptintf/includes/f
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/make_field.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/make_field.c.o: ../ft_ptintf/srcs/make_field.c
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing.c.o: ../ft_ptintf/srcs/parsing.c
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.o: ../ft_ptintf/srcs/parsing_funcs.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.o: ../ft_ptintf/srcs/parsing_generaly.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o: ../ft_ptintf/srcs/prepare_lennum.c
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.o: ../ft_ptintf/srcs/set_buff.c
 
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o: ../ft_ptintf/srcs/set_flags.c
+
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.o: ../ft_ptintf/srcs/to_buff.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o: ../ft_ptintf/srcs/which_sign.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o: ../ft_ptintf/srcs/zeroing.c
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/check_create_float_res.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/check_create_float_res.c.o: ../ft_ptintf/includes/myfloat.h
@@ -259,6 +273,15 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/frees_for_float.c.o: ../ft_ptintf/
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/frees_for_float.c.o: ../ft_ptintf/includes/myfloat.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/frees_for_float.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/frees_for_float.c.o: ../ft_ptintf/srcsFloat/frees_for_float.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log10.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log10.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log10.c.o: ../ft_ptintf/srcsFloat/ft_log10.c
+
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log2.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log2.c.o: ../ft_ptintf/includes/myfloat.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log2.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/ft_log2.c.o: ../ft_ptintf/srcsFloat/ft_log2.c
 
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/g_flag_intf.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/g_flag_intf.c.o: ../ft_ptintf/includes/myfloat.h

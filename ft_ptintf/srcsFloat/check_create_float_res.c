@@ -6,7 +6,7 @@
 /*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 22:07:14 by ylila             #+#    #+#             */
-/*   Updated: 2019/12/10 22:47:43 by ylila            ###   ########.fr       */
+/*   Updated: 2019/12/11 21:09:37 by ylila            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
-	if (tls->precision)
-		*lennum = 1 + tls->precision;
+	if (tls->prec)
+		*lennum = 1 + tls->prec;
 	else if (tls->flags & M_PRECISION_NOT_ADDED)
 	{
 		*lennum = 1 + 6;
-		tls->precision = 6;
+		tls->prec = 6;
 	}
 	else
 		*lennum = 1;
-	if (tls->flags & M_SHARP || tls->precision || tls->flags & M_PRECISION_NOT_ADDED)
+	if (tls->flags & M_SHARP || tls->prec || tls->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 	if (lg_10 >= 0)
 	{
@@ -44,16 +44,16 @@ static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 
 static void	create_for_f(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
-	if (tls->precision)
-		*lennum = (lg_10 > 0) ? lg_10 + 1 + tls->precision : 1 + tls->precision;
+	if (tls->prec)
+		*lennum = (lg_10 > 0) ? lg_10 + 1 + tls->prec : 1 + tls->prec;
 	else if (tls->flags & M_PRECISION_NOT_ADDED)
 	{
 		*lennum = (lg_10 > 0) ? lg_10 + 1 + 6 : 1 + 6;
-		tls->precision = 6;
+		tls->prec = 6;
 	}
 	else
 		*lennum = (lg_10 > 0) ? lg_10 + 1 : 1;
-	if (tls->flags & M_SHARP || tls->precision ||
+	if (tls->flags & M_SHARP || tls->prec ||
 			tls->flags & M_PRECISION_NOT_ADDED)
 		++*lennum;
 }

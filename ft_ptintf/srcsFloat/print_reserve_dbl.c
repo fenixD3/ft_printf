@@ -42,12 +42,12 @@ char		*print_inf(t_result *res, _Bool sign, const char type)
 
 static void	fill_reserve_zero(t_prsng *tools, t_result *res)
 {
-	if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
-		tools->precision = 6;
-	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED ||
+	if (!tools->prec && tools->flags & M_PRECISION_NOT_ADDED)
+		tools->prec = 6;
+	if (tools->prec || tools->flags & M_PRECISION_NOT_ADDED ||
 		tools->flags & M_SHARP)
 		ft_strncat(res->result, ".", 1);
-	while (tools->precision-- > 0)
+	while (tools->prec-- > 0)
 		ft_strncat(res->result, "0", 1);
 }
 

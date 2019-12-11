@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ylila/Printf_Hub
+# Install script for directory: /Users/mdeanne/ft_printf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ylila/Printf_Hub/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/mdeanne/ft_printf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
