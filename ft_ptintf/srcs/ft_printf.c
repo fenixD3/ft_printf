@@ -12,12 +12,16 @@
 
 #include "ft_ptintf.h"
 
-void	param_processing(char **format, t_prsng *tools)
+int		param_processing(char **format, t_prsng *tools)
 {
 	(*format)++;
-	if (!parsing(format, tools))
-		;
-	organozation_by_flags_to_buff(tools);
+	parsing(format, tools);
+	if (organozation_by_flags_to_buff(tools) != 1)
+	{
+		buffer_managment(&tools, NULL, 0, LAST);
+		return (0);
+	}
+	return (1);
 }
 
 int		ft_printf(const char *format, ...)
@@ -34,7 +38,8 @@ int		ft_printf(const char *format, ...)
 		if (*f_not_const == '%')
 		{
 			zeroing_tools(&tools, 0);
-			param_processing(&f_not_const, &tools);
+			if (!param_processing(&f_not_const, &tools))
+				return (0);
 		}
 		else
 			add_str_to_buff(&f_not_const, &tools);

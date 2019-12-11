@@ -108,4 +108,4 @@ add_executable(Printf_Hub
         ft_ptintf/srcs/parsing_generaly.c
         ft_ptintf/srcsFloat/print_reserve_dbl.c
         ft_ptintf/srcs/set_buff.c
-        ft_ptintf/srcs/to_buff.c ft_ptintf/srcs/is_typeflags.c ft_ptintf/srcs/which_sign.c ft_ptintf/srcs/fill_union.c ft_ptintf/srcs/zeroing.c ft_ptintf/srcs/set_flags.c ft_ptintf/srcs/parsing_funcs.c ft_ptintf/srcs/prepare_lennum.c)
+        ft_ptintf/srcs/to_buff.c ft_ptintf/srcs/is_typeflags.c ft_ptintf/srcs/which_sign.c ft_ptintf/srcs/fill_union.c ft_ptintf/srcs/zeroing.c ft_ptintf/srcs/set_flags.c ft_ptintf/srcs/parsing_funcs.c ft_ptintf/srcs/prepare_lennum.c ft_ptintf/srcs/str_tolower.c)

@@ -37,15 +37,15 @@ void	parsing_flags(char **format, t_prsng *tools)
 void	parsing_modifiers(char **format, t_prsng *tools)
 {
 	if (**format == 'h' && *(*format + 1) == 'h')
-		tools->modifiers |= M_HH;
+		tools->mdfirs |= M_HH;
 	else if (**format == 'l' && *(*format + 1) == 'l')
-		tools->modifiers |= M_LL;
+		tools->mdfirs |= M_LL;
 	else if (**format == 'h')
-		tools->modifiers |= M_H;
+		tools->mdfirs |= M_H;
 	else if (**format == 'l')
-		tools->modifiers |= M_L;
+		tools->mdfirs |= M_L;
 	else if (**format == 'L')
-		tools->modifiers |= M_UPPER_L;
+		tools->mdfirs |= M_UPPER_L;
 	if (*(*format + 1) == 'h' || *(*format + 1) == 'l')
 		(*format) += 2;
 	else
@@ -80,12 +80,12 @@ void	parsing_precision(char **format, t_prsng *tools)
 	(*format)++;
 	if (**format == '*')
 	{
-		tools->precision = va_arg(tools->ap, int);
+		tools->prec = va_arg(tools->ap, int);
 		(*format)++;
 	}
 	else
 	{
-		tools->precision = ft_atoi(*format);
+		tools->prec = ft_atoi(*format);
 		while ((**format >= '0' && **format <= '9'))
 			(*format)++;
 	}
@@ -97,7 +97,7 @@ void	parsing_typeflag(char **format, t_prsng *tools)
 		tools->type = **format;
 	else
 	{
-		tools->modifiers |= M_L;
+		tools->mdfirs |= M_L;
 		tools->type = ft_tolower(**format);
 	}
 	(*format)++;

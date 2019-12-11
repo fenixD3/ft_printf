@@ -87,6 +87,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/prepare_lennum.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/set_buff.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/set_flags.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o"
+  "/Users/mdeanne/ft_printf/ft_ptintf/srcs/str_tolower.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/str_tolower.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/to_buff.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/which_sign.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o"
   "/Users/mdeanne/ft_printf/ft_ptintf/srcs/zeroing.c" "/Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o"

@@ -12,39 +12,55 @@
 
 #include "ft_ptintf.h"
 
-void	prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
+int		prepare_diouxxcsp(t_prsng *tools, t_mkfld *field)
 {
 	if (is_ddioouuxx(tools->type))
 		fill_union_diouxx(field, tools);
 	else if (is_csp(tools->type))
-		fill_union_csp(field, tools); /// need protection strdup (malloc)
+		if (!fill_union_csp(field, tools))
+			return (0);
 	field->base = define_base(tools);
 	diouxxcsp_lennum(tools, field);
 	len_counting_diouxxcsp(tools, field);
+	return (1);
 }
 
-void	prepare_aaeeffgg(t_prsng *tools, t_mkfld *field)
+int		prepare_aaeeffgg(t_prsng *tls, t_mkfld *fld)
 {
-	fill_union_aaeeffgg(field, tools);
-	if (!(tools->flags & M_B))
+	fill_union_aaeeffgg(fld, tls);
+	if (!(tls->flags & M_B))
 	{
-		if ((tools->modifiers & M_UPPER_L))
-			field->str = print_long_double(tools, field, field->number.ldb);
+		if ((tls->mdfirs & M_UPPER_L))
+			fld->str = print_long_double(tls, fld, fld->nmbr.ldb);
 		else
-			field->str = print_double(tools, field, field->number.db);
+			fld->str = print_double(tls, fld, fld->nmbr.db);
 	}
 	else
 	{
-		field->lennum = 3 + ((tools->modifiers & M_UPPER_L)) ?
-										80 : sizeof(double);
-		if (tools->modifiers & M_UPPER_L)
-			field->str = get_binary( (uint64_t *)&field->number.ldb,
-					80, field, 'd');
+		fld->lennum = 2 +
+				(((tls->mdfirs & M_UPPER_L)) ? 80 : (sizeof(double) * 8));
+		if (tls->mdfirs & M_UPPER_L)
+			fld->str = get_binary((uint64_t *)&fld->nmbr.ldb, 80, fld, 'd');
 		else
-			field->str = get_binary( (uint64_t *)&field->number.db,
-						sizeof(double) * 8, field, 'f');
+			fld->str = get_binary((uint64_t *)&fld->nmbr.db,
+						sizeof(double) * 8, fld, 'f');
 	}
-	aaeeffgg_lennum_len(tools, field);
+	if (!fld->str)
+		return (0);
+	aaeeffgg_lennum_len(tls, fld);
+	return (1);
+}
+
+int		diouxx(t_prsng *tools, t_mkfld *field)
+{
+	if (!prepare_diouxxcsp(tools, field))
+		return (0);
+	if (tools->type && !set_buff(field, tools))
+	{
+		if (tools->type == 's' && !ft_strcmp("(null)", field->nmbr.cptr))
+			free(field->nmbr.cptr);
+		return (0);
+	}
 }
 
 int		organozation_by_flags_to_buff(t_prsng *tools)
@@ -54,16 +70,17 @@ int		organozation_by_flags_to_buff(t_prsng *tools)
 	zeroing_mkfield(&field);
 	if (is_aaeeffgg(tools->type))
 	{
-		prepare_aaeeffgg(tools, &field);
+		if (!prepare_aaeeffgg(tools, &field))
+			return (2);
 		if (!set_buff_float(&field, tools))
+		{
+			free(field.str);
 			return (0);
+		}
 	}
-	else if (is_ddioouuxx(tools->type) || is_csp(tools->type)
-			 										|| !is_flag(tools->type))
-	{
-		prepare_diouxxcsp(tools, &field);
-		if (tools->type && !set_buff(&field, tools))
-			return (0);
-	}
+	else /*if (is_ddioouuxx(tools->type) || is_csp(tools->type)
+													|| !is_flag(tools->type))*/
+		diouxx(tools, &field);
+	free(field.str);
 	return (1);
 }

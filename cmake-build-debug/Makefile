@@ -2364,6 +2364,33 @@ ft_ptintf/srcs/set_flags.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.s
 .PHONY : ft_ptintf/srcs/set_flags.c.s
 
+ft_ptintf/srcs/str_tolower.o: ft_ptintf/srcs/str_tolower.c.o
+
+.PHONY : ft_ptintf/srcs/str_tolower.o
+
+# target to build an object file
+ft_ptintf/srcs/str_tolower.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/str_tolower.c.o
+.PHONY : ft_ptintf/srcs/str_tolower.c.o
+
+ft_ptintf/srcs/str_tolower.i: ft_ptintf/srcs/str_tolower.c.i
+
+.PHONY : ft_ptintf/srcs/str_tolower.i
+
+# target to preprocess a source file
+ft_ptintf/srcs/str_tolower.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/str_tolower.c.i
+.PHONY : ft_ptintf/srcs/str_tolower.c.i
+
+ft_ptintf/srcs/str_tolower.s: ft_ptintf/srcs/str_tolower.c.s
+
+.PHONY : ft_ptintf/srcs/str_tolower.s
+
+# target to generate assembly for a file
+ft_ptintf/srcs/str_tolower.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/str_tolower.c.s
+.PHONY : ft_ptintf/srcs/str_tolower.c.s
+
 ft_ptintf/srcs/to_buff.o: ft_ptintf/srcs/to_buff.c.o
 
 .PHONY : ft_ptintf/srcs/to_buff.o
@@ -3162,6 +3189,9 @@ help:
 	@echo "... ft_ptintf/srcs/set_flags.o"
 	@echo "... ft_ptintf/srcs/set_flags.i"
 	@echo "... ft_ptintf/srcs/set_flags.s"
+	@echo "... ft_ptintf/srcs/str_tolower.o"
+	@echo "... ft_ptintf/srcs/str_tolower.i"
+	@echo "... ft_ptintf/srcs/str_tolower.s"
 	@echo "... ft_ptintf/srcs/to_buff.o"
 	@echo "... ft_ptintf/srcs/to_buff.i"
 	@echo "... ft_ptintf/srcs/to_buff.s"

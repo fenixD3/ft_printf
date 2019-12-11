@@ -14,54 +14,54 @@
 
 void	fill_union_diouxx(t_mkfld *field, t_prsng *tools)
 {
-	field->number.ull = 0;
-	if (tools->modifiers == 0 && tools->type == 'u')
-		field->number.ui = va_arg(tools->ap, unsigned int);
-	else if (tools->modifiers == 0)
-		field->number.i = va_arg(tools->ap, int);
-	else if (tools->modifiers & M_LL && tools->type == 'u')
-		field->number.ull = va_arg(tools->ap, unsigned long long);
-	else if (tools->modifiers & M_LL)
-		field->number.ll = va_arg(tools->ap, long long);
-	else if (tools->modifiers & M_L && tools->type == 'u')
-		field->number.ul = va_arg(tools->ap, unsigned long);
-	else if (tools->modifiers & M_L)
-		field->number.l = va_arg(tools->ap, long);
-	else if (tools->modifiers & M_H && tools->type == 'u')
-		field->number.ush = (unsigned short)va_arg(tools->ap, unsigned int);
-	else if (tools->modifiers & M_H)
-		field->number.sh = (short)va_arg(tools->ap, int);
-	else if (tools->modifiers & M_HH && tools->type == 'u')
-		field->number.uc = (unsigned char)va_arg(tools->ap, unsigned int);
-	else if (tools->modifiers & M_HH)
-		field->number.c = (char)va_arg(tools->ap, int);
+	field->nmbr.ull = 0;
+	if (tools->mdfirs == 0 && tools->type == 'u')
+		field->nmbr.ui = va_arg(tools->ap, unsigned int);
+	else if (tools->mdfirs == 0)
+		field->nmbr.i = va_arg(tools->ap, int);
+	else if (tools->mdfirs & M_LL && tools->type == 'u')
+		field->nmbr.ull = va_arg(tools->ap, unsigned long long);
+	else if (tools->mdfirs & M_LL)
+		field->nmbr.ll = va_arg(tools->ap, long long);
+	else if (tools->mdfirs & M_L && tools->type == 'u')
+		field->nmbr.ul = va_arg(tools->ap, unsigned long);
+	else if (tools->mdfirs & M_L)
+		field->nmbr.l = va_arg(tools->ap, long);
+	else if (tools->mdfirs & M_H && tools->type == 'u')
+		field->nmbr.ush = (unsigned short)va_arg(tools->ap, unsigned int);
+	else if (tools->mdfirs & M_H)
+		field->nmbr.sh = (short)va_arg(tools->ap, int);
+	else if (tools->mdfirs & M_HH && tools->type == 'u')
+		field->nmbr.uc = (unsigned char)va_arg(tools->ap, unsigned int);
+	else if (tools->mdfirs & M_HH)
+		field->nmbr.c = (char)va_arg(tools->ap, int);
 }
 
 _Bool	fill_union_csp(t_mkfld *field, t_prsng *tools)
 {
-	field->number.ull = 0;
+	field->nmbr.ull = 0;
 	if (tools->type == 'c')
 	{
-		if ((field->number.c = (char)va_arg(tools->ap, int)) == 0)
+		if ((field->nmbr.c = (char)va_arg(tools->ap, int)) == 0)
 			tools->flags |= M_ZERO_CHAR;
 	}
 	else if (tools->type == 's')
 	{
-		field->number.cptr = va_arg(tools->ap, char*);
-		if (!field->number.cptr && !(field->number.cptr = ft_strdup("(null)")))
+		field->nmbr.cptr = va_arg(tools->ap, char*);
+		if (!field->nmbr.cptr && !(field->nmbr.cptr = ft_strdup("(null)")))
 			return (0);
 	}
 	else if (tools->type == 'p')
-		field->number.ull = va_arg(tools->ap, unsigned long long);
+		field->nmbr.ull = va_arg(tools->ap, unsigned long long);
 	return (1);
 }
 
 void	fill_union_aaeeffgg(t_mkfld *field, t_prsng *tools)
 {
-	field->number.db = 0.0;
-	field->number.ldb = 0.0;
-	if (tools->modifiers & M_UPPER_L)
-		field->number.ldb = va_arg(tools->ap, long double);
+	field->nmbr.db = 0.0;
+	field->nmbr.ldb = 0.0;
+	if (tools->mdfirs & M_UPPER_L)
+		field->nmbr.ldb = va_arg(tools->ap, long double);
 	else
-		field->number.db = va_arg(tools->ap, double);
+		field->nmbr.db = va_arg(tools->ap, double);
 }

@@ -65,7 +65,7 @@ char		*print_double(t_prsng *tools, t_mkfld *fld, double number)
 	if (!(hp = hp_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
-	precision = tools->precision;
+	precision = tools->prec;
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &dblcomp, tools);

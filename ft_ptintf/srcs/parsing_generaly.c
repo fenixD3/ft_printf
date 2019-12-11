@@ -39,10 +39,10 @@ int		parsing(char **format, t_prsng *tools)
 	parsing_cyclone(format, tools);
 	if (!tools->type && **format)
 		tools->type = *((*format)++);
-	if (tools->precision < 0)
+	if (tools->prec < 0)
 	{
 		tools->flags |= M_PRECISION_NOT_ADDED;
-		tools->precision = 0;
+		tools->prec = 0;
 	}
 	if (!(tools->flags & M_PRECISION_NOT_ADDED) &&
 		tools->flags & M_ZERO && is_ddioouuxx(tools->type))

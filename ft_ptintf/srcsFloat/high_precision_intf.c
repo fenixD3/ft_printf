@@ -40,7 +40,7 @@ static void	fill_result_fract(t_high *hp, _Bool intg, t_prsng *tools,
 	int		nxt_nu;
 	int		prec;
 
-	ft_memcpy(&prec, &tools->precision, sizeof(int));
+	ft_memcpy(&prec, &tools->prec, sizeof(int));
 	if (!*res->result && (tools->type == 'e' || tools->type == 'E'))
 		fill_fucking_e(res, tools, hp, &prec);
 	while (prec > 0 && !hp_is_zero(hp, intg))
@@ -96,7 +96,7 @@ void		fill_result(t_high *hp, _Bool intg, t_prsng *tools, t_result *res)
 	{
 		if (res->buff)
 		{
-			while (++res->buff && *res->buff && tools->precision-- && ++res->bf_len)
+			while (++res->buff && *res->buff && tools->prec-- && ++res->bf_len)
 			{
 				ft_strncat(res->result, res->buff, 1);
 				++res->len;

@@ -82,6 +82,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/prepare_lennum.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_buff.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/set_flags.c.o"
+  "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/str_tolower.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/to_buff.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/which_sign.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/zeroing.c.o"

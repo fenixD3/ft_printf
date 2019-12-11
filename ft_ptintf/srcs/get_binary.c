@@ -83,14 +83,19 @@ char		*get_binary(uint64_t *num, size_t bit_size, t_mkfld *fld,
 
 void		get_binaryd_by_type(t_prsng *tools, t_mkfld *fld)
 {
-	if (tools->modifiers == 0)
-		fld->str = get_binaryd((uint64_t *)&fld->number.i, sizeof(int) * 8, fld);
-	else if (tools->modifiers & M_LL)
-		fld->str = get_binaryd((uint64_t *)&fld->number.ll, sizeof(long long) * 8, fld);
-	else if (tools->modifiers & M_L)
-		fld->str = get_binaryd((uint64_t *)&fld->number.l, sizeof(long) * 8, fld);
-	else if (tools->modifiers & M_H)
-		fld->str = get_binaryd((uint64_t *)&fld->number.sh, sizeof(short) * 8, fld);
-	else if (tools->modifiers & M_HH)
-		fld->str = get_binaryd((uint64_t *)&fld->number.c, sizeof(char) * 8, fld);
+	char *a;
+
+	if (tools->type == 'c')
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.c, sizeof(char) * 8, fld);
+	else if (tools->mdfirs == 0)
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.i, sizeof(int) * 8, fld);
+	else if (tools->mdfirs & M_LL)
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.ll, sizeof(long long) * 8, fld);
+	else if (tools->mdfirs & M_L)
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.l, sizeof(long) * 8, fld);
+	else if (tools->mdfirs & M_H)
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.sh, sizeof(short) * 8, fld);
+	else if (tools->mdfirs & M_HH)
+		a = GET_BINARYD((uint64_t *)&fld->nmbr.c, sizeof(char) * 8, fld);
+	ft_strncpy(&fld->str[fld->len], a, fld->lennum);
 }

@@ -6,7 +6,7 @@
 
 void		add_point(t_result *res, t_prsng *tools)
 {
-	if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED ||
+	if (tools->prec || tools->flags & M_PRECISION_NOT_ADDED ||
 	tools->flags & M_SHARP)
 	{
 		ft_strncat(res->result, ".", 1);
@@ -21,12 +21,12 @@ char		*calculate_g_a_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 
 	if (ft_tolower(tools->type) == 'g')
 	{
-		if (!tools->precision && tools->flags & M_PRECISION_NOT_ADDED)
-			tools->precision = 6;
-		prec = (tools->precision) ? tools->precision : 1;
+		if (!tools->prec && tools->flags & M_PRECISION_NOT_ADDED)
+			tools->prec = 6;
+		prec = (tools->prec) ? tools->prec : 1;
 		if (!(res = get_g_result(tools, fld, lg_10)))
 			return (NULL);
-		if (tools->precision || tools->flags & M_PRECISION_NOT_ADDED ||
+		if (tools->prec || tools->flags & M_PRECISION_NOT_ADDED ||
 		tools->flags & M_SHARP)
 			if (!(res = delete_lst_zeroes(res, fld, tools->type)))
 				return (NULL);

@@ -66,8 +66,8 @@ void	to_buff(char *str, t_prsng *tools, t_mkfld *field)
 {
 	int	len;
 
-	len = ft_strlen(str) + ((tools->type == 'c' && !field->number.c) ? 1 : 0) +
-		((tools->type == 'c' && (tools->flags & M_MINUS) && !field->number.c) ?
+	len = ft_strlen(str) + ((tools->type == 'c' && !field->nmbr.c) ? 1 : 0) +
+		((tools->type == 'c' && (tools->flags & M_MINUS) && !field->nmbr.c) ?
 		field->len_empty_field : 0);
 	buffer_managment(tools, str, len, NON_FORMAT);
 }

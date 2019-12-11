@@ -12,63 +12,69 @@
 
 int main() {
 
-	ft_printf("%bc\n",34);
-	ft_printf("%bc", -34);
+	//ft_printf("%+ bf\n",34.);
+	ft_printf("%70.50bf\n", 34.l);
+	printf("%70.50d\n", 34);
 	//printf("\n");
 	//ft_printf("%#bf", -10.18);
-///  флаг 0, +, отрицательное значение,
+////  флаг 0, +, отрицательное значение,
+	char a = 34;
+/*	//ft_printf("%010.c\n",34);
+	//ft_printf("%010.s\n",&a);
 
 
 
 
-/*	printf("aaaa%lfbbb\n", 12.5);
-	printf("aaaa%dbb\n", sizeof(double));*/
+
+
+*//*	printf("aaaa%lfbbb\n", 12.5);
+	printf("aaaa%dbb\n", sizeof(double));*//*
 //	printf("ooo%#5.4xooo\n", 100);
 
-/*int a;
+*//*int a;
 unsigned int b;
 
 a = -10;
 b = (unsigned int)a;
 a = (int)b;
 printf("%d %u\n\n\n", a, b);9223372036854775807
-printf("%o %o\n\n\n", a, b);*/
+printf("%o %o\n\n\n", a, b);*//*
 
-/*	int i;
+*//*	int i;
 
 
 	int real;
-	int my;*/
+	int my;*//*
 
-/*	char *str = {"@moulitest: %#.o"};
+*//*	char *str = {"@moulitest: %#.o"};
 	int num = 0;
 	real = printf(str, num);
 	printf("\n----------\n");
-   my = ft_printf(str, num);*/
+   my = ft_printf(str, num);*//*
 
-/*	real = printf("%.16384Lf", LDBL_MIN);
-	printf("\n----------\n");*/
+*//*	real = printf("%.16384Lf", LDBL_MIN);
+	printf("\n----------\n");*//*
 
 
-	/*real = printf("% faa", 3.75);
+	*//*real = printf("% faa", 3.75);
 	printf("\n----------\n");
-	my = ft_printf("% faa", 3.75);*/
+	my = ft_printf("% faa", 3.75);*//*
 
 	//printf("%d\n", ft_64log2(8301034833169298));
 
-	/*printf("FT ceil\n%f\n", ft_ceil(-4.5));
-	printf("LB ceil\n%f\n", ceil(-4.5));*/
+	*//*printf("FT ceil\n%f\n", ft_ceil(-4.5));
+	printf("LB ceil\n%f\n", ceil(-4.5));*//*
 
-	/*printf("FT floor\n%f\n", ft_floor(-4.5));
-	printf("LB floor\n%f\n", floor(-4.5));*/
+	*//*printf("FT floor\n%f\n", ft_floor(-4.5));
+	printf("LB floor\n%f\n", floor(-4.5));*//*
 
-	/*printf("FT round\n%f\n", ft_round(0.4999999999999999));
-	printf("LB round\n%f\n", round(0.4999999999999999));*/
+	*//*printf("FT round\n%f\n", ft_round(0.4999999999999999));
+	printf("LB round\n%f\n", round(0.4999999999999999));*//*
 
-	/*printf("%f\n", DBL_MAX * 2);
-	printf("%f\n", sqrt(-1));*/
+	*//*printf("%f\n", DBL_MAX * 2);
+	printf("%f\n", sqrt(-1));*//*
 
-	/*printf("%.200f\n", 67.76845654865499);
+	*//*printf("%.200f\n", 67.76845654865499);
 	printf("%.14f\n", 67.76845654865499);
 	printf("%.200f\n", 67.99999999999999);
 	printf("%#.13f\n", 67.99999999999999);
@@ -77,33 +83,33 @@ printf("%o %o\n\n\n", a, b);*/
 	printf("%+#f\n", 0.);
 	ft_printf("%+#f\n", 0.);
 	printf("%+#Lf\n", -0 / 1000.L);
-	ft_printf("%+#Lf\n", -0 / 1000.L);*/
-	/*printf("%-57lc", "W");
+	ft_printf("%+#Lf\n", -0 / 1000.L);*//*
+	*//*printf("%-57lc", "W");
 	printf("\n----------\n");
 	ft_printf("%-57lc", "W");
 
 	ft_printf("%+#Lf\n", -0 / 1000.L);
 	printf("%e\n", 0.9988);
-	ft_printf("%e\n", 0.9988);*/
+	ft_printf("%e\n", 0.9988);*//*
 
-	/*ft_printf("%LF\n", LDBL_MAX);
-	ft_printf("%.16383LF\n", LDBL_MIN);*/
-	/*ft_printf("%F\n", DBL_MAX);
+	*//*ft_printf("%LF\n", LDBL_MAX);
+	ft_printf("%.16383LF\n", LDBL_MIN);*//*
+	*//*ft_printf("%F\n", DBL_MAX);
 	ft_printf("%.1024F\n", DBL_MIN);
 	ft_printf("%E\n", DBL_MAX);
-	ft_printf("%E\n", DBL_MIN);*/
+	ft_printf("%E\n", DBL_MIN);*//*
 
-	/*printf("%.Lg\n", 512.89898988L);
+	*//*printf("%.Lg\n", 512.89898988L);
 	ft_printf("%.Lg\n", 512.89898988L);
 	printf("%.Lg\n", 1000.99L);
-	ft_printf("%.Lg\n", 1000.99L);*/
-	/*printf("%.3g\n", 0000.0099);
-	ft_printf("%.3g\n", 0000.0099);*/
+	ft_printf("%.Lg\n", 1000.99L);*//*
+	*//*printf("%.3g\n", 0000.0099);
+	ft_printf("%.3g\n", 0000.0099);*//*
 
-	/*printf("%a\n", 3.75);
-	printf("%a\n", -3.75);*/
+	*//*printf("%a\n", 3.75);
+	printf("%a\n", -3.75);*//*
 
-	/*double		i = DBL_MAX;
+	*//*double		i = DBL_MAX;
 	uint64_t	*dbl;
 	int32_t		exp_val;
 	uint64_t	mant_val;
@@ -128,9 +134,9 @@ printf("%o %o\n\n\n", a, b);*/
 		i < 1. ? --log10 : ++log10;
 	else if (fabs(i / ft_pow(10, log10)) > 10.0)
 		i < 1.0 ? ++log10 : --log10;
-	printf("\tNew log10 = %d\n", log10);*/
+	printf("\tNew log10 = %d\n", log10);*//*
 
-/*	int fp = open("Logs_lg", O_WRONLY);
+*//*	int fp = open("Logs_lg", O_WRONLY);
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -148,9 +154,9 @@ printf("%o %o\n\n\n", a, b);*/
 		}
 		fprintf(&fp, "Num = %.10f\n\tLog 10 = %d\n\tExp2 = %d\n", i, ft_log10(mant_val, exp_val), exp_val);
 	}
-	close(fp);*/
+	close(fp);*//*
 
-	/*FILE *fp = fopen("Logs_lg", "w");
+	*//*FILE *fp = fopen("Logs_lg", "w");
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -176,9 +182,9 @@ printf("%o %o\n\n\n", a, b);*/
 			i < 1.0 ? ++log10 : --log10;
 		fprintf(fp, "\tNew log10 = %d\n", log10);
 	}
-	fclose(fp);*/
+	fclose(fp);*//*
 
-	/*FILE *fp = fopen("Logs_lg", "w");
+	*//*FILE *fp = fopen("Logs_lg", "w");
 
 	for (double i = 0.00000005; i <= 5E307; i *= 10)
 	{
@@ -190,38 +196,38 @@ printf("%o %o\n\n\n", a, b);*/
 
 	printf("%f\n", ft_floor(ft_log10(28.734)));
 	printf("%f\n", ft_floor(ft_log10(DBL_MAX)));
-	printf("%f\n", ft_floor(ft_log10(DBL_MIN)));*/
+	printf("%f\n", ft_floor(ft_log10(DBL_MIN)));*//*
 
 
-/*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
+*//*	real = printf("@moulitest: >%#.o< >%#.0o<", 0, 0);
 	printf("\n----------\n");
-	my = ft_printf("@moulitest: >%#.o< >%#.0o<", 0, 0);*/
+	my = ft_printf("@moulitest: >%#.o< >%#.0o<", 0, 0);*//*
 
-	/*printf("\n");
-	printf("%d %d", real, my);*/
+	*//*printf("\n");
+	printf("%d %d", real, my);*//*
 	//printf("%10.4m");
 
-/*	for(int i = 0; i < 32; i++)
+*//*	for(int i = 0; i < 32; i++)
 	{
 		printf("%d\ta%ca\n", i, (char)i);
-	}*/
+	}*//*
 	//printf("%d %d", real, my);
 	//printf("%10.4m");
 
-	/*printf("Int %zu\nUint %zu\nLong %zu\nUlong %zu\nLong long %zu\nUlong long %zu\n",
+	*//*printf("Int %zu\nUint %zu\nLong %zu\nUlong %zu\nLong long %zu\nUlong long %zu\n",
 		   sizeof(int), sizeof(unsigned int), sizeof(long), sizeof(unsigned long),
-		   sizeof(long long), sizeof(unsigned long long));*/
+		   sizeof(long long), sizeof(unsigned long long));*//*
 
-	/*printf("%s\n", print_double(NULL, DBL_MAX));
-	printf("----------------------\n");*/
+	*//*printf("%s\n", print_double(NULL, DBL_MAX));
+	printf("----------------------\n");*//*
 
 	//printf("%d\n", (uint32_t)(ft_log2(15728640)));
 	//printf("%zu\n", sizeof(unsigned long long));
-	/*printf("%s\n", print_long_double(NULL, 0.5));
+	*//*printf("%s\n", print_long_double(NULL, 0.5));
 	printf("----------------------\n");
-	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*/
-	/*printf("----------------------\n");
-	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*/
+	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*//*
+	*//*printf("----------------------\n");
+	printf("%s\n\n", print_long_double(NULL, LDBL_MAX));*//*
 
 	//printf("%f\n", ft_ceil(-0.5));
 
@@ -241,11 +247,11 @@ printf("%o %o\n\n\n", a, b);*/
 //	ft_putchar('-');
 //	to_buff("BBB", &tools);
 
-	/*int i = 34;
-	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));
+	*//*int i = 34;
+	printf("%s\n", GET_BINARYD((uint64_t *)&i, sizeof(i) * 8));
 	i = -i;
-	printf("%s\n", get_binaryd((uint64_t *)&i, sizeof(i) * 8));*/
-	/*double d = 3.75;
+	printf("%s\n", GET_BINARYD((uint64_t *)&i, sizeof(i) * 8));*//*
+	*//*double d = 3.75;
 	printf("%s\n", get_binary((uint64_t *)&d, sizeof(d) * 8, 'f'));
 	long double ld = 3.75;
 	printf("%s\n", get_binary((uint64_t *)&ld, 80, 'd'));*/

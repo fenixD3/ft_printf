@@ -69,7 +69,7 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	if (!(hp = hp_ldbl_initializ()))
 		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
-	precision = tools->precision;
+	precision = tools->prec;
 	if (!res.result)
 		return (NULL);
 	process(&res, hp, &ldblcomp, tools);

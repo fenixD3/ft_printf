@@ -14,17 +14,17 @@
 
 int		which_sign_aaeeffgg(t_un *number, t_prsng *tools)
 {
-	if ((tools->modifiers == 0 && number->i < 0) ||
-		(tools->modifiers & M_L && number->l < 0) ||
-		(tools->modifiers & M_H && number->sh < 0) ||
-		(tools->modifiers & M_LL && number->ll < 0) ||
-		(tools->modifiers & M_HH && number->c < 0))
+	if ((tools->mdfirs == 0 && number->i < 0) ||
+		(tools->mdfirs & M_L && number->l < 0) ||
+		(tools->mdfirs & M_H && number->sh < 0) ||
+		(tools->mdfirs & M_LL && number->ll < 0) ||
+		(tools->mdfirs & M_HH && number->c < 0))
 		return (-1);
-	else if ((tools->modifiers == 0 && number->i > 0) ||
-				(tools->modifiers & M_L && number->l > 0) ||
-				(tools->modifiers & M_H && number->sh > 0) ||
-				(tools->modifiers & M_LL && number->ll > 0) ||
-				(tools->modifiers & M_HH && number->c > 0))
+	else if ((tools->mdfirs == 0 && number->i > 0) ||
+			(tools->mdfirs & M_L && number->l > 0) ||
+			(tools->mdfirs & M_H && number->sh > 0) ||
+			(tools->mdfirs & M_LL && number->ll > 0) ||
+			(tools->mdfirs & M_HH && number->c > 0))
 		return (1);
 	return (0);
 }
@@ -35,13 +35,13 @@ int		which_sign(t_un *number, t_prsng *tools)
 		return (which_sign_aaeeffgg(number, tools));
 	else
 	{
-		if (((tools->modifiers == 0 || tools->modifiers & M_L)
+		if (((tools->mdfirs == 0 || tools->mdfirs & M_L)
 			&& number->db < 0) ||
-			(tools->modifiers & M_UPPER_L && number->ldb < 0))
+			(tools->mdfirs & M_UPPER_L && number->ldb < 0))
 			return (-1);
-		else if (((tools->modifiers == 0 || tools->modifiers & M_L)
+		else if (((tools->mdfirs == 0 || tools->mdfirs & M_L)
 					&& number->db > 0) ||
-					(tools->modifiers & M_UPPER_L && number->ldb > 0))
+					(tools->mdfirs & M_UPPER_L && number->ldb > 0))
 			return (1);
 	}
 	return (0);
