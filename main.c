@@ -1,7 +1,7 @@
 #include <stdarg.h>
 
-#include "includes/ft_ptintf.h"
-#include "includes/myfloat.h"
+#include "ft_ptintf.h"
+#include "my_float.h"
 
 #include <stdio.h>
 #include <math.h>
@@ -13,12 +13,13 @@
 int main() {
 
 	//ft_printf("%+ bf\n",34.);
-	ft_printf("%70.50bf\n", 34.l);
-	printf("%70.50d\n", 34);
+	/*ft_printf("%70.50bf\n", 34.l);
+	printf("%70.50d\n", 34);*/
+	ft_printf("%.1f\n", -3.85);
 	//printf("\n");
 	//ft_printf("%#bf", -10.18);
 ////  флаг 0, +, отрицательное значение,
-	char a = 34;
+	//char a = 34;
 /*	//ft_printf("%010.c\n",34);
 	//ft_printf("%010.s\n",&a);
 

@@ -11,16 +11,10 @@ stdarg.h
 -
 stdint.h
 -
-float.h
--
 libft.h
 ../ft_ptintf/includes/libft.h
-stdio.h
--
-stdbool.h
--
 
-../ft_ptintf/includes/myfloat.h
+../ft_ptintf/includes/my_float.h
 stdint.h
 -
 string.h
@@ -36,13 +30,13 @@ stdlib.h
 unistd.h
 -
 
-/Users/mdeanne/ft_printf/ft_ptintf/srcs/main.c
+/Users/ylila/Printf_Hub/ft_ptintf/main.c
 stdarg.h
 -
-includes/ft_ptintf.h
-/Users/mdeanne/ft_printf/ft_ptintf/srcs/includes/ft_ptintf.h
-includes/myfloat.h
-/Users/mdeanne/ft_printf/ft_ptintf/srcs/includes/myfloat.h
+ft_ptintf.h
+/Users/ylila/Printf_Hub/ft_ptintf/ft_ptintf.h
+my_float.h
+/Users/ylila/Printf_Hub/ft_ptintf/my_float.h
 stdio.h
 -
 math.h

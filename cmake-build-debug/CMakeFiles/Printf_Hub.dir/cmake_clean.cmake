@@ -75,7 +75,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/get_binary.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_parser.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.o"
-  "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/make_field.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_funcs.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/parsing_generaly.c.o"
@@ -103,6 +102,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/my_float.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/my_long_float.c.o"
   "CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o"
+  "CMakeFiles/Printf_Hub.dir/main.c.o"
   "Printf_Hub"
   "Printf_Hub.pdb"
 )

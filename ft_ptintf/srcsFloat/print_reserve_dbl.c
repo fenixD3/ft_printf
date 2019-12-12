@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 
 char		*print_nan(t_result *res, const char type)
 {

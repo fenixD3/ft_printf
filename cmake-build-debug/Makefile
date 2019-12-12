@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdeanne/ft_printf
+CMAKE_SOURCE_DIR = /Users/ylila/Printf_Hub
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdeanne/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ylila/Printf_Hub/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mdeanne/ft_printf/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/mdeanne/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ylila/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdeanne/ft_printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ylila/Printf_Hub/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2175,33 +2175,6 @@ ft_ptintf/srcs/is_typeflags.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/is_typeflags.c.s
 .PHONY : ft_ptintf/srcs/is_typeflags.c.s
 
-ft_ptintf/srcs/main.o: ft_ptintf/srcs/main.c.o
-
-.PHONY : ft_ptintf/srcs/main.o
-
-# target to build an object file
-ft_ptintf/srcs/main.c.o:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.o
-.PHONY : ft_ptintf/srcs/main.c.o
-
-ft_ptintf/srcs/main.i: ft_ptintf/srcs/main.c.i
-
-.PHONY : ft_ptintf/srcs/main.i
-
-# target to preprocess a source file
-ft_ptintf/srcs/main.c.i:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.i
-.PHONY : ft_ptintf/srcs/main.c.i
-
-ft_ptintf/srcs/main.s: ft_ptintf/srcs/main.c.s
-
-.PHONY : ft_ptintf/srcs/main.s
-
-# target to generate assembly for a file
-ft_ptintf/srcs/main.c.s:
-	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/main.c.s
-.PHONY : ft_ptintf/srcs/main.c.s
-
 ft_ptintf/srcs/make_field.o: ft_ptintf/srcs/make_field.c.o
 
 .PHONY : ft_ptintf/srcs/make_field.o
@@ -2931,6 +2904,33 @@ ft_ptintf/srcsFloat/print_reserve_dbl.c.s:
 	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.s
 .PHONY : ft_ptintf/srcsFloat/print_reserve_dbl.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/Printf_Hub.dir/build.make CMakeFiles/Printf_Hub.dir/main.c.s
+.PHONY : main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -3168,9 +3168,6 @@ help:
 	@echo "... ft_ptintf/srcs/is_typeflags.o"
 	@echo "... ft_ptintf/srcs/is_typeflags.i"
 	@echo "... ft_ptintf/srcs/is_typeflags.s"
-	@echo "... ft_ptintf/srcs/main.o"
-	@echo "... ft_ptintf/srcs/main.i"
-	@echo "... ft_ptintf/srcs/main.s"
 	@echo "... ft_ptintf/srcs/make_field.o"
 	@echo "... ft_ptintf/srcs/make_field.i"
 	@echo "... ft_ptintf/srcs/make_field.s"
@@ -3252,6 +3249,9 @@ help:
 	@echo "... ft_ptintf/srcsFloat/print_reserve_dbl.o"
 	@echo "... ft_ptintf/srcsFloat/print_reserve_dbl.i"
 	@echo "... ft_ptintf/srcsFloat/print_reserve_dbl.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

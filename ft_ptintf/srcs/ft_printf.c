@@ -18,7 +18,7 @@ int		param_processing(char **format, t_prsng *tools)
 	parsing(format, tools);
 	if (organozation_by_flags_to_buff(tools) != 1)
 	{
-		buffer_managment(&tools, NULL, 0, LAST);
+		buffer_managment(tools, NULL, 0, LAST);
 		return (0);
 	}
 	return (1);

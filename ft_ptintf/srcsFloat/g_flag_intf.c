@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 
 char		*get_g_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 {

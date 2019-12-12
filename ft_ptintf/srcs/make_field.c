@@ -61,6 +61,7 @@ int		diouxx(t_prsng *tools, t_mkfld *field)
 			free(field->nmbr.cptr);
 		return (0);
 	}
+	return (1);
 }
 
 int		organozation_by_flags_to_buff(t_prsng *tools)
@@ -78,8 +79,7 @@ int		organozation_by_flags_to_buff(t_prsng *tools)
 			return (0);
 		}
 	}
-	else /*if (is_ddioouuxx(tools->type) || is_csp(tools->type)
-													|| !is_flag(tools->type))*/
+	else
 		diouxx(tools, &field);
 	free(field.str);
 	return (1);

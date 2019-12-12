@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 #include "libft.h"
 
 static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
@@ -69,7 +69,7 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 		create_for_f(tools, &lennum, lg_10);
 	res.buff = ft_strnew(ABS(lg_10));
 	if (!res.buff || !(res.result = ft_strnew(lennum + 1)))
-		return ((t_result){NULL, NULL, 0});
+		return ((t_result){NULL, NULL, 0, 0, NULL, 0});
 	*res.result = '0';
 	res.begin = res.result;
 	++res.result;

@@ -19,7 +19,7 @@
 # define ARRSIZE_FRCT_LDBL 514
 # include <stdlib.h>
 # include <stdint.h>
-# include "myfloat.h"
+# include "my_float.h"
 # include "ft_ptintf.h"
 
 typedef struct	s_high

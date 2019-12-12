@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/mdeanne/ft_printf/ft_ptintf -I/Users/mdeanne/ft_printf/ft_ptintf/includes -I/Users/mdeanne/ft_printf/ft_ptintf/libft 
+C_INCLUDES = -I/Users/ylila/Printf_Hub/ft_ptintf/includes -I/Users/ylila/Printf_Hub/ft_ptintf/libft -I/Users/ylila/Printf_Hub/ft_ptintf/pft/src 
 

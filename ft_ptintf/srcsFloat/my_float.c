@@ -38,21 +38,21 @@ static char	*initialize_dbl(t_result *res, t_dbl_comp *dblcomp, double number,
 		dblcomp->exp_val -= OFFSET_DBL;
 		dblcomp->mant_val = (1LL << 52) | get_mantissa(dbl);
 	}
-	dblcomp->mant_High_Bits = dblcomp->mant_val >> 32;
-	dblcomp->mant_Low_Bits = dblcomp->mant_val & 0xFFFFFFFF;
+	dblcomp->mant_high_bits = dblcomp->mant_val >> 32;
+	dblcomp->mant_low_bits = dblcomp->mant_val & 0xFFFFFFFF;
 	return (NULL);
 }
 
 static void	process(t_result *res, t_high *hp, const t_dbl_comp *dblcomp,
 		t_prsng *tools)
 {
-	insert_low_bits(hp, dblcomp->mant_High_Bits, dblcomp->exp_val + 12, 1);
-	insert_low_bits(hp, dblcomp->mant_Low_Bits, dblcomp->exp_val - 32 + 12, 1);
+	insert_low_bits(hp, dblcomp->mant_high_bits, dblcomp->exp_val + 12, 1);
+	insert_low_bits(hp, dblcomp->mant_low_bits, dblcomp->exp_val - 32 + 12, 1);
 	fill_result(hp, 1, tools, res);
 	if (*res->result)
 		add_point(res, tools);
-	insert_top_bits(hp, dblcomp->mant_High_Bits, 52 - dblcomp->exp_val - 32, 0);
-	insert_top_bits(hp, dblcomp->mant_Low_Bits, 52 - dblcomp->exp_val, 0);
+	insert_top_bits(hp, dblcomp->mant_high_bits, 52 - dblcomp->exp_val - 32, 0);
+	insert_top_bits(hp, dblcomp->mant_low_bits, 52 - dblcomp->exp_val, 0);
 	res->bf_len = 0;
 	fill_result(hp, 0, tools, res);
 	if (tools->type == 'e' || tools->type == 'E')

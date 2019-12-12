@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 #include "high_precision.h"
 
 static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp,
@@ -30,17 +30,17 @@ static char	*initialize_ldbl(t_result *res, t_dbl_comp *ldblcomp,
 	{
 		if (!get_lmantissa(ldbl))
 			return (print_zero(res, ldblcomp->sign, tools));
-		ldblcomp->exp_val = 1 - offset_ldbl;
+		ldblcomp->exp_val = 1 - OFFSET_LDBL;
 		ldblcomp->mant_val = get_lmantissa(ldbl);
 	}
 	else
 	{
-		ldblcomp->exp_val -= offset_ldbl;
+		ldblcomp->exp_val -= OFFSET_LDBL;
 		ldblcomp->mant_val = get_lmantissa(ldbl);
 	}
 	ldblcomp->mant_high_bits = ldblcomp->mant_val >> 32;
 	ldblcomp->mant_low_bits = ldblcomp->mant_val & 0xffffffff;
-	return (null);
+	return (NULL);
 }
 
 static void	process(t_result *res, t_highl *hp, const t_dbl_comp *ldblcomp,
@@ -72,20 +72,20 @@ char		*print_long_double(t_prsng *tools, t_mkfld *fld, long double number)
 	if ((res.result = initialize_ldbl(&res, &ldblcomp, number, tools)))
 		return (res.result);
 	if (!res.len)
-		return (null);
+		return (NULL);
 	res.lg_10 = ft_floor(ft_log10(number));
 	if (ft_tolower(tools->type) == 'g' || ft_tolower(tools->type) == 'a')
 		return (calculate_g_a_result(tools, fld, res.lg_10));
 	if (!(hp = hp_ldbl_initializ()))
-		return (null);
+		return (NULL);
 	res = create_str(res.lg_10, tools, fld);
 	precision = tools->prec;
 	if (!res.result)
-		return (null);
+		return (NULL);
 	process(&res, hp, &ldblcomp, tools);
 	check_result(&res, tools, precision, fld);
 	if (!res.len)
-		return (null);
+		return (NULL);
 	free_l_hp(hp);
 	return (res.result);
 }

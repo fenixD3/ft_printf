@@ -27,6 +27,7 @@ char		*calculate_g_a_result(t_prsng *tools, t_mkfld *fld, int lg_10)
 	char		*res;
 	int			prec;
 
+	res = NULL;
 	if (ft_tolower(tools->type) == 'g')
 	{
 		if (!tools->prec && tools->flags & M_PRECISION_NOT_ADDED)

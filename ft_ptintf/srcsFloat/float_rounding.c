@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 #include "libft.h"
 
 static void	nine_rounding(t_result *res, size_t i)
@@ -36,7 +36,7 @@ void		float_round(t_result *res, const int nxt_nu)
 	i = 0;
 	if (*(res->result + res->len - (++i)) == '.')
 		++i;
-	if (nxt_nu == 5)
+	if (nxt_nu == 5 && *(res->result + res->len - 1) == '.')
 	{
 		nu = atoi(res->result + res->len - i);
 		if (nu == 9)

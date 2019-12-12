@@ -82,6 +82,12 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+struct			s_comp
+{
+	int32_t		exp_val;
+	uint64_t	mant;
+};
+
 t_list			*ft_lstnew(const void *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));

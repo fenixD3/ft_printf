@@ -12,7 +12,7 @@
 
 #include "ft_ptintf.h"
 
-int		get_lennum_binary_diouxx(t_prsng *tools, t_mkfld *field)
+void	get_lennum_binary_diouxx(t_prsng *tools, t_mkfld *field)
 {
 	if (tools->type == 'c')
 		field->lennum = sizeof(char) * 8;

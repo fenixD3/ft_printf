@@ -112,11 +112,11 @@ void		fill_lresult(t_highl *hp, _Bool intg, t_prsng *tls, t_result *rs)
 			if (*rs->buff && *rs->buff >= '5')
 				float_round(rs, *rs->buff - '0');
 			else if (!*rs->buff)
-				fill_lresult_fract(hp, intg, tls, res);
+				fill_lresult_fract(hp, intg, tls, rs);
 			rs->buff -= rs->bf_len + 1;
 			clear_res_buff(rs);
 		}
 		else
-			fill_lresult_fract(hp, intg, tls, res);
+			fill_lresult_fract(hp, intg, tls, rs);
 	}
 }

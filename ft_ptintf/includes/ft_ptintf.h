@@ -14,7 +14,6 @@
 # define FT_PTINTF_H
 # include <stdarg.h>
 # include <stdint.h>
-# include <float.h>
 # define BUFF_SIZE  60
 
 # define M_MINUS 1

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myfloat.h"
+#include "my_float.h"
 
 static void	fix_point_binary(char *res, uint64_t *num, size_t bit_size,
 								size_t whr_space)
