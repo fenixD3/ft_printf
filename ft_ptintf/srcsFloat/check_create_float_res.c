@@ -13,7 +13,17 @@
 #include "my_float.h"
 #include "libft.h"
 
-static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
+static size_t	len_log(int32_t lg_10)
+{
+	size_t	len;
+
+	len = 0;
+	while (lg_10 /= 10)
+		++len;
+	return (len);
+}
+
+static void		create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
 	if (tls->prec)
 		*lennum = 1 + tls->prec;
@@ -29,20 +39,20 @@ static void	create_for_e(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 	if (lg_10 >= 0)
 	{
 		if (lg_10 >= 0 && lg_10 <= 9)
-			*lennum += 1 + ft_strlen(ft_itoa(lg_10)) + 1 + 1;
+			*lennum += 1 + len_log(lg_10) + 1 + 1;
 		else
-			*lennum += 1 + ft_strlen(ft_itoa(lg_10)) + 1;
+			*lennum += 1 + len_log(lg_10) + 1;
 	}
 	else
 	{
 		if (ABS(lg_10) >= 0 && ABS(lg_10) <= 9)
-			*lennum += 1 + ft_strlen(ft_itoa(lg_10)) + 1;
+			*lennum += 1 + len_log(lg_10) + 1;
 		else
-			*lennum += 1 + ft_strlen(ft_itoa(lg_10));
+			*lennum += 1 + len_log(lg_10);
 	}
 }
 
-static void	create_for_f(t_prsng *tls, size_t *lennum, const int32_t lg_10)
+static void		create_for_f(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 {
 	if (tls->prec)
 		*lennum = (lg_10 > 0) ? lg_10 + 1 + tls->prec : 1 + tls->prec;
@@ -58,7 +68,7 @@ static void	create_for_f(t_prsng *tls, size_t *lennum, const int32_t lg_10)
 		++*lennum;
 }
 
-t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
+t_result		create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 {
 	t_result	res;
 	size_t		lennum;
@@ -78,7 +88,8 @@ t_result	create_str(const int32_t lg_10, t_prsng *tools, t_mkfld *fld)
 	return (res);
 }
 
-void		check_result(t_result *res, t_prsng *tools, int prec, t_mkfld *fld)
+void			check_result(t_result *res, t_prsng *tools, int prec,
+						t_mkfld *fld)
 {
 	if (res->result != res->begin)
 	{

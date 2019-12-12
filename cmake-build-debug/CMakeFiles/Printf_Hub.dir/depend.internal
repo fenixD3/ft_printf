@@ -178,11 +178,6 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/get_next_line.c.o
  /Users/ylila/Printf_Hub/ft_ptintf/libft/get_next_line.c
  /Users/ylila/Printf_Hub/ft_ptintf/libft/get_next_line.h
  /Users/ylila/Printf_Hub/ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/main.c.o
- ../ft_ptintf/includes/ft_ptintf.h
- ../ft_ptintf/includes/my_float.h
- ../ft_ptintf/libft/libft.h
- /Users/ylila/Printf_Hub/ft_ptintf/main.c
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o
  ../ft_ptintf/includes/ft_ptintf.h
  ../ft_ptintf/libft/libft.h
@@ -343,3 +338,8 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o
  ../ft_ptintf/includes/my_float.h
  ../ft_ptintf/libft/libft.h
  /Users/ylila/Printf_Hub/ft_ptintf/srcsFloat/print_reserve_dbl.c
+CMakeFiles/Printf_Hub.dir/main.c.o
+ ../ft_ptintf/includes/ft_ptintf.h
+ ../ft_ptintf/includes/my_float.h
+ ../ft_ptintf/libft/libft.h
+ /Users/ylila/Printf_Hub/main.c

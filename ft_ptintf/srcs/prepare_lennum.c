@@ -55,7 +55,7 @@ void	diouxxcsp_lennum(t_prsng *tools, t_mkfld *field)
 void	aaeeffgg_lennum_len(t_prsng *tools, t_mkfld *field)
 {
 	if (*field->str == '-' || *field->str == '0')
-		field->lennum = strlen(field->str);
+		field->lennum = ft_strlen(field->str);
 	if (field->lennum < tools->field)
 		field->len = tools->field - field->lennum;
 	else if (!ft_isalpha(*field->str) && *field->str != '-' &&

@@ -61,6 +61,8 @@ int		diouxx(t_prsng *tools, t_mkfld *field)
 			free(field->nmbr.cptr);
 		return (0);
 	}
+	if (tools->type == 's' && !ft_strcmp("(null)", field->nmbr.cptr))
+		free(field->nmbr.cptr);
 	return (1);
 }
 

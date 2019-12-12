@@ -6,14 +6,14 @@
 /*   By: ylila <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 22:04:16 by ylila             #+#    #+#             */
-/*   Updated: 2019/12/11 22:04:45 by ylila            ###   ########.fr       */
+/*   Updated: 2019/12/12 19:21:45 by ylila            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdint.h>
 #include "libft.h"
 
-double	ft_ceil(double num)
+double		ft_ceil(double num)
 {
 	uint64_t		intg;
 	uint64_t		int_res;
@@ -32,7 +32,7 @@ double	ft_ceil(double num)
 		res *= -1;
 	ft_memcpy(&int_res, &res, sizeof(double));
 	if (res > 0 && int_res != intg)
-		return  (++res);
+		return (++res);
 	return (res);
 }
 
@@ -55,6 +55,6 @@ long double	ft_ceill(long double num)
 		res *= -1;
 	int_res = (uint64_t *)&res;
 	if (res > 0 && (*int_res != *intg || *(int_res + 1) != *(intg + 1)))
-		return  (++res);
+		return (++res);
 	return (res);
 }

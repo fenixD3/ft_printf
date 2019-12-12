@@ -178,11 +178,6 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/get_next_line.c.o: ../ft_ptintf/libft/
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/get_next_line.c.o: ../ft_ptintf/libft/get_next_line.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/libft/get_next_line.c.o: ../ft_ptintf/libft/libft.h
 
-CMakeFiles/Printf_Hub.dir/ft_ptintf/main.c.o: ../ft_ptintf/includes/ft_ptintf.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/main.c.o: ../ft_ptintf/includes/my_float.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/main.c.o: ../ft_ptintf/libft/libft.h
-CMakeFiles/Printf_Hub.dir/ft_ptintf/main.c.o: ../ft_ptintf/main.c
-
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/includes/ft_ptintf.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcs/field_len.c.o: ../ft_ptintf/srcs/field_len.c
@@ -342,4 +337,9 @@ CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o: ../ft_ptint
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o: ../ft_ptintf/includes/my_float.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o: ../ft_ptintf/libft/libft.h
 CMakeFiles/Printf_Hub.dir/ft_ptintf/srcsFloat/print_reserve_dbl.c.o: ../ft_ptintf/srcsFloat/print_reserve_dbl.c
+
+CMakeFiles/Printf_Hub.dir/main.c.o: ../ft_ptintf/includes/ft_ptintf.h
+CMakeFiles/Printf_Hub.dir/main.c.o: ../ft_ptintf/includes/my_float.h
+CMakeFiles/Printf_Hub.dir/main.c.o: ../ft_ptintf/libft/libft.h
+CMakeFiles/Printf_Hub.dir/main.c.o: ../main.c
 

@@ -38,7 +38,7 @@ void		float_round(t_result *res, const int nxt_nu)
 		++i;
 	if (nxt_nu == 5 && *(res->result + res->len - 1) == '.')
 	{
-		nu = atoi(res->result + res->len - i);
+		nu = ft_atoi(res->result + res->len - i);
 		if (nu == 9)
 		{
 			*(res->result + res->len - i) = '0';
